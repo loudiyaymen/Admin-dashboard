@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-
-// Import routers
+import { logger } from './middleware/logger.js';
 import { campusesRouter } from './routes/campuses.js';
 import { buildingsRouter } from './routes/buildings.js';
 import { announcementsRouter } from './routes/announcements.js';
@@ -14,6 +13,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
+app.use(logger);
 
 // health check
 app.get('/health', (req, res) => {
