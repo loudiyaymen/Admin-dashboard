@@ -1,0 +1,43 @@
+import express from 'express';
+import cors from 'cors';
+
+// Import routers
+import { campusesRouter } from './routes/campuses.js';
+import { buildingsRouter } from './routes/buildings.js';
+import { announcementsRouter } from './routes/announcements.js';
+import { alertsRouter } from './routes/alerts.js';
+import { eventsRouter } from './routes/events.js';
+import { sosRouter } from './routes/sos.js';
+
+const app = express();
+const PORT = process.env.PORT || 4000;
+
+app.use(cors());
+app.use(express.json());
+
+// health check
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// API v1 router
+const v1 = express.Router();
+
+// Map & navigation 
+v1.use('/campuses', campusesRouter);
+v1.use('/buildings', buildingsRouter);
+
+//Announcements, alerts, events
+v1.use('/announcements', announcementsRouter);
+v1.use('/alerts', alertsRouter);
+v1.use('/events', eventsRouter);
+
+// SOS
+v1.use('/sos', sosRouter);
+
+
+app.use('/api/v1', v1);
+
+app.listen(PORT, () => {
+  console.log(`API listening on http://localhost:${PORT}`);
+});
