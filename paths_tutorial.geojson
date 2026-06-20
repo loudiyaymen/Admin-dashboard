@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "paths_tutorial",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "start_node": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "end_node ": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "path_type ": "room_transition", "accessibility ": null }, "geometry": { "type": "LineString", "coordinates": [ [ 794.579545454545837, -781.613636363636033 ], [ 810.227272727273089, -782.193181818181529 ] ] } },
+{ "type": "Feature", "properties": { "start_node": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "end_node ": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "path_type ": "corridor", "accessibility ": null }, "geometry": { "type": "LineString", "coordinates": [ [ 810.227272727273089, -782.193181818181529 ], [ 811.965909090909463, -859.852272727272407 ] ] } },
+{ "type": "Feature", "properties": { "start_node": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "end_node ": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "path_type ": "corridor", "accessibility ": null }, "geometry": { "type": "LineString", "coordinates": [ [ 811.965909090909463, -859.852272727272407 ], [ 887.886363636363967, -860.431818181817789 ] ] } },
+{ "type": "Feature", "properties": { "start_node": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "end_node ": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "path_type ": "corridor", "accessibility ": null }, "geometry": { "type": "LineString", "coordinates": [ [ 887.886363636363967, -860.431818181817789 ], [ 1119.125000000000227, -861.590909090908667 ] ] } },
+{ "type": "Feature", "properties": { "start_node": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "end_node ": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "path_type ": "room_transition", "accessibility ": null }, "geometry": { "type": "LineString", "coordinates": [ [ 1119.125000000000227, -861.590909090908667 ], [ 1119.704545454545723, -878.977272727272407 ] ] } },
+{ "type": "Feature", "properties": { "start_node": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "end_node ": "{e9d6ab01-b753-48e6-8101-d29fa4671d67}", "path_type ": "room_transition", "accessibility ": null }, "geometry": { "type": "LineString", "coordinates": [ [ 887.886363636363967, -860.431818181817789 ], [ 889.045454545454845, -879.556818181817789 ] ] } }
+]
+}
