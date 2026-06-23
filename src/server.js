@@ -3,6 +3,7 @@ import cors from 'cors';
 import { logger } from './middleware/logger.js';
 import { campusesRouter } from './routes/campuses.js';
 import { buildingsRouter } from './routes/buildings.js';
+import { floorsRouter } from './routes/floors.js';
 import { announcementsRouter } from './routes/announcements.js';
 import { alertsRouter } from './routes/alerts.js';
 import { eventsRouter } from './routes/events.js';
@@ -26,6 +27,7 @@ const v1 = express.Router();
 // Map & navigation 
 v1.use('/campuses', campusesRouter);
 v1.use('/buildings', buildingsRouter);
+v1.use('/floors', floorsRouter);
 
 //Announcements, alerts, events
 v1.use('/announcements', announcementsRouter);
