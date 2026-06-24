@@ -1,0 +1,149 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  extensions = [postgis()]
+}
+
+// --- ENUMS ---
+enum Role {
+  admin
+  student
+}
+
+enum IncidentType {
+  sexual
+  lostandfound
+  suspicious
+  other
+}
+
+enum ReportStatus {
+  pending
+  acknowledged
+  resolved
+  dismissed
+}
+
+// --- CORE TABLES ---
+model User {
+  id         String   @id @default(uuid()) @db.Uuid
+  email      String?  @unique
+  role       Role     @default(student)
+  device_id  String?  @unique
+  created_at DateTime @default(now())
+
+  reports    Report[]
+  sos_logs   SosLog[]
+}
+
+model Campus {
+  id       String   @id @default(uuid()) @db.Uuid
+  name     String
+  
+  // PostGIS Polygon for the campus boundary
+  boundary Unsupported("geometry(Polygon, 4326)")?
+
+  reports          Report[]
+  sos_logs         SosLog[]
+  navigation_nodes NavigationNode[]
+  events           Event[]
+}
+
+// --- EMERGENCY & REPORTING ---
+model Report {
+  id            String       @id @default(uuid()) @db.Uuid
+  user_id       String?      @db.Uuid
+  campus_id     String       @db.Uuid
+  incident_type IncidentType
+  description   String
+  photo_url     String?
+  status        ReportStatus @default(pending)
+  created_at    DateTime     @default(now())
+
+  user   User?  @relation(fields: [user_id], references: [id])
+  campus Campus @relation(fields: [campus_id], references: [id])
+}
+
+model SosLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  campus_id     String   @db.Uuid
+  user_id       String?  @db.Uuid
+  device_id     String?
+  dispatched_at DateTime @default(now())
+
+  campus Campus @relation(fields: [campus_id], references: [id])
+  user   User?  @relation(fields: [user_id], references: [id])
+}
+
+// --- SPATIAL & NAVIGATION ---
+model NavigationNode {
+  id          String  @id // String because QGIS exports alphanumeric IDs
+  campus_id   String  @db.Uuid
+  name        String?
+  floor_level Int     @default(1)
+
+  // PostGIS Point
+  geom Unsupported("geometry(Point, 4326)")?
+
+  campus Campus @relation(fields: [campus_id], references: [id])
+
+  source_edges NavigationEdge[] @relation("SourceEdges")
+  target_edges NavigationEdge[] @relation("TargetEdges")
+  events       Event[]
+}
+
+model NavigationEdge {
+  id             String  @id @default(uuid()) @db.Uuid
+  source_node_id String
+  target_node_id String
+  weight         Float
+  is_stairs      Boolean @default(false)
+
+  // PostGIS LineString
+  geom Unsupported("geometry(LineString, 4326)")?
+
+  source_node NavigationNode @relation("SourceEdges", fields: [source_node_id], references: [id])
+  target_node NavigationNode @relation("TargetEdges", fields: [target_node_id], references: [id])
+}
+
+// --- EVENTS & ANALYTICS ---
+model Event {
+  id               String   @id @default(uuid()) @db.Uuid
+  campus_id        String   @db.Uuid
+  location_node_id String?
+  title            String
+  host_type        Role
+  is_approved      Boolean  @default(false)
+  event_date       DateTime
+
+  campus        Campus          @relation(fields: [campus_id], references: [id])
+  location_node NavigationNode? @relation(fields: [location_node_id], references: [id])
+  participants  EventParticipant[]
+}
+
+model EventParticipant {
+  event_id  String   @db.Uuid
+  device_id String
+  joined_at DateTime @default(now())
+
+  event Event @relation(fields: [event_id], references: [id])
+
+  @@id([event_id, device_id])
+}
+
+model DailyActiveUser {
+  device_id  String
+  login_date DateTime @db.Date
+
+  @@id([device_id, login_date])
+}
