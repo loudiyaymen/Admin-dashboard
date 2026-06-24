@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
     "dev": "node --watch src/server.js"
@@ -21,8 +21,14 @@
   },
   "homepage": "https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard#readme",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.4.2",
+    "@prisma/client": "^7.4.2",
     "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "pg": "^8.18.0"
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "prisma": "^7.4.2"
   }
 }
