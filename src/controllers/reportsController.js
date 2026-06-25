@@ -32,7 +32,8 @@ export async function getAll(req, res) {
 
 export async function getOne(req, res) {
     try {
-        const result = await query('SELECT report_id, building_id, description, priority, status, created_at FROM reports WHERE report_id = $1', [req.params.id]);
+        const result = await query('SELECT report_id, building_id, description, priority, status, created_at FROM reports WHERE report_id = $1', 
+            [req.params.id]);
         if (result.rows.length === 0) return res.status(404).json({ error: 'Not found' });
         res.json(result.rows[0]);
 
@@ -41,17 +42,7 @@ export async function getOne(req, res) {
     }
 };
 
-export async function updateOne(req, res) {
-    try {
-        const { description, priority, status } = req.body;
-        const result = await query('UPDATE reports SET description = COALESCE($2, description), priority = COALESCE($3, priority), status = COALESCE($4, status) WHERE report_id = $1 RETURNING report_id, building_id, description, priority, status, created_at', 
-            [req.params.id, description, priority, status]);
-        if (result.rows.length === 0) return res.status(404).json({ error: 'Not found' });
-        res.json(result.rows[0]);
-    }catch (e){
-        res.status(500).json({ error: e.message });
-    }
-};
+
 
 export async function deleteOne(req, res) {
     try {

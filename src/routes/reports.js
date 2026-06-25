@@ -5,5 +5,4 @@ export const reportsRouter = Router();
 
 reportsRouter.get('/', reportsController.getAll);
 reportsRouter.get('/:id', reportsController.getOne);
-reportsRouter.patch('/:id', reportsController.updateOne);
 reportsRouter.delete('/:id', reportsController.deleteOne);
