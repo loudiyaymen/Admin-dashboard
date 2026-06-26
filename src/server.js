@@ -8,6 +8,7 @@ import { announcementsRouter } from './routes/announcements.js';
 import { alertsRouter } from './routes/alerts.js';
 import { eventsRouter } from './routes/events.js';
 import { sosRouter } from './routes/sos.js';
+import { reportsRouter } from './routes/reports.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -33,6 +34,10 @@ v1.use('/floors', floorsRouter);
 v1.use('/announcements', announcementsRouter);
 v1.use('/alerts', alertsRouter);
 v1.use('/events', eventsRouter);
+
+//reports
+v1.use('/reports', reportsRouter);
+
 
 // SOS
 v1.use('/sos', sosRouter);
