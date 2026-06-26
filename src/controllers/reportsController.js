@@ -75,7 +75,7 @@ export async function createOne(req, res) {
             return res.status(400).json({ error: 'Invalid type value' });
         }
 
-        if (!description || desvription.trim() === "") {
+        if (!description || description.trim() === "") {
             return res.status(400).json({ error: 'Description is required' });
         }
 
@@ -89,13 +89,13 @@ export async function createOne(req, res) {
             }
         } 
 
-        const parseFlooorId = floor_id ? parseInt(floor_id) : null;
+        const parseFloorId = floor_id ? parseInt(floor_id) : null;
 
         const result = await query(
             `INSERT INTO reports (type, description, floor_id, position) 
             VALUES ($1, $2, $3, $4) 
             RETURNING id, type, description, floor_id, position, status, created_at`,
-            [type, description.trim(), parseFlooorId, parsedPosition]
+            [type, description.trim(), parseFloorId, parsedPosition]
         );
 
         const report = result.rows[0];
