@@ -52,7 +52,7 @@ export async function getAll(req, res) {
 
         res.status(200).json({
             data: dataResult.rows,
-            total: parseInt(countResult.rows[0].count),
+            total: parseInt(countResult.rows[0]?.count ?? 0),
             page: pageNum,
             limit: limitNum,
         });
@@ -137,14 +137,14 @@ export async function getOne(req, res) {
                     'id', a.id,
                     'object_storage_key', a.object_storage_key,
                     'mime_type', a.mime_type,
-                    'size', a.size
+                    'size', a.size,
                     'created_at', a.created_at
                     
                     )
                 ) FILTER (WHERE a.id IS NOT NULL), '[]'
             ) AS attachments
             FROM reports r
-            LEFT JOIN attachments a ON a.report_id =  r.id
+            LEFT JOIN report_attachments a ON a.report_id =  r.id
             WHERE r.id = $1
             GROUP BY r.id`
             , 
@@ -168,7 +168,7 @@ export async function updateOne(req, res) {
         const id = Number(req.params.id) ;
         const { status } = req.body;
 
-        if (!Number.isInterger(id) || id <= 0) {
+        if (!Number.isInteger(id) || id <= 0) {
             return res.status(400).json({ error: 'Invalid report ID' });
         }
 
@@ -182,7 +182,7 @@ export async function updateOne(req, res) {
         UPDATE reports
         SET status = $1
         WHERE id = $2
-        RETURNING id, type, description, floor_id, position, status, created_at`
+        RETURNING id, type, description, floor_id, position, status, created_at`,
         [status, id]
     );
         if (result.rows.length === 0 ){
@@ -190,6 +190,9 @@ export async function updateOne(req, res) {
         }
 
         res.status(200).json(result.rows[0]);
+
+        
+
         
     }catch (error){
         console.error("updateOne error:", error);

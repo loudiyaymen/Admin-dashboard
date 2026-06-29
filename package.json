@@ -24,13 +24,14 @@
     "@prisma/adapter-pg": "^7.4.2",
     "@prisma/client": "^7.4.2",
     "cors": "^2.8.6",
-    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "multer": "^2.1.1",
     "pg": "^8.20.0",
+    "uuid": "^13.0.0",
     "ws": "^8.19.0"
   },
   "devDependencies": {
-    "prisma": "^6.19.2"
+    "dotenv": "^17.3.1",
+    "prisma": "^7.4.2"
   }
 }

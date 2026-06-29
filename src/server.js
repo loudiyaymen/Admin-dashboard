@@ -30,7 +30,7 @@ v1.use('/campuses', campusesRouter);
 v1.use('/buildings', buildingsRouter);
 v1.use('/floors', floorsRouter);
 
-//Announcements, alerts, events
+Announcements, alerts, events
 v1.use('/announcements', announcementsRouter);
 v1.use('/alerts', alertsRouter);
 v1.use('/events', eventsRouter);
