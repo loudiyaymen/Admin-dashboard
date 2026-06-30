@@ -1,5 +1,6 @@
 import { query } from "../db.js";
 import crypto from "crypto";
+// comment to commit
 
 function isAdmin(req) {
   return req.headers["x-admin"] === "true";
