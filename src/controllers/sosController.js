@@ -1,15 +1,21 @@
 import { query } from '../db.js';
 import crypto from 'crypto';
+import { prisma } from '../prismaClient.js';
+import { broadcast } from '../websocket.js';
 
 export async function trigger(req, res) {
   try {
-    const { deviceInstallationId, estimatedFloor } = req.body || {};
+    const { deviceInstallationId, estimatedFloor, campusId, userId } =
+      req.body || {};
     const did =
       deviceInstallationId || req.headers['x-device-installation-id'];
     if (!did) {
       return res.status(400).json({
         error: 'deviceInstallationId required (body or X-Device-Installation-Id)',
       });
+    }
+    if (!campusId) {
+      return res.status(400).json({ error: 'campusId required' });
     }
     const sosEventId = crypto.randomUUID();
     await query(
@@ -23,6 +29,15 @@ export async function trigger(req, res) {
           : null,
       ]
     );
+    await prisma.sosLog.create({
+      data: {
+        campus_id: campusId,
+        user_id: userId ?? null,
+        device_id: did,
+      },
+    });
+    broadcast('SOS_ACTIVE');
+    broadcast('PUSH_SOS_ACTIVE');
     res.status(201).json({ sosEventId, status: 'active' });
   } catch (e) {
     res.status(500).json({ error: e.message });

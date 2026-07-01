@@ -3,6 +3,7 @@ import * as alertsController from '../controllers/alertsController.js';
 
 export const alertsRouter = Router();
 
+alertsRouter.post('/create', alertsController.createGlobalAlert);
 alertsRouter.post('/', alertsController.createOne);
 alertsRouter.get('/', alertsController.getAll);
 alertsRouter.get('/:id', alertsController.getOne);
