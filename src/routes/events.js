@@ -10,3 +10,4 @@ eventsRouter.patch("/:id", eventsController.updateOne);
 eventsRouter.delete("/:id", eventsController.deleteOne);
 eventsRouter.patch("/:id/approve", eventsController.approveEvent);
 eventsRouter.delete("/:id/reject", eventsController.denyEvent);
+eventsRouter.post("/:id/drawWinner", eventsController.drawWinner);

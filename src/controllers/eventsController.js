@@ -121,3 +121,27 @@ export async function denyEvent(req, res) {
     res.status(404).json({ error: "Event not found" });
   }
 }
+
+export const drawWinner = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const participants = await prisma.eventParticipant.findMany({
+      where: { event_id: id },
+    });
+
+    if (participants.length === 0) {
+      return res.status(404).json({ message: "No participants found" });
+    }
+
+    const randomIndex = Math.floor(Math.random() * participants.length);
+    const winner = participants[randomIndex];
+
+    res.json({
+      message: "Winner selected",
+      winner: winner.device_id,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to draw winner" });
+  }
+};
