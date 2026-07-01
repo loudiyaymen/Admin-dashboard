@@ -1,4 +1,7 @@
+import crypto from 'crypto';
 import { query } from '../db.js';
+import { prisma } from '../prismaClient.js';
+import { broadcast } from '../websocket.js';
 
 export async function getAll(req, res) {
   try {
@@ -167,6 +170,60 @@ export async function deleteOne(req, res) {
       return res.status(404).json({ error: 'Not found' });
     }
     res.status(204).send();
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+}
+
+export async function createGlobalAlert(req, res) {
+  try {
+    const {
+      message,
+      alert_type,
+      severity,
+      starts_at,
+      ends_at,
+      created_by_admin_id,
+    } = req.body;
+    if (!message || typeof message !== 'string' || message.trim() === '') {
+      return res.status(400).json({ error: 'message required' });
+    }
+    const alert_id = crypto.randomUUID();
+    await prisma.$executeRaw`
+      INSERT INTO alerts (
+        alert_id,
+        alert_type,
+        message,
+        severity,
+        campus_id,
+        building_id,
+        starts_at,
+        ends_at,
+        created_by_admin_id
+      ) VALUES (
+        ${alert_id},
+        ${alert_type ?? null},
+        ${message.trim()},
+        ${severity ?? null},
+        ${null},
+        ${null},
+        ${starts_at ? new Date(starts_at) : null},
+        ${ends_at ? new Date(ends_at) : null},
+        ${created_by_admin_id ?? null}
+      )
+    `;
+    broadcast('ALERT_CREATED');
+    broadcast('PUSH_ALERT');
+    res.status(201).json({
+      alert_id,
+      alert_type: alert_type ?? null,
+      message: message.trim(),
+      severity: severity ?? null,
+      campus_id: null,
+      building_id: null,
+      starts_at: starts_at ?? null,
+      ends_at: ends_at ?? null,
+    });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
