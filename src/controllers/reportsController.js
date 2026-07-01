@@ -1,5 +1,13 @@
 // This file contains the controller functions for handling CRUD operations on reports.
 import { query } from '../db.js';
+import { prisma } from '../prismaClient.js';
+
+const incidentTypeMap = {
+  lost_item: 'lostandfound',
+  damaged_vehicle: 'other',
+  safety_concern: 'suspicious',
+  sexual_violence: 'sexual',
+};
 
 
 //fetch all reports with optional sorting and ordering
@@ -67,7 +75,7 @@ export async function getAll(req, res) {
 export async function createOne(req, res) {
 
     try{
-        const { type, description, floor_id, position } = req.body;
+        const { type, description, floor_id, position, campus_id, user_id } = req.body;
         const file = req.file;
         const validTypes = ["lost_item", "damaged_vehicle", "safety_concern", "sexual_violence"];
 
@@ -77,6 +85,20 @@ export async function createOne(req, res) {
 
         if (!description || description.trim() === "") {
             return res.status(400).json({ error: 'Description is required' });
+        }
+
+        if (campus_id) {
+            const incident_type = incidentTypeMap[type];
+            const created = await prisma.report.create({
+                data: {
+                    campus_id,
+                    user_id: user_id || null,
+                    incident_type,
+                    description: description.trim(),
+                    photo_url: file ? file.path : null,
+                },
+            });
+            return res.status(201).json(created);
         }
 
         let parsedPosition = null;

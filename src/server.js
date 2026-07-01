@@ -35,15 +35,19 @@ v1.use('/announcements', announcementsRouter);
 v1.use('/alerts', alertsRouter);
 v1.use('/events', eventsRouter);
 
-//reports
-v1.use('/reports', reportsRouter);
-
-
 // SOS
 v1.use('/sos', sosRouter);
 
+v1.use('/reports', reportsRouter);
 
 app.use('/api/v1', v1);
+
+app.use((err, req, res, next) => {
+  if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+    return res.status(400).json({ error: 'Invalid JSON' });
+  }
+  next(err);
+});
 
 app.listen(PORT, () => {
   console.log(`API listening on http://localhost:${PORT}`);

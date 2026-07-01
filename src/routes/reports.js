@@ -2,6 +2,7 @@
 import { Router } from 'express';
 import multer from 'multer';
 import * as reportsController from '../controllers/reportsController.js';
+import { validateReportJsonBody } from '../middleware/validateReportJsonBody.js';
 
 const upload = multer({ 
     dest: 'uploads/',
@@ -17,7 +18,12 @@ const upload = multer({
 
 export const reportsRouter = Router();
 
-reportsRouter.post('/', upload.single('photo'), reportsController.createOne);
+reportsRouter.post(
+  '/',
+  upload.single('photo'),
+  validateReportJsonBody,
+  reportsController.createOne
+);
 reportsRouter.get('/', reportsController.getAll);
 reportsRouter.get('/:id', reportsController.getOne);
 reportsRouter.patch('/:id', reportsController.updateOne);
