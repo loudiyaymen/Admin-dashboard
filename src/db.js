@@ -1,4 +1,4 @@
-import pg from 'pg';
+import pg from "pg";
 
 const { Pool } = pg;
 
@@ -10,10 +10,10 @@ export async function query(text, params) {
   if (pool) {
     return pool.query(text, params);
   }
-  const isSelect = text.trim().toUpperCase().startsWith('SELECT');
+  const isSelect = text.trim().toUpperCase().startsWith("SELECT");
   return Promise.resolve({
     rows: [],
-    rowCount: isSelect ? 0 : 1
+    rowCount: isSelect ? 0 : 1,
   });
 }
 

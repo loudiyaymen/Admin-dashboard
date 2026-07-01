@@ -18,25 +18,25 @@ app.use(express.json());
 app.use(logger);
 
 // health check
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+app.get("/health", (req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
 // API v1 router
 const v1 = express.Router();
 
-// Map & navigation 
-v1.use('/campuses', campusesRouter);
-v1.use('/buildings', buildingsRouter);
-v1.use('/floors', floorsRouter);
+// Map & navigation
+v1.use("/campuses", campusesRouter);
+v1.use("/buildings", buildingsRouter);
+v1.use("/floors", floorsRouter);
 
 //Announcements, alerts, events
-v1.use('/announcements', announcementsRouter);
-v1.use('/alerts', alertsRouter);
-v1.use('/events', eventsRouter);
+v1.use("/announcements", announcementsRouter);
+v1.use("/alerts", alertsRouter);
+v1.use("/events", eventsRouter);
 
 // SOS
-v1.use('/sos', sosRouter);
+v1.use("/sos", sosRouter);
 
 v1.use('/reports', reportsRouter);
 
