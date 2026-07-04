@@ -1,7 +1,12 @@
-import prisma from "../database.js";
+import { prisma } from "../prismaClient.js";
+import {
+  API_ERRORS,
+  sendError,
+  sendInternalError,
+} from "../errors/apiErrors.js";
 
 function isAdmin(req) {
-  return req.headers["x-admin"] === "true";
+  return req.admin?.role === "admin";
 }
 
 export async function getAll(req, res) {
@@ -26,7 +31,7 @@ export async function getAll(req, res) {
 
     res.json({ data: events });
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
@@ -37,10 +42,10 @@ export async function getOne(req, res) {
       include: { campus: true, location_node: true },
     });
 
-    if (!event) return res.status(404).json({ error: "Event not found" });
+    if (!event) return sendError(res, API_ERRORS.EVENT_NOT_FOUND);
     res.json(event);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
@@ -63,7 +68,7 @@ export async function createOne(req, res) {
 
     res.status(201).json(newEvent);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
@@ -82,7 +87,7 @@ export async function updateOne(req, res) {
     });
     res.json(updatedEvent);
   } catch (e) {
-    res.status(404).json({ error: "Event not found or invalid data" });
+    sendError(res, API_ERRORS.EVENT_NOT_FOUND_OR_INVALID);
   }
 }
 
@@ -91,13 +96,13 @@ export async function deleteOne(req, res) {
     await prisma.event.delete({ where: { id: req.params.id } });
     res.status(204).send();
   } catch (e) {
-    res.status(404).json({ error: "Event not found" });
+    sendError(res, API_ERRORS.EVENT_NOT_FOUND);
   }
 }
 
 export async function approveEvent(req, res) {
   try {
-    if (!isAdmin(req)) return res.status(403).json({ error: "Admin only" });
+    if (!isAdmin(req)) return sendError(res, API_ERRORS.ADMIN_ONLY);
 
     const event = await prisma.event.update({
       where: { id: req.params.id },
@@ -105,20 +110,20 @@ export async function approveEvent(req, res) {
     });
     res.json(event);
   } catch (e) {
-    res.status(404).json({ error: "Event not found" });
+    sendError(res, API_ERRORS.EVENT_NOT_FOUND);
   }
 }
 
 export async function denyEvent(req, res) {
   try {
-    if (!isAdmin(req)) return res.status(403).json({ error: "Admin only" });
+    if (!isAdmin(req)) return sendError(res, API_ERRORS.ADMIN_ONLY);
 
     await prisma.event.delete({
       where: { id: req.params.id },
     });
     res.json({ message: "Event rejected" });
   } catch (e) {
-    res.status(404).json({ error: "Event not found" });
+    sendError(res, API_ERRORS.EVENT_NOT_FOUND);
   }
 }
 
@@ -142,6 +147,6 @@ export const drawWinner = async (req, res) => {
       winner: winner.device_id,
     });
   } catch (error) {
-    res.status(500).json({ error: "Failed to draw winner" });
+    sendError(res, API_ERRORS.DRAW_WINNER_FAILED);
   }
 };

@@ -1,34 +1,35 @@
-import { query } from '../db.js';
-import crypto from 'crypto';
-import { prisma } from '../prismaClient.js';
-import { broadcast } from '../websocket.js';
+import crypto from "crypto";
+import { prisma } from "../prismaClient.js";
+import { broadcast } from "../websocket.js";
+import {
+  API_ERRORS,
+  sendError,
+  sendInternalError,
+} from "../errors/apiErrors.js";
 
 export async function trigger(req, res) {
   try {
     const { deviceInstallationId, estimatedFloor, campusId, userId } =
       req.body || {};
-    const did =
-      deviceInstallationId || req.headers['x-device-installation-id'];
+    const did = deviceInstallationId || req.headers["x-device-installation-id"];
     if (!did) {
-      return res.status(400).json({
-        error: 'deviceInstallationId required (body or X-Device-Installation-Id)',
-      });
+      return sendError(res, API_ERRORS.DEVICE_INSTALLATION_ID_REQUIRED);
     }
     if (!campusId) {
-      return res.status(400).json({ error: 'campusId required' });
+      return sendError(res, API_ERRORS.SOS_CAMPUS_ID_REQUIRED);
     }
     const sosEventId = crypto.randomUUID();
-    await query(
-      `INSERT INTO sos_events (sos_event_id, device_installation_id, status, estimated_floor_id)
-       VALUES ($1, $2, 'active', $3)`,
-      [
-        sosEventId,
-        did,
-        estimatedFloor && typeof estimatedFloor === 'string'
-          ? estimatedFloor
-          : null,
-      ]
-    );
+    await prisma.sosEvent.create({
+      data: {
+        sos_event_id: sosEventId,
+        device_installation_id: did,
+        status: "active",
+        estimated_floor_id:
+          estimatedFloor && typeof estimatedFloor === "string"
+            ? estimatedFloor
+            : null,
+      },
+    });
     await prisma.sosLog.create({
       data: {
         campus_id: campusId,
@@ -36,90 +37,80 @@ export async function trigger(req, res) {
         device_id: did,
       },
     });
-    broadcast('SOS_ACTIVE');
-    broadcast('PUSH_SOS_ACTIVE');
-    res.status(201).json({ sosEventId, status: 'active' });
+    broadcast("SOS_ACTIVE");
+    broadcast("PUSH_SOS_ACTIVE");
+    res.status(201).json({ sosEventId, status: "active" });
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
 export async function end(req, res) {
   try {
-    const result = await query(
-      "UPDATE sos_events SET status = 'ended', ended_at = NOW() WHERE sos_event_id = $1 RETURNING sos_event_id, status, ended_at",
-      [req.params.sosId]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
-    }
-    res.json(result.rows[0]);
+    const updated = await prisma.sosEvent.update({
+      where: { sos_event_id: req.params.sosId },
+      data: { status: "ended", ended_at: new Date() },
+      select: { sos_event_id: true, status: true, ended_at: true },
+    });
+    res.json(updated);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    if (e.code === "P2025") {
+      return sendError(res, API_ERRORS.NOT_FOUND);
+    }
+    sendInternalError(res);
   }
 }
 
 export async function getAll(req, res) {
   try {
     const { status, limit = 50, offset = 0 } = req.query;
-    let sql =
-      'SELECT sos_event_id, device_installation_id, status, created_at, ended_at, estimated_floor_id FROM sos_events WHERE 1=1';
-    const params = [];
-    let i = 1;
-    if (status) {
-      params.push(status);
-      sql += ` AND status = $${i++}`;
-    }
-    sql += ` ORDER BY created_at DESC LIMIT $${i++} OFFSET $${i}`;
-    params.push(parseInt(limit, 10), parseInt(offset, 10));
-    const result = await query(sql, params);
-    res.json({ data: result.rows });
+    const data = await prisma.sosEvent.findMany({
+      where: {
+        ...(status ? { status } : {}),
+      },
+      orderBy: { created_at: "desc" },
+      take: parseInt(limit, 10),
+      skip: parseInt(offset, 10),
+    });
+    res.json({ data });
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
 export async function getOne(req, res) {
   try {
-    const result = await query(
-      'SELECT sos_event_id, device_installation_id, status, created_at, ended_at, estimated_floor_id FROM sos_events WHERE sos_event_id = $1',
-      [req.params.id]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
+    const row = await prisma.sosEvent.findUnique({
+      where: { sos_event_id: req.params.id },
+    });
+    if (!row) {
+      return sendError(res, API_ERRORS.NOT_FOUND);
     }
-    res.json(result.rows[0]);
+    res.json(row);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
 export async function updateOne(req, res) {
   try {
     const { status, ended_at } = req.body;
-    const updates = [];
-    const params = [req.params.id];
-    let i = 2;
-    if (status !== undefined) {
-      updates.push(`status = $${i++}`);
-      params.push(status);
+    const data = {};
+    if (status !== undefined) data.status = status;
+    if (ended_at !== undefined) data.ended_at = ended_at;
+
+    if (Object.keys(data).length === 0) {
+      return sendError(res, API_ERRORS.NO_FIELDS_TO_UPDATE);
     }
-    if (ended_at !== undefined) {
-      updates.push(`ended_at = $${i++}`);
-      params.push(ended_at);
-    }
-    if (updates.length === 0) {
-      return res.status(400).json({ error: 'No fields to update' });
-    }
-    const result = await query(
-      `UPDATE sos_events SET ${updates.join(', ')} WHERE sos_event_id = $1 RETURNING sos_event_id, device_installation_id, status, created_at, ended_at, estimated_floor_id`,
-      params
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
-    }
-    res.json(result.rows[0]);
+    const updated = await prisma.sosEvent.update({
+      where: { sos_event_id: req.params.id },
+      data,
+    });
+    res.json(updated);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    if (e.code === "P2025") {
+      return sendError(res, API_ERRORS.NOT_FOUND);
+    }
+    sendInternalError(res);
   }
 }

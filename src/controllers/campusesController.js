@@ -1,28 +1,42 @@
-import { query } from '../db.js';
+import { prisma } from "../prismaClient.js";
+import {
+  API_ERRORS,
+  sendError,
+  sendInternalError,
+} from "../errors/apiErrors.js";
+
+function toApiCampus(row) {
+  return {
+    campus_id: row.id,
+    name: row.name,
+    created_at: row.created_at ?? null,
+  };
+}
 
 export async function getAll(_req, res) {
   try {
-    const result = await query(
-      'SELECT campus_id, name, created_at FROM campuses ORDER BY name'
-    );
-    res.json({ data: result.rows });
+    const result = await prisma.campus.findMany({
+      orderBy: { name: "asc" },
+      select: { id: true, name: true },
+    });
+    res.json({ data: result.map(toApiCampus) });
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
 export async function getOne(req, res) {
   try {
-    const result = await query(
-      'SELECT campus_id, name, created_at FROM campuses WHERE campus_id = $1',
-      [req.params.id]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
+    const campus = await prisma.campus.findUnique({
+      where: { id: req.params.id },
+      select: { id: true, name: true },
+    });
+    if (!campus) {
+      return sendError(res, API_ERRORS.NOT_FOUND);
     }
-    res.json(result.rows[0]);
+    res.json(toApiCampus(campus));
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
@@ -30,15 +44,15 @@ export async function createOne(req, res) {
   try {
     const { campus_id, name } = req.body;
     if (!campus_id || !name) {
-      return res.status(400).json({ error: 'campus_id and name required' });
+      return sendError(res, API_ERRORS.CAMPUS_ID_AND_NAME_REQUIRED);
     }
-    await query(
-      'INSERT INTO campuses (campus_id, name) VALUES ($1, $2)',
-      [campus_id, name]
-    );
-    res.status(201).json({ campus_id, name });
+    const created = await prisma.campus.create({
+      data: { id: campus_id, name },
+      select: { id: true, name: true },
+    });
+    res.status(201).json(toApiCampus(created));
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
@@ -46,32 +60,33 @@ export async function updateOne(req, res) {
   try {
     const { name } = req.body;
     if (!name) {
-      return res.status(400).json({ error: 'name required' });
+      return sendError(res, API_ERRORS.CAMPUS_NAME_REQUIRED);
     }
-    const result = await query(
-      'UPDATE campuses SET name = $2 WHERE campus_id = $1 RETURNING campus_id, name, created_at',
-      [req.params.id, name]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
+    const updated = await prisma.campus.update({
+      where: { id: req.params.id },
+      data: { name },
+      select: { id: true, name: true },
+    });
+    if (!updated) {
+      return sendError(res, API_ERRORS.NOT_FOUND);
     }
-    res.json(result.rows[0]);
+    res.json(toApiCampus(updated));
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    if (e.code === "P2025") {
+      return sendError(res, API_ERRORS.NOT_FOUND);
+    }
+    sendInternalError(res);
   }
 }
 
 export async function deleteOne(req, res) {
   try {
-    const result = await query(
-      'DELETE FROM campuses WHERE campus_id = $1 RETURNING campus_id',
-      [req.params.id]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
-    }
+    await prisma.campus.delete({ where: { id: req.params.id } });
     res.status(204).send();
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    if (e.code === "P2025") {
+      return sendError(res, API_ERRORS.NOT_FOUND);
+    }
+    sendInternalError(res);
   }
 }

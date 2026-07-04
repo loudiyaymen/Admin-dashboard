@@ -1,253 +1,214 @@
-// This file contains the controller functions for handling CRUD operations on reports.
-import { query } from '../db.js';
-import { prisma } from '../prismaClient.js';
+import { prisma } from "../prismaClient.js";
+import {
+  API_ERRORS,
+  sendError,
+  sendInternalError,
+} from "../errors/apiErrors.js";
 
-const incidentTypeMap = {
-  lost_item: 'lostandfound',
-  damaged_vehicle: 'other',
-  safety_concern: 'suspicious',
-  sexual_violence: 'sexual',
+const apiToIncidentType = {
+  lost_item: "lostandfound",
+  damaged_vehicle: "other",
+  safety_concern: "suspicious",
+  sexual_violence: "sexual",
 };
 
+const incidentTypeToApi = {
+  lostandfound: "lost_item",
+  other: "damaged_vehicle",
+  suspicious: "safety_concern",
+  sexual: "sexual_violence",
+};
 
-//fetch all reports with optional sorting and ordering
+const apiToPrismaStatus = {
+  new: "pending",
+  in_review: "acknowledged",
+  in_progress: "acknowledged",
+  resolved: "resolved",
+  dismissed: "dismissed",
+};
+
+const prismaToApiStatus = {
+  pending: "new",
+  acknowledged: "in_review",
+  resolved: "resolved",
+  dismissed: "dismissed",
+};
+
+function toApiReport(row) {
+  return {
+    id: row.id,
+    type: incidentTypeToApi[row.incident_type] ?? row.incident_type,
+    description: row.description,
+    floor_id: null,
+    position: null,
+    status: prismaToApiStatus[row.status] ?? row.status,
+    created_at: row.created_at,
+    campus_id: row.campus_id,
+    user_id: row.user_id,
+    photo_url: row.photo_url,
+    attachments: [],
+  };
+}
+
 export async function getAll(req, res) {
-    try {
+  try {
+    const {
+      sort_by = "created_at",
+      order = "DESC",
+      page = 1,
+      limit = 10,
+      status,
+      type,
+    } = req.query;
 
-        const{
-            sort_by = "created_at",
-            order = "DESC",
-            page = 1,
-            limit = 10,
-            status,
-            type,
-        } = req.query;
+    const pageNum = Math.max(1, parseInt(page, 10) || 1);
+    const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 10));
+    const offset = (pageNum - 1) * limitNum;
 
-        const pageNum = Math.max(1, parseInt(page) || 1);
-        const limitNum = Math.min(100, Math.max(1, parseInt(limit) || 10));
-        const offset = (pageNum - 1) * limitNum;
+    const sortableMap = {
+      id: "id",
+      created_at: "created_at",
+      status: "status",
+      type: "incident_type",
+    };
+    const field = sortableMap[sort_by] ?? "created_at";
+    const direction = String(order).toUpperCase() === "ASC" ? "asc" : "desc";
 
-        const validSortFields = ["id", "type", "status", "created_at", "floor_id"];
-        const validOrder = ["ASC", "DESC"];
-        const validStatuses = ["new", "in_review", "resolved"];
-        const validTypes = ["lost_item", "damaged_vehicle", "safety_concern", "sexual_violence"];
-
-        const field = validSortFields.includes(sort_by) ? sort_by : "created_at";
-        const direction = validOrder.includes(order.toUpperCase()) ? order.toUpperCase() : "DESC";
-        const conditions = [];
-        const params = [];
-
-        if (type && validTypes.includes(type)){
-            conditions.push(`type = $${params.length + 1}`);
-            params.push(type);
-        }
-
-        const whereClause = conditions.length ? `WHERE ${conditions.join(" AND ")}` : "";
-
-        const dataQuery = `
-            SELECT id, type, description, floor_id, position, status, created_at
-            FROM reports
-            ${whereClause}
-            ORDER BY ${field} ${direction}
-            LIMIT $${params.length + 1} OFFSET $${params.length + 2}
-        `;
-
-        const countQuery = `SELECT COUNT(*) FROM reports ${whereClause}`;
-        const [dataResult, countResult] = await Promise.all([
-            query(dataQuery, [...params, limitNum, offset]),
-            query(countQuery, params)
-        ]);
-
-        res.status(200).json({
-            data: dataResult.rows,
-            total: parseInt(countResult.rows[0].count),
-            page: pageNum,
-            limit: limitNum,
-        });
-        
-    }catch (error){
-        console.error("getAll error:", error);
-        res.status(500).json({ error: "Internal Server Error"});
+    const where = {};
+    if (type) {
+      const mappedType = apiToIncidentType[type];
+      if (!mappedType) {
+        return sendError(res, API_ERRORS.REPORT_INVALID_TYPE);
+      }
+      where.incident_type = mappedType;
     }
-};
+    if (status) {
+      const mappedStatus = apiToPrismaStatus[status];
+      if (!mappedStatus) {
+        return sendError(res, API_ERRORS.REPORT_INVALID_STATUS);
+      }
+      where.status = mappedStatus;
+    }
 
-//create a new report with uplade foto logic
+    const [rows, total] = await Promise.all([
+      prisma.report.findMany({
+        where,
+        orderBy: { [field]: direction },
+        take: limitNum,
+        skip: offset,
+      }),
+      prisma.report.count({ where }),
+    ]);
+
+    res.status(200).json({
+      data: rows.map(toApiReport),
+      total,
+      page: pageNum,
+      limit: limitNum,
+    });
+  } catch (error) {
+    console.error("getAll error:", error);
+    sendInternalError(res);
+  }
+}
+
 export async function createOne(req, res) {
+  try {
+    const { type, description, campus_id, user_id } = req.body;
+    const file = req.file;
 
-    try{
-        const { type, description, floor_id, position, campus_id, user_id } = req.body;
-        const file = req.file;
-        const validTypes = ["lost_item", "damaged_vehicle", "safety_concern", "sexual_violence"];
-
-        if (!type || !validTypes.includes(type)) {
-            return res.status(400).json({ error: 'Invalid type value' });
-        }
-
-        if (!description || description.trim() === "") {
-            return res.status(400).json({ error: 'Description is required' });
-        }
-
-        if (campus_id) {
-            const incident_type = incidentTypeMap[type];
-            const created = await prisma.report.create({
-                data: {
-                    campus_id,
-                    user_id: user_id || null,
-                    incident_type,
-                    description: description.trim(),
-                    photo_url: file ? file.path : null,
-                },
-            });
-            return res.status(201).json(created);
-        }
-
-        let parsedPosition = null;
-        if (position) {
-
-            try {
-                parsedPosition = JSON.parse(position);
-            } catch {
-                return res.status(400).json({ error: 'Invalid position format. Must be a JSON object.' });
-            }
-        } 
-
-        const parseFloorId = floor_id ? parseInt(floor_id) : null;
-
-        const result = await query(
-            `INSERT INTO reports (type, description, floor_id, position) 
-            VALUES ($1, $2, $3, $4) 
-            RETURNING id, type, description, floor_id, position, status, created_at`,
-            [type, description.trim(), parseFloorId, parsedPosition]
-        );
-
-        const report = result.rows[0];
-
-        if (file){
-            await query(
-                `INSERT INTO report_attachments (report_id, object_storage_key, mime_type, size) 
-                VALUES ($1, $2, $3, $4)`,
-                [report.id, file.path, file.mimetype, file.size]
-            );
-        }
-
-
-        res.status(201).json(report);
-
-    }catch(error){
-        console.error("createOne error:", error);
-        res.status(500).json({ error: "Internal Server Error "});
+    const incident_type = apiToIncidentType[type];
+    if (!incident_type) {
+      return sendError(res, API_ERRORS.REPORT_INVALID_TYPE);
     }
+
+    if (!description || description.trim() === "") {
+      return sendError(res, API_ERRORS.REPORT_DESCRIPTION_REQUIRED);
+    }
+
+    if (!campus_id) {
+      return sendError(res, API_ERRORS.REPORT_CAMPUS_REQUIRED);
+    }
+
+    const created = await prisma.report.create({
+      data: {
+        campus_id,
+        user_id: user_id || null,
+        incident_type,
+        description: description.trim(),
+        photo_url: file ? file.path : null,
+      },
+    });
+
+    res.status(201).json(toApiReport(created));
+  } catch (error) {
+    console.error("createOne error:", error);
+    sendInternalError(res);
+  }
 }
 
-//fetch a report by a specific Id
 export async function getOne(req, res) {
-    try {
-
-        const id  = Number(req.params.id);
-
-        // Validate the id
-        if (!Number.isInteger(id) || id <= 0) {
-            return res.status(400).json({ error: 'Invalid report ID' });
-        }
-
-
-        const result = await query(`
-            SELECT r.id, r.type, r.description, r.floor_id, r.position, r.status, r.created_at,
-            COALESCE(
-                json_agg(
-                    json_build_object(
-                    'id', a.id,
-                    'object_storage_key', a.object_storage_key,
-                    'mime_type', a.mime_type,
-                    'size', a.size
-                    'created_at', a.created_at
-                    
-                    )
-                ) FILTER (WHERE a.id IS NOT NULL), '[]'
-            ) AS attachments
-            FROM reports r
-            LEFT JOIN attachments a ON a.report_id =  r.id
-            WHERE r.id = $1
-            GROUP BY r.id`
-            , 
-            [id]);
-
-        if (result.rows.length === 0) return res.status(404).json({ error: 'Report Not found' });
-
-        res.status(200).json(result.rows[0]);
-
-    }catch (error){
-        console.error("getOne error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
+  try {
+    const id = req.params.id;
+    if (!id || typeof id !== "string") {
+      return sendError(res, API_ERRORS.REPORT_ID_INVALID);
     }
-};
 
-//update the status of a report
-export async function updateOne(req, res) {
-
-    try{
-
-        const id = Number(req.params.id) ;
-        const { status } = req.body;
-
-        if (!Number.isInterger(id) || id <= 0) {
-            return res.status(400).json({ error: 'Invalid report ID' });
-        }
-
-        const validStatuses = ["new", "in_progress", "resolved"];
-        if (!status || !validStatuses.includes(status)) {  
-            return res.status(400).json({ error: 'Invalid status value' });
-         }
-        
-
-        const result = await query( ` 
-        UPDATE reports
-        SET status = $1
-        WHERE id = $2
-        RETURNING id, type, description, floor_id, position, status, created_at`
-        [status, id]
-    );
-        if (result.rows.length === 0 ){
-            return res.status(404).json({ error: 'Report not found' });
-        }
-
-        res.status(200).json(result.rows[0]);
-        
-    }catch (error){
-        console.error("updateOne error:", error);
-        res.status(500).json({ error: "Internal Server Error "});
+    const report = await prisma.report.findUnique({ where: { id } });
+    if (!report) {
+      return sendError(res, API_ERRORS.REPORT_NOT_FOUND);
     }
-    
+
+    res.status(200).json(toApiReport(report));
+  } catch (error) {
+    console.error("getOne error:", error);
+    sendInternalError(res);
+  }
 }
 
+export async function updateOne(req, res) {
+  try {
+    const id = req.params.id;
+    const { status } = req.body;
 
-//delete the report by a specific Id
-export async function deleteOne(req, res) {
-    try {
-
-        const id = Number(req.params.id);
-
-        
-        if (!Number.isInteger(id) || id <= 0) {
-            return res.status(400).json({ error: 'Invalid report ID' });
-        }
-
-        const result = await query(
-            'DELETE FROM reports WHERE id = $1 '
-        ,
-            [id]
-        );
-
-        if (result.rowCount === 0) return res.status(404).json({ error: 'Not foud' });
-
-
-        res.json(204).send();
-
-    }catch (error){
-        console.error("deleteOne error:", error);
-        res.status(500).json({ error: "Internal Server Error "});
+    if (!id || typeof id !== "string") {
+      return sendError(res, API_ERRORS.REPORT_ID_INVALID);
     }
-};
 
+    const mappedStatus = apiToPrismaStatus[status];
+    if (!mappedStatus) {
+      return sendError(res, API_ERRORS.REPORT_INVALID_STATUS);
+    }
 
+    const updated = await prisma.report.update({
+      where: { id },
+      data: { status: mappedStatus },
+    });
 
+    res.status(200).json(toApiReport(updated));
+  } catch (error) {
+    if (error.code === "P2025") {
+      return sendError(res, API_ERRORS.REPORT_NOT_FOUND);
+    }
+    console.error("updateOne error:", error);
+    sendInternalError(res);
+  }
+}
+
+export async function deleteOne(req, res) {
+  try {
+    const id = req.params.id;
+    if (!id || typeof id !== "string") {
+      return sendError(res, API_ERRORS.REPORT_ID_INVALID);
+    }
+
+    await prisma.report.delete({ where: { id } });
+    res.status(204).send();
+  } catch (error) {
+    if (error.code === "P2025") {
+      return sendError(res, API_ERRORS.REPORT_NOT_FOUND);
+    }
+    console.error("deleteOne error:", error);
+    sendInternalError(res);
+  }
+}

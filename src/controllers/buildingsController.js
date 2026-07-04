@@ -1,38 +1,39 @@
-import { query } from '../db.js';
+import { prisma } from "../prismaClient.js";
+import {
+  API_ERRORS,
+  sendError,
+  sendInternalError,
+} from "../errors/apiErrors.js";
 
 export async function getAll(req, res) {
   try {
     const { campus_id, campusId, limit = 100, offset = 0 } = req.query;
     const campus = campus_id || campusId;
-    let sql =
-      'SELECT building_id, campus_id, code, name, created_at FROM buildings WHERE 1=1';
-    const params = [];
-    let i = 1;
-    if (campus) {
-      params.push(campus);
-      sql += ` AND campus_id = $${i++}`;
-    }
-    sql += ` ORDER BY name LIMIT $${i++} OFFSET $${i}`;
-    params.push(parseInt(limit, 10), parseInt(offset, 10));
-    const result = await query(sql, params);
-    res.json({ data: result.rows });
+    const data = await prisma.building.findMany({
+      where: {
+        ...(campus ? { campus_id: campus } : {}),
+      },
+      orderBy: { name: "asc" },
+      take: parseInt(limit, 10),
+      skip: parseInt(offset, 10),
+    });
+    res.json({ data });
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
 export async function getOne(req, res) {
   try {
-    const result = await query(
-      'SELECT building_id, campus_id, code, name, created_at FROM buildings WHERE building_id = $1',
-      [req.params.id]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
+    const row = await prisma.building.findUnique({
+      where: { building_id: req.params.id },
+    });
+    if (!row) {
+      return sendError(res, API_ERRORS.NOT_FOUND);
     }
-    res.json(result.rows[0]);
+    res.json(row);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
@@ -40,63 +41,54 @@ export async function createOne(req, res) {
   try {
     const { building_id, campus_id, code, name } = req.body;
     if (!building_id || !campus_id || !name) {
-      return res.status(400).json({ error: 'building_id, campus_id, name required' });
+      return sendError(res, API_ERRORS.BUILDING_REQUIRED_FIELDS);
     }
-    await query(
-      'INSERT INTO buildings (building_id, campus_id, code, name) VALUES ($1, $2, $3, $4)',
-      [building_id, campus_id, code ?? null, name]
-    );
+    await prisma.building.create({
+      data: {
+        building_id,
+        campus_id,
+        code: code ?? null,
+        name,
+      },
+    });
     res.status(201).json({ building_id, campus_id, code, name });
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    sendInternalError(res);
   }
 }
 
 export async function updateOne(req, res) {
   try {
     const { campus_id, code, name } = req.body;
-    const updates = [];
-    const params = [req.params.id];
-    let i = 2;
-    if (campus_id !== undefined) {
-      updates.push(`campus_id = $${i++}`);
-      params.push(campus_id);
+    const data = {};
+    if (campus_id !== undefined) data.campus_id = campus_id;
+    if (code !== undefined) data.code = code;
+    if (name !== undefined) data.name = name;
+
+    if (Object.keys(data).length === 0) {
+      return sendError(res, API_ERRORS.NO_FIELDS_TO_UPDATE);
     }
-    if (code !== undefined) {
-      updates.push(`code = $${i++}`);
-      params.push(code);
-    }
-    if (name !== undefined) {
-      updates.push(`name = $${i++}`);
-      params.push(name);
-    }
-    if (updates.length === 0) {
-      return res.status(400).json({ error: 'No fields to update' });
-    }
-    const result = await query(
-      `UPDATE buildings SET ${updates.join(', ')} WHERE building_id = $1 RETURNING building_id, campus_id, code, name, created_at`,
-      params
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
-    }
-    res.json(result.rows[0]);
+    const updated = await prisma.building.update({
+      where: { building_id: req.params.id },
+      data,
+    });
+    res.json(updated);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    if (e.code === "P2025") {
+      return sendError(res, API_ERRORS.NOT_FOUND);
+    }
+    sendInternalError(res);
   }
 }
 
 export async function deleteOne(req, res) {
   try {
-    const result = await query(
-      'DELETE FROM buildings WHERE building_id = $1 RETURNING building_id',
-      [req.params.id]
-    );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Not found' });
-    }
+    await prisma.building.delete({ where: { building_id: req.params.id } });
     res.status(204).send();
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    if (e.code === "P2025") {
+      return sendError(res, API_ERRORS.NOT_FOUND);
+    }
+    sendInternalError(res);
   }
 }
