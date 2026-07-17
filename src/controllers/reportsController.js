@@ -39,15 +39,67 @@ function toApiReport(row) {
     id: row.id,
     type: incidentTypeToApi[row.incident_type] ?? row.incident_type,
     description: row.description,
-    floor_id: null,
+    floor_id: row.location_text ?? null,
     position: null,
     status: prismaToApiStatus[row.status] ?? row.status,
     created_at: row.created_at,
     campus_id: row.campus_id,
     user_id: row.user_id,
+    location_text: row.location_text ?? null,
+    incident_at: row.incident_at ?? null,
+    is_anonymous: Boolean(row.is_anonymous),
+    email_updates: Boolean(row.email_updates),
     photo_url: row.photo_url,
     attachments: [],
   };
+}
+
+function parseBooleanFlag(value, defaultValue = false) {
+  if (value === undefined || value === null || value === "") {
+    return defaultValue;
+  }
+  if (typeof value === "boolean") return value;
+  const normalized = String(value).trim().toLowerCase();
+  if (["true", "1", "yes", "y", "on"].includes(normalized)) return true;
+  if (["false", "0", "no", "n", "off"].includes(normalized)) return false;
+  return defaultValue;
+}
+
+function parseOptionalDate(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return date;
+}
+
+async function resolveUserIdForReport({ user_id, device_id }) {
+  if (user_id) {
+    return user_id;
+  }
+
+  const normalizedDeviceId = String(device_id || "").trim();
+  if (!normalizedDeviceId) {
+    return null;
+  }
+
+  const existing = await prisma.user.findUnique({
+    where: { device_id: normalizedDeviceId },
+    select: { id: true },
+  });
+
+  if (existing?.id) {
+    return existing.id;
+  }
+
+  const created = await prisma.user.create({
+    data: {
+      device_id: normalizedDeviceId,
+      role: "student",
+    },
+    select: { id: true },
+  });
+
+  return created.id;
 }
 
 export async function getAll(req, res) {
@@ -114,7 +166,17 @@ export async function getAll(req, res) {
 
 export async function createOne(req, res) {
   try {
-    const { type, description, campus_id, user_id } = req.body;
+    const {
+      type,
+      description,
+      campus_id,
+      user_id,
+      device_id,
+      location_text,
+      incident_at,
+      is_anonymous,
+      email_updates,
+    } = req.body;
     const file = req.file;
 
     const incident_type = apiToIncidentType[type];
@@ -130,12 +192,21 @@ export async function createOne(req, res) {
       return sendError(res, API_ERRORS.REPORT_CAMPUS_REQUIRED);
     }
 
+    const resolvedUserId = await resolveUserIdForReport({
+      user_id,
+      device_id,
+    });
+
     const created = await prisma.report.create({
       data: {
         campus_id,
-        user_id: user_id || null,
+        user_id: resolvedUserId,
         incident_type,
         description: description.trim(),
+        location_text: location_text ? String(location_text).trim() : null,
+        incident_at: parseOptionalDate(incident_at),
+        is_anonymous: parseBooleanFlag(is_anonymous, false),
+        email_updates: parseBooleanFlag(email_updates, false),
         photo_url: file ? file.path : null,
       },
     });
@@ -143,6 +214,45 @@ export async function createOne(req, res) {
     res.status(201).json(toApiReport(created));
   } catch (error) {
     console.error("createOne error:", error);
+    if (error.code === "P2003") {
+      console.error("Invalid campus_id provided");
+      return sendError(
+        res,
+        API_ERRORS.NOT_FOUND,
+        "Selected campus does not exist. Please choose a valid campus.",
+      );
+    }
+    sendInternalError(res);
+  }
+}
+
+export async function getMine(req, res) {
+  try {
+    const device_id = String(req.query.device_id || "").trim();
+    if (!device_id) {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "device_id is required");
+    }
+
+    const user = await prisma.user.findUnique({
+      where: { device_id },
+      select: { id: true },
+    });
+
+    if (!user?.id) {
+      return res.status(200).json({ data: [], total: 0 });
+    }
+
+    const rows = await prisma.report.findMany({
+      where: { user_id: user.id },
+      orderBy: { created_at: "desc" },
+    });
+
+    return res.status(200).json({
+      data: rows.map(toApiReport),
+      total: rows.length,
+    });
+  } catch (error) {
+    console.error("getMine error:", error);
     sendInternalError(res);
   }
 }

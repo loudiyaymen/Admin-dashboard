@@ -19,7 +19,7 @@ export async function trigger(req, res) {
       return sendError(res, API_ERRORS.SOS_CAMPUS_ID_REQUIRED);
     }
     const sosEventId = crypto.randomUUID();
-    await prisma.sosEvent.create({
+    const createdSosEvent = await prisma.sosEvent.create({
       data: {
         sos_event_id: sosEventId,
         device_installation_id: did,
@@ -37,8 +37,33 @@ export async function trigger(req, res) {
         device_id: did,
       },
     });
+    const campus = prisma.campus?.findUnique
+      ? await prisma.campus.findUnique({
+          where: { id: campusId },
+          select: { id: true, name: true },
+        })
+      : null;
+
+    const createdAtIso = createdSosEvent?.created_at
+      ? new Date(createdSosEvent.created_at).toISOString()
+      : new Date().toISOString();
+
+    const wsPayload = {
+      event: "SOS_ACTIVE",
+      id: sosEventId,
+      title: "SOS active",
+      body: "An SOS emergency has been triggered.",
+      sosEventId,
+      status: "active",
+      campusId,
+      campusName: campus?.name ?? null,
+      deviceInstallationId: did,
+      estimatedFloorId: createdSosEvent.estimated_floor_id ?? null,
+      sentAt: createdAtIso,
+    };
+
     broadcast("SOS_ACTIVE");
-    broadcast("PUSH_SOS_ACTIVE");
+    broadcast(JSON.stringify(wsPayload));
     res.status(201).json({ sosEventId, status: "active" });
   } catch (e) {
     sendInternalError(res);

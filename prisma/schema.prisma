@@ -34,6 +34,10 @@ model Report {
   campus_id     String       @db.Uuid
   incident_type IncidentType
   description   String
+  location_text String?
+  incident_at   DateTime?
+  is_anonymous  Boolean      @default(false)
+  email_updates Boolean      @default(false)
   photo_url     String?
   status        ReportStatus @default(pending)
   created_at    DateTime     @default(now())
@@ -79,6 +83,16 @@ model Event {
   campus_id        String             @db.Uuid
   location_node_id String?
   title            String
+  event_type       String?
+  description      String?
+  location_text    String?
+  registration_start_at DateTime?
+  registration_end_at   DateTime?
+  max_participants Int?
+  is_unlimited     Boolean            @default(false)
+  event_url        String?
+  fee_cents        Int?
+  event_image_url  String?
   host_type        Role
   is_approved      Boolean            @default(false)
   event_date       DateTime

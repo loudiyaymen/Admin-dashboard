@@ -148,6 +148,8 @@ export async function createGlobalAlert(req, res) {
       message,
       alert_type,
       severity,
+      campus_id,
+      building_id,
       starts_at,
       ends_at,
       created_by_admin_id,
@@ -156,32 +158,82 @@ export async function createGlobalAlert(req, res) {
       return sendError(res, API_ERRORS.ALERT_MESSAGE_REQUIRED);
     }
     const alert_id = crypto.randomUUID();
-    await prisma.alert.create({
+    const created = await prisma.alert.create({
       data: {
         alert_id,
         alert_type: alert_type ?? null,
         message: message.trim(),
         severity: severity ?? null,
-        campus_id: null,
-        building_id: null,
+        campus_id: campus_id ?? null,
+        building_id: building_id ?? null,
         starts_at: starts_at ? new Date(starts_at) : null,
         ends_at: ends_at ? new Date(ends_at) : null,
         created_by_admin_id: created_by_admin_id ?? null,
       },
     });
+
+    let campus = null;
+    let building = null;
+
+    if (campus_id) {
+      try {
+        campus = await prisma.campus.findUnique({
+          where: { id: campus_id },
+          select: { id: true, name: true },
+        });
+      } catch (err) {
+        console.error("Failed to fetch campus details:", err);
+      }
+    }
+
+    if (building_id) {
+      try {
+        building = await prisma.building.findUnique({
+          where: { building_id },
+          select: { building_id: true, name: true, code: true },
+        });
+      } catch (err) {
+        console.error("Failed to fetch building details:", err);
+      }
+    }
+
+    const createdAtIso = created?.created_at
+      ? new Date(created.created_at).toISOString()
+      : new Date().toISOString();
+
+    const wsPayload = {
+      event: "ALERT_CREATED",
+      id: alert_id,
+      title: alert_type ? `Alert: ${alert_type}` : "Campus alert",
+      body: message.trim(),
+      message: message.trim(),
+      severity: severity ?? null,
+      alertType: alert_type ?? null,
+      campusId: campus_id ?? null,
+      campusName: campus?.name ?? null,
+      buildingId: building_id ?? null,
+      buildingName: building?.name ?? null,
+      buildingCode: building?.code ?? null,
+      buildingAffected: building?.name ?? building?.code ?? building_id ?? null,
+      startsAt: starts_at ?? null,
+      endsAt: ends_at ?? null,
+      sentAt: createdAtIso,
+    };
+
     broadcast("ALERT_CREATED");
-    broadcast("PUSH_ALERT");
+    broadcast(JSON.stringify(wsPayload));
     res.status(201).json({
       alert_id,
       alert_type: alert_type ?? null,
       message: message.trim(),
       severity: severity ?? null,
-      campus_id: null,
-      building_id: null,
+      campus_id: campus_id ?? null,
+      building_id: building_id ?? null,
       starts_at: starts_at ?? null,
       ends_at: ends_at ?? null,
     });
   } catch (e) {
+    console.error("Error creating global alert:", e);
     sendInternalError(res);
   }
 }

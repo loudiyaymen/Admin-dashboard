@@ -12,6 +12,8 @@ import { eventsRouter } from "./routes/events.js";
 import { sosRouter } from "./routes/sos.js";
 import { reportsRouter } from "./routes/reports.js";
 import { adminAuthRouter } from "./routes/adminAuth.js";
+import { analyticsRouter } from "./routes/analytics.js";
+import { usersRouter } from "./routes/users.js";
 import { API_ERRORS, sendError } from "./errors/apiErrors.js";
 import { validateAdminAuthConfig } from "./config/adminAuthConfig.js";
 
@@ -19,7 +21,6 @@ validateAdminAuthConfig();
 
 export const app = express();
 
-// TODO: Restrict CORS origins for production deployment.
 app.use(cors({ origin: "*" }));
 app.use(helmet());
 app.use(express.json());
@@ -44,6 +45,8 @@ v1.use("/sos", sosRouter);
 
 v1.use("/reports", reportsRouter);
 v1.use("/admin", adminAuthRouter);
+v1.use("/analytics", analyticsRouter);
+v1.use("/users", usersRouter);
 
 app.use("/api/v1", v1);
 
