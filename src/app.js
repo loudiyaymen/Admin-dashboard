@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import fs from "node:fs";
+import path from "node:path";
 import { logger } from "./middleware/logger.js";
 import { sanitizeInput } from "./middleware/sanitizeInput.js";
 import { campusesRouter } from "./routes/campuses.js";
@@ -21,11 +23,19 @@ validateAdminAuthConfig();
 
 export const app = express();
 
+const uploadsDir = path.resolve(process.cwd(), "uploads");
+fs.mkdirSync(uploadsDir, { recursive: true });
+
 app.use(cors({ origin: "*" }));
-app.use(helmet());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+  }),
+);
 app.use(express.json());
 app.use(sanitizeInput);
 app.use(logger);
+app.use("/uploads", express.static(uploadsDir));
 
 app.get("/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });

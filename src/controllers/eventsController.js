@@ -7,6 +7,11 @@ import {
 
 const VALID_HOST_TYPES = new Set(["admin", "student"]);
 
+function buildPublicUploadUrl(req, file) {
+  if (!file) return null;
+  return `/uploads/${file.filename}`;
+}
+
 function parseOptionalDate(rawValue) {
   if (rawValue === undefined || rawValue === null || rawValue === "") {
     return undefined;
@@ -121,6 +126,7 @@ export async function createOne(req, res) {
       fee_cents,
       event_image_url,
     } = req.body;
+    const uploadedEventImageUrl = buildPublicUploadUrl(req, req.file);
 
     const normalizedEventType = event_type ?? req.body.type ?? null;
     const normalizedDescription = description ?? req.body.details ?? null;
@@ -192,7 +198,7 @@ export async function createOne(req, res) {
         is_unlimited: Boolean(is_unlimited),
         event_url: event_url ?? null,
         fee_cents: parsedFeeCents,
-        event_image_url: event_image_url ?? null,
+        event_image_url: uploadedEventImageUrl ?? event_image_url ?? null,
         is_approved: admin,
       },
     });
@@ -212,6 +218,7 @@ export async function createOne(req, res) {
 
 export async function updateOne(req, res) {
   try {
+    const uploadedEventImageUrl = buildPublicUploadUrl(req, req.file);
     const parsedRegistrationStartAt = parseOptionalDate(
       req.body.registration_start_at,
     );
@@ -260,7 +267,8 @@ export async function updateOne(req, res) {
             : Boolean(req.body.is_unlimited),
         event_url: req.body.event_url,
         fee_cents: parsedFeeCents,
-        event_image_url: req.body.event_image_url,
+        event_image_url:
+          uploadedEventImageUrl ?? req.body.event_image_url ?? undefined,
         is_approved: req.body.is_approved,
       },
     });
@@ -349,6 +357,35 @@ export async function registerForEvent(req, res) {
         alreadyRegistered: true,
       });
     }
+    sendInternalError(res);
+  }
+}
+
+export async function cancelRegistration(req, res) {
+  try {
+    const eventId = String(req.params.id || "").trim();
+    const deviceId = String(req.body?.device_id || "").trim();
+
+    if (!eventId) {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "event id is required");
+    }
+
+    if (!deviceId) {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "device_id is required");
+    }
+
+    const deleted = await prisma.eventParticipant.deleteMany({
+      where: {
+        event_id: eventId,
+        device_id: deviceId,
+      },
+    });
+
+    return res.json({
+      canceled: true,
+      deletedCount: deleted.count,
+    });
+  } catch (error) {
     sendInternalError(res);
   }
 }
