@@ -5,3 +5,4 @@ node_modules
 /Admin-dashboard/node_modules
 scripts
 /*.md
+/uploads
