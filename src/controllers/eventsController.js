@@ -36,6 +36,44 @@ function isAdmin(req) {
   return req.admin?.role === "admin";
 }
 
+function participantSelect() {
+  return {
+    event_id: true,
+    device_id: true,
+    name: true,
+    email: true,
+    joined_at: true,
+  };
+}
+
+function participantSort(a, b) {
+  return new Date(a.joined_at).getTime() - new Date(b.joined_at).getTime();
+}
+
+function mapParticipant(row) {
+  return {
+    id: `${row.event_id}:${row.device_id}`,
+    deviceId: row.device_id,
+    name: row.name || row.device_id,
+    email: row.email || "",
+    joinedAt: row.joined_at,
+  };
+}
+
+async function loadEventWithParticipants(eventId) {
+  return prisma.event.findUnique({
+    where: { id: eventId },
+    include: {
+      campus: true,
+      location_node: true,
+      participants: {
+        select: participantSelect(),
+        orderBy: { joined_at: "asc" },
+      },
+    },
+  });
+}
+
 export async function getAll(req, res) {
   try {
     const admin = isAdmin(req);
@@ -53,6 +91,10 @@ export async function getAll(req, res) {
       include: {
         campus: true,
         location_node: true,
+        participants: {
+          select: participantSelect(),
+          orderBy: { joined_at: "asc" },
+        },
       },
     });
 
@@ -64,10 +106,7 @@ export async function getAll(req, res) {
 
 export async function getOne(req, res) {
   try {
-    const event = await prisma.event.findUnique({
-      where: { id: req.params.id },
-      include: { campus: true, location_node: true },
-    });
+    const event = await loadEventWithParticipants(req.params.id);
 
     if (!event) return sendError(res, API_ERRORS.EVENT_NOT_FOUND);
     res.json(event);
@@ -90,6 +129,10 @@ export async function getMine(req, res) {
           include: {
             campus: true,
             location_node: true,
+            participants: {
+              select: participantSelect(),
+              orderBy: { joined_at: "asc" },
+            },
           },
         },
       },
@@ -291,6 +334,8 @@ export async function registerForEvent(req, res) {
   try {
     const eventId = String(req.params.id || "").trim();
     const deviceId = String(req.body?.device_id || "").trim();
+    const name = String(req.body?.name || "").trim();
+    const email = String(req.body?.email || "").trim();
 
     if (!eventId) {
       return sendError(res, API_ERRORS.BAD_REQUEST, "event id is required");
@@ -342,12 +387,16 @@ export async function registerForEvent(req, res) {
       data: {
         event_id: eventId,
         device_id: deviceId,
+        name: name || null,
+        email: email || null,
       },
     });
 
     return res.status(201).json({
       event_id: registration.event_id,
       device_id: registration.device_id,
+      name: registration.name,
+      email: registration.email,
       joined_at: registration.joined_at,
     });
   } catch (e) {
@@ -423,6 +472,8 @@ export const drawWinner = async (req, res) => {
   try {
     const participants = await prisma.eventParticipant.findMany({
       where: { event_id: id },
+      select: participantSelect(),
+      orderBy: { joined_at: "asc" },
     });
 
     if (participants.length === 0) {
@@ -430,11 +481,12 @@ export const drawWinner = async (req, res) => {
     }
 
     const randomIndex = Math.floor(Math.random() * participants.length);
-    const winner = participants[randomIndex];
+    const winner = mapParticipant(participants[randomIndex]);
 
     res.json({
       message: "Winner selected",
-      winner: winner.device_id,
+      winner,
+      participantCount: participants.length,
     });
   } catch (error) {
     sendError(res, API_ERRORS.DRAW_WINNER_FAILED);
