@@ -336,6 +336,7 @@ export async function registerForEvent(req, res) {
     const deviceId = String(req.body?.device_id || "").trim();
     const name = String(req.body?.name || "").trim();
     const email = String(req.body?.email || "").trim();
+    const normalizedEmail = email.toLowerCase();
 
     if (!eventId) {
       return sendError(res, API_ERRORS.BAD_REQUEST, "event id is required");
@@ -383,12 +384,38 @@ export async function registerForEvent(req, res) {
       });
     }
 
+    if (normalizedEmail) {
+      const existingEmailRegistration = await prisma.eventParticipant.findFirst(
+        {
+          where: {
+            event_id: eventId,
+            email: {
+              equals: normalizedEmail,
+              mode: "insensitive",
+            },
+          },
+          select: {
+            event_id: true,
+            device_id: true,
+            email: true,
+          },
+        },
+      );
+
+      if (existingEmailRegistration) {
+        return res.status(409).json({
+          error: "This email is already registered for this event",
+          alreadyRegistered: true,
+        });
+      }
+    }
+
     const registration = await prisma.eventParticipant.create({
       data: {
         event_id: eventId,
         device_id: deviceId,
         name: name || null,
-        email: email || null,
+        email: normalizedEmail || null,
       },
     });
 

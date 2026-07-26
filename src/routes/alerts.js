@@ -9,6 +9,11 @@ alertsRouter.post(
   requireAdminAuth,
   alertsController.createGlobalAlert,
 );
+alertsRouter.post(
+  "/:id/resolve",
+  requireAdminAuth,
+  alertsController.resolveOne,
+);
 alertsRouter.post("/", requireAdminAuth, alertsController.createOne);
 alertsRouter.get("/", alertsController.getAll);
 alertsRouter.get("/:id", alertsController.getOne);
