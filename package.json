@@ -8,7 +8,8 @@
     "prestart": "prisma migrate deploy --schema prisma/schema.prisma && prisma generate --schema prisma/schema.prisma",
     "start": "node src/serverWithWebsocket.js",
     "predev": "prisma migrate deploy --schema prisma/schema.prisma && prisma generate --schema prisma/schema.prisma",
-    "dev": "node --watch src/serverWithWebsocket.js"
+    "dev": "node --watch src/serverWithWebsocket.js",
+    "seed:navigation": "node scripts/import-navigation-graphs.js"
   },
   "repository": {
     "type": "git",

@@ -8,6 +8,7 @@ import { sanitizeInput } from "./middleware/sanitizeInput.js";
 import { campusesRouter } from "./routes/campuses.js";
 import { buildingsRouter } from "./routes/buildings.js";
 import { floorsRouter } from "./routes/floors.js";
+import { navigationRouter } from "./routes/navigation.js";
 import { announcementsRouter } from "./routes/announcements.js";
 import { alertsRouter } from "./routes/alerts.js";
 import { eventsRouter } from "./routes/events.js";
@@ -46,6 +47,7 @@ const v1 = express.Router();
 v1.use("/campuses", campusesRouter);
 v1.use("/buildings", buildingsRouter);
 v1.use("/floors", floorsRouter);
+v1.use("/navigation", navigationRouter);
 
 v1.use("/announcements", announcementsRouter);
 v1.use("/alerts", alertsRouter);

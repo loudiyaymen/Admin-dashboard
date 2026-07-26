@@ -162,11 +162,12 @@ model Announcement {
 }
 
 model Building {
-  building_id String   @id
-  campus_id   String
-  code        String?
-  name        String
-  created_at  DateTime @default(now())
+  building_id      String            @id
+  campus_id        String
+  code             String?
+  name             String
+  created_at       DateTime          @default(now())
+  navigation_graph NavigationGraph?
 
   @@map("buildings")
 }
@@ -179,8 +180,17 @@ model Floor {
   elevation_meters  Float?
   map_asset_key     String?
   created_at        DateTime @default(now())
-
   @@map("floors")
+}
+
+model NavigationGraph {
+  building_id String   @id
+  graph_data   Json
+  source_file  String?
+  updated_at   DateTime @updatedAt
+  building     Building @relation(fields: [building_id], references: [building_id], onDelete: Cascade)
+
+  @@map("navigation_graphs")
 }
 
 model SosEvent {
