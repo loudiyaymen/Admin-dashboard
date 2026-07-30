@@ -37,6 +37,13 @@ function buildResolutionMessage(alertType, originalMessage) {
   return `Update: The reported issue has been resolved.${sourceMessage ? ` Original alert: ${sourceMessage}` : ""}`;
 }
 
+function isResolutionUpdateType(alertType) {
+  const normalized = String(alertType || "")
+    .trim()
+    .toLowerCase();
+  return normalized.endsWith("- resolved");
+}
+
 function buildAlertWsPayload(created, campus, building) {
   const message = String(created.message || "").trim();
   const createdAtIso = created?.created_at
@@ -51,6 +58,7 @@ function buildAlertWsPayload(created, campus, building) {
     message,
     severity: created.severity ?? null,
     alertType: created.alert_type ?? null,
+    isResolutionUpdate: isResolutionUpdateType(created.alert_type),
     campusId: created.campus_id ?? null,
     campusName: campus?.name ?? null,
     buildingId: created.building_id ?? null,
@@ -295,6 +303,13 @@ export async function resolveOne(req, res) {
       return res.status(409).json({
         error: "Alert already resolved",
         alreadyResolved: true,
+      });
+    }
+
+    if (isResolutionUpdateType(existing.alert_type)) {
+      return res.status(409).json({
+        error: "Resolution update alerts cannot be marked as fixed",
+        notResolvable: true,
       });
     }
 
