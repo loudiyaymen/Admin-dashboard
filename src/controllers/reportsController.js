@@ -34,6 +34,23 @@ const prismaToApiStatus = {
   dismissed: "dismissed",
 };
 
+function deriveReporterName(row) {
+  if (Boolean(row.is_anonymous)) {
+    return "Anonymous";
+  }
+
+  const email = String(row?.user?.email || "").trim();
+  if (email.includes("@")) {
+    return email.split("@")[0];
+  }
+
+  if (row.user_id) {
+    return row.user_id;
+  }
+
+  return null;
+}
+
 function toApiReport(row) {
   return {
     id: row.id,
@@ -45,6 +62,8 @@ function toApiReport(row) {
     created_at: row.created_at,
     campus_id: row.campus_id,
     user_id: row.user_id,
+    reporter_name: deriveReporterName(row),
+    reporter_email: Boolean(row.is_anonymous) ? "Anonymous" : row?.user?.email,
     location_text: row.location_text ?? null,
     incident_at: row.incident_at ?? null,
     is_anonymous: Boolean(row.is_anonymous),
@@ -148,6 +167,13 @@ export async function getAll(req, res) {
         orderBy: { [field]: direction },
         take: limitNum,
         skip: offset,
+        include: {
+          user: {
+            select: {
+              email: true,
+            },
+          },
+        },
       }),
       prisma.report.count({ where }),
     ]);
@@ -209,6 +235,13 @@ export async function createOne(req, res) {
         email_updates: parseBooleanFlag(email_updates, false),
         photo_url: file ? file.path : null,
       },
+      include: {
+        user: {
+          select: {
+            email: true,
+          },
+        },
+      },
     });
 
     res.status(201).json(toApiReport(created));
@@ -245,6 +278,13 @@ export async function getMine(req, res) {
     const rows = await prisma.report.findMany({
       where: { user_id: user.id },
       orderBy: { created_at: "desc" },
+      include: {
+        user: {
+          select: {
+            email: true,
+          },
+        },
+      },
     });
 
     return res.status(200).json({
@@ -264,7 +304,16 @@ export async function getOne(req, res) {
       return sendError(res, API_ERRORS.REPORT_ID_INVALID);
     }
 
-    const report = await prisma.report.findUnique({ where: { id } });
+    const report = await prisma.report.findUnique({
+      where: { id },
+      include: {
+        user: {
+          select: {
+            email: true,
+          },
+        },
+      },
+    });
     if (!report) {
       return sendError(res, API_ERRORS.REPORT_NOT_FOUND);
     }
@@ -293,6 +342,13 @@ export async function updateOne(req, res) {
     const updated = await prisma.report.update({
       where: { id },
       data: { status: mappedStatus },
+      include: {
+        user: {
+          select: {
+            email: true,
+          },
+        },
+      },
     });
 
     res.status(200).json(toApiReport(updated));
