@@ -1,0 +1,90 @@
+{
+  "{e5ca75db-cf31-4b70-bcce-8038e27867c7}": {
+    "id": "{e5ca75db-cf31-4b70-bcce-8038e27867c7}",
+    "type": "entrance",
+    "label": "entrance west_upper",
+    "x": 485.2761627906973,
+    "y": -501.5188953488372,
+    "neighbors": {}
+  },
+  "{a047621a-a269-4e4d-9a15-6ca4dc558bfc}": {
+    "id": "{a047621a-a269-4e4d-9a15-6ca4dc558bfc}",
+    "type": "entrance",
+    "label": "entrance east upper",
+    "x": 1029.2005813953483,
+    "y": -508.844476744186,
+    "neighbors": {}
+  },
+  "{c0afc4bb-8e1a-4eb9-a03d-a28c7f71fd87}": {
+    "id": "{c0afc4bb-8e1a-4eb9-a03d-a28c7f71fd87}",
+    "type": "entrance",
+    "label": "entrance down",
+    "x": 591.4970930232554,
+    "y": -960.2834302325581,
+    "neighbors": {}
+  },
+  "{26ae8630-9f6f-49c0-a20b-46dbd6658b1c}": {
+    "id": "{26ae8630-9f6f-49c0-a20b-46dbd6658b1c}",
+    "type": "room_door",
+    "label": "Employee Dining room",
+    "x": 748.9970930232554,
+    "y": -828.422965116279,
+    "neighbors": {}
+  },
+  "{43116343-00cb-4655-99d1-bb78edd95657}": {
+    "id": "{43116343-00cb-4655-99d1-bb78edd95657}",
+    "type": "intersection",
+    "label": "T-junction",
+    "x": 826.7243980662281,
+    "y": -509.69174592391295,
+    "neighbors": {}
+  },
+  "{921af9a0-ce33-411a-8322-fd738478d97e}": {
+    "id": "{921af9a0-ce33-411a-8322-fd738478d97e}",
+    "type": "room_door",
+    "label": "Cafeteria entrance",
+    "x": 827.9013681749237,
+    "y": -559.1244904891304,
+    "neighbors": {}
+  },
+  "{3d970a98-cb0e-44a8-91c7-6baca7bf2ea9}": {
+    "id": "{3d970a98-cb0e-44a8-91c7-6baca7bf2ea9}",
+    "type": "room_door",
+    "label": "Cafeteria entrance_main",
+    "x": 746.6904306749237,
+    "y": -781.5718410326086,
+    "neighbors": {}
+  },
+  "{8ef3adf3-3e37-41e4-8d45-cf3f7b71e5fe}": {
+    "id": "{8ef3adf3-3e37-41e4-8d45-cf3f7b71e5fe}",
+    "type": "hallway_node",
+    "label": "hallway near entrance",
+    "x": 592.5073464357934,
+    "y": -896.9149116847825,
+    "neighbors": {}
+  },
+  "{bcce271e-31a6-4f37-85b1-b9c000c30772}": {
+    "id": "{bcce271e-31a6-4f37-85b1-b9c000c30772}",
+    "type": "hallway_node",
+    "label": "hallway near employee dining room",
+    "x": 725.504968718402,
+    "y": -829.8276154891304,
+    "neighbors": {}
+  },
+  "{7b5c97d9-32d5-4674-8941-6ee6c8aeec2b}": {
+    "id": "{7b5c97d9-32d5-4674-8941-6ee6c8aeec2b}",
+    "type": "hallway_node",
+    "label": "hallway near caf_entrance",
+    "x": 725.504968718402,
+    "y": -782.7488111413043,
+    "neighbors": {}
+  },
+  "{aa2e36ad-2f2d-4dc0-b2ce-7763e671a175}": {
+    "id": "{aa2e36ad-2f2d-4dc0-b2ce-7763e671a175}",
+    "type": "intersection",
+    "label": "T-junction",
+    "x": 726.6819388270976,
+    "y": -510.86871603260863,
+    "neighbors": {}
+  }
+}

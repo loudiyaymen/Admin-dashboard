@@ -139,6 +139,36 @@ async function loadGraphs() {
   });
 }
 
+async function loadGraphVersion() {
+  const [count, latest] = await Promise.all([
+    prisma.navigationGraph.count(),
+    prisma.navigationGraph.findFirst({
+      orderBy: { updated_at: "desc" },
+      select: { updated_at: true },
+    }),
+  ]);
+
+  const latestUpdatedAt = latest?.updated_at || null;
+  const version = latestUpdatedAt
+    ? `${count}:${latestUpdatedAt.toISOString()}`
+    : `0:empty`;
+
+  return {
+    version,
+    total: count,
+    latestUpdatedAt,
+  };
+}
+
+export async function getGraphsVersion(_req, res) {
+  try {
+    const payload = await loadGraphVersion();
+    res.json(payload);
+  } catch (error) {
+    sendInternalError(res);
+  }
+}
+
 export async function getGraphs(req, res) {
   try {
     const rows = await loadGraphs();
