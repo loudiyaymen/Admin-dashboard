@@ -32,6 +32,19 @@ function parseOptionalInt(rawValue) {
   return parsed;
 }
 
+function parseBooleanFlag(rawValue, defaultValue = false) {
+  if (rawValue === undefined || rawValue === null || rawValue === "") {
+    return defaultValue;
+  }
+  if (typeof rawValue === "boolean") return rawValue;
+
+  const normalized = String(rawValue).trim().toLowerCase();
+  if (["true", "1", "yes", "y", "on"].includes(normalized)) return true;
+  if (["false", "0", "no", "n", "off"].includes(normalized)) return false;
+
+  return defaultValue;
+}
+
 function isAdmin(req) {
   return req.admin?.role === "admin";
 }
@@ -205,6 +218,7 @@ export async function createOne(req, res) {
     const parsedRegistrationEndAt = parseOptionalDate(registration_end_at);
     const parsedMaxParticipants = parseOptionalInt(max_participants);
     const parsedFeeCents = parseOptionalInt(fee_cents);
+    const parsedIsUnlimited = parseBooleanFlag(is_unlimited, false);
 
     if (
       parsedRegistrationStartAt === null ||
@@ -225,6 +239,38 @@ export async function createOne(req, res) {
       );
     }
 
+    if (
+      parsedRegistrationStartAt &&
+      parsedRegistrationEndAt &&
+      parsedRegistrationEndAt < parsedRegistrationStartAt
+    ) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "registration_end_at must be on or after registration_start_at",
+      );
+    }
+
+    if (
+      !parsedIsUnlimited &&
+      parsedMaxParticipants !== undefined &&
+      parsedMaxParticipants < 1
+    ) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "max_participants must be at least 1",
+      );
+    }
+
+    if (parsedFeeCents !== undefined && parsedFeeCents < 0) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "fee_cents cannot be negative",
+      );
+    }
+
     const newEvent = await prisma.event.create({
       data: {
         title,
@@ -238,7 +284,7 @@ export async function createOne(req, res) {
         registration_start_at: parsedRegistrationStartAt,
         registration_end_at: parsedRegistrationEndAt,
         max_participants: parsedMaxParticipants,
-        is_unlimited: Boolean(is_unlimited),
+        is_unlimited: parsedIsUnlimited,
         event_url: event_url ?? null,
         fee_cents: parsedFeeCents,
         event_image_url: uploadedEventImageUrl ?? event_image_url ?? null,
@@ -248,6 +294,9 @@ export async function createOne(req, res) {
 
     res.status(201).json(newEvent);
   } catch (e) {
+    if (e?.name === "PrismaClientValidationError") {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "Invalid event payload");
+    }
     if (e?.code === "P2003") {
       return sendError(
         res,
@@ -290,6 +339,45 @@ export async function updateOne(req, res) {
       );
     }
 
+    if (
+      parsedRegistrationStartAt &&
+      parsedRegistrationEndAt &&
+      parsedRegistrationEndAt < parsedRegistrationStartAt
+    ) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "registration_end_at must be on or after registration_start_at",
+      );
+    }
+
+    if (parsedMaxParticipants !== undefined && parsedMaxParticipants < 1) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "max_participants must be at least 1",
+      );
+    }
+
+    if (parsedFeeCents !== undefined && parsedFeeCents < 0) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "fee_cents cannot be negative",
+      );
+    }
+
+    if (req.body.event_date) {
+      const parsedDate = new Date(req.body.event_date);
+      if (Number.isNaN(parsedDate.getTime())) {
+        return sendError(
+          res,
+          API_ERRORS.BAD_REQUEST,
+          "event_date must be a valid ISO date string",
+        );
+      }
+    }
+
     const updatedEvent = await prisma.event.update({
       where: { id: req.params.id },
       data: {
@@ -307,7 +395,7 @@ export async function updateOne(req, res) {
         is_unlimited:
           req.body.is_unlimited === undefined
             ? undefined
-            : Boolean(req.body.is_unlimited),
+            : parseBooleanFlag(req.body.is_unlimited),
         event_url: req.body.event_url,
         fee_cents: parsedFeeCents,
         event_image_url:
@@ -317,6 +405,9 @@ export async function updateOne(req, res) {
     });
     res.json(updatedEvent);
   } catch (e) {
+    if (e?.name === "PrismaClientValidationError") {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "Invalid event payload");
+    }
     sendError(res, API_ERRORS.EVENT_NOT_FOUND_OR_INVALID);
   }
 }
@@ -352,6 +443,8 @@ export async function registerForEvent(req, res) {
         id: true,
         title: true,
         is_approved: true,
+        is_unlimited: true,
+        max_participants: true,
       },
     });
 
@@ -365,6 +458,19 @@ export async function registerForEvent(req, res) {
         API_ERRORS.BAD_REQUEST,
         "Cannot register for an unapproved event",
       );
+    }
+
+    if (!event.is_unlimited && typeof event.max_participants === "number") {
+      const participantCount = await prisma.eventParticipant.count({
+        where: { event_id: eventId },
+      });
+
+      if (participantCount >= event.max_participants) {
+        return res.status(409).json({
+          error: "This event is full. Registration is closed.",
+          isFull: true,
+        });
+      }
     }
 
     const alreadyRegistered = await prisma.eventParticipant.findUnique({

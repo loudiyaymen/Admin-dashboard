@@ -1,6 +1,7 @@
 import { Router } from "express";
 import multer from "multer";
 import * as eventsController from "../controllers/eventsController.js";
+import { API_ERRORS, sendError } from "../errors/apiErrors.js";
 import { requireAdminAuth } from "../middleware/requireAdminAuth.js";
 
 export const eventsRouter = Router();
@@ -16,10 +17,26 @@ const upload = multer({
   },
 });
 
+function uploadEventImage(req, res, next) {
+  upload.single("eventImage")(req, res, (error) => {
+    if (!error) {
+      next();
+      return;
+    }
+
+    if (error instanceof multer.MulterError && error.code === "LIMIT_FILE_SIZE") {
+      sendError(res, API_ERRORS.BAD_REQUEST, "Event image must be 5MB or smaller");
+      return;
+    }
+
+    sendError(res, API_ERRORS.BAD_REQUEST, error.message || "Invalid event image");
+  });
+}
+
 eventsRouter.post(
   "/",
   requireAdminAuth,
-  upload.single("eventImage"),
+  uploadEventImage,
   eventsController.createOne,
 );
 eventsRouter.get("/mine", eventsController.getMine);
@@ -30,7 +47,7 @@ eventsRouter.get("/:id", eventsController.getOne);
 eventsRouter.patch(
   "/:id",
   requireAdminAuth,
-  upload.single("eventImage"),
+  uploadEventImage,
   eventsController.updateOne,
 );
 eventsRouter.delete("/:id", requireAdminAuth, eventsController.deleteOne);
