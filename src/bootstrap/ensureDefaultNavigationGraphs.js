@@ -54,7 +54,9 @@ export async function ensureDefaultNavigationGraphs() {
   const preferredCampus =
     campuses.find(
       (campus) => String(campus.name || "").toLowerCase() === "ottawa",
-    ) || campuses[0] || null;
+    ) ||
+    campuses[0] ||
+    null;
 
   if (!preferredCampus) {
     throw new Error("No campus available to seed navigation graphs.");

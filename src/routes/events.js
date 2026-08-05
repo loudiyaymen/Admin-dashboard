@@ -24,12 +24,23 @@ function uploadEventImage(req, res, next) {
       return;
     }
 
-    if (error instanceof multer.MulterError && error.code === "LIMIT_FILE_SIZE") {
-      sendError(res, API_ERRORS.BAD_REQUEST, "Event image must be 5MB or smaller");
+    if (
+      error instanceof multer.MulterError &&
+      error.code === "LIMIT_FILE_SIZE"
+    ) {
+      sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "Event image must be 5MB or smaller",
+      );
       return;
     }
 
-    sendError(res, API_ERRORS.BAD_REQUEST, error.message || "Invalid event image");
+    sendError(
+      res,
+      API_ERRORS.BAD_REQUEST,
+      error.message || "Invalid event image",
+    );
   });
 }
 
