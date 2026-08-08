@@ -5,7 +5,11 @@
     "label": "stair near washroom",
     "x": 801.2891689373299,
     "y": -599.1978882833789,
-    "neighbors": {},
+    "neighbors": {
+      "{1df10265-fbe6-4c40-a79c-30f8fb354733}": 75.9240226393322,
+      "{78cabe75-6e96-453a-b9af-f920668eb8ec}": 108.38461930355113,
+      "{76013090-0de9-477f-ad1e-851b19522055}_L5": 50.1943106622247
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{654c60f4-39f7-4276-b027-52ef69920310}"
@@ -16,7 +20,9 @@
     "label": "elevator near C033",
     "x": 700.9741144414171,
     "y": -558.1599114441419,
-    "neighbors": {},
+    "neighbors": {
+      "{654c60f4-39f7-4276-b027-52ef69920310}": 108.38461930355113
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{78cabe75-6e96-453a-b9af-f920668eb8ec}"
@@ -27,7 +33,11 @@
     "label": "RoomC033",
     "x": 679.9991485013627,
     "y": -559.5278440054499,
-    "neighbors": {},
+    "neighbors": {
+      "{d3493e8a-8317-4e13-99f2-a77004cd6a18}": 135.79864446524215,
+      "{505716f0-5862-44a6-9052-fdda96e6199d}": 10.041863227724303,
+      "{cafb78aa-5a19-4231-a553-ec5c69c4047e}": 11.855415531335098
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{868ba2cf-259f-400b-aea2-8f124075235f}"
@@ -38,7 +48,9 @@
     "label": "its elevator, C033",
     "x": 690.0306539509539,
     "y": -559.9838215258858,
-    "neighbors": {},
+    "neighbors": {
+      "{868ba2cf-259f-400b-aea2-8f124075235f}": 10.041863227724303
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{505716f0-5862-44a6-9052-fdda96e6199d}"
@@ -49,7 +61,10 @@
     "label": "RoomC033A",
     "x": 679.9991485013627,
     "y": -571.383259536785,
-    "neighbors": {},
+    "neighbors": {
+      "{868ba2cf-259f-400b-aea2-8f124075235f}": 11.855415531335098,
+      "{adabd9de-c240-43a2-ae77-243dcd156a8f}": 9.575527929155214
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{cafb78aa-5a19-4231-a553-ec5c69c4047e}"
@@ -57,10 +72,13 @@
   "{adabd9de-c240-43a2-ae77-243dcd156a8f}": {
     "id": "{adabd9de-c240-43a2-ae77-243dcd156a8f}",
     "type": "hallway_node",
-    "label": "hallway near C033A",
+    "label": "hallway",
     "x": 689.5746764305179,
     "y": -571.383259536785,
-    "neighbors": {},
+    "neighbors": {
+      "{cafb78aa-5a19-4231-a553-ec5c69c4047e}": 9.575527929155214,
+      "{968643d9-92e0-4eee-aa99-f7db1398c0ff}": 86.66572221206286
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{adabd9de-c240-43a2-ae77-243dcd156a8f}"
@@ -71,7 +89,11 @@
     "label": "RoomC035 Test Centre",
     "x": 687.2947888283381,
     "y": -658.0189884196187,
-    "neighbors": {},
+    "neighbors": {
+      "{adabd9de-c240-43a2-ae77-243dcd156a8f}": 86.66572221206286,
+      "{9b791bb8-bda2-4ede-b632-6303b982c421}": 74.46755651433335,
+      "{d5e1ac97-0cb8-44c1-86a7-108985d0a5b7}": 12.586724941560616
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{968643d9-92e0-4eee-aa99-f7db1398c0ff}"
@@ -82,7 +104,12 @@
     "label": "RoomC008",
     "x": 841.4151907356951,
     "y": -672.1542915531337,
-    "neighbors": {},
+    "neighbors": {
+      "{d3493e8a-8317-4e13-99f2-a77004cd6a18}": 64.86561359435106,
+      "{d7c2b7af-c214-454a-a56a-7d4f2d4c149a}": 54.51275986451419,
+      "{53ed050a-5e37-4b9a-8dbe-8fb545c0c905}": 24.873002620599674,
+      "{9a206785-063d-4d23-a5dd-08f78c1789cb}": 11.265135357501801
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{3a2d6a23-8f0a-468a-b281-3108c0e1f09e}"
@@ -93,7 +120,11 @@
     "label": "C024",
     "x": 875.6135047683927,
     "y": -614.7011239782018,
-    "neighbors": {},
+    "neighbors": {
+      "{654c60f4-39f7-4276-b027-52ef69920310}": 75.9240226393322,
+      "{19ce3df5-8b55-4a5e-8754-220f5be95ba6}": 40.754274466628296,
+      "{1e7f7b68-faca-4dec-9fb3-2c1801682c59}": 7.485940811394122
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{1df10265-fbe6-4c40-a79c-30f8fb354733}"
@@ -104,7 +135,11 @@
     "label": "RoomC022",
     "x": 916.3651129761968,
     "y": -615.1672953832708,
-    "neighbors": {},
+    "neighbors": {
+      "{1df10265-fbe6-4c40-a79c-30f8fb354733}": 40.754274466628296,
+      "{6386e4c8-370f-4c23-959c-cd815f615eac}": 15.46875,
+      "{fcffed36-86fa-474a-b896-fca547b2fde6}": 7.004716981131992
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{19ce3df5-8b55-4a5e-8754-220f5be95ba6}"
@@ -115,7 +150,10 @@
     "label": "RoomC015",
     "x": 942.6422002724798,
     "y": -661.2108310626705,
-    "neighbors": {},
+    "neighbors": {
+      "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}": 35.391588272117374,
+      "{85614fde-13b0-43a5-87e2-acea7f20aafa}": 11.032405159154344
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{34460166-fa19-4766-a1ae-118601bcef51}"
@@ -126,7 +164,10 @@
     "label": "RoomC021 Int Edu Centre",
     "x": 979.5763794277933,
     "y": -608.7734162125342,
-    "neighbors": {},
+    "neighbors": {
+      "{4885fe29-5547-4f4b-8c8e-ef7cae6b69ab}": 12.983977350179366,
+      "{b24fa3f6-837f-40d9-9adc-0e6de44393c0}": 7.7573043942718805
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{7420334c-38fa-4749-a414-f294ae5d6d08}"
@@ -137,7 +178,10 @@
     "label": "stair near C021",
     "x": 971.235395995065,
     "y": -598.8229557606294,
-    "neighbors": {},
+    "neighbors": {
+      "{7420334c-38fa-4749-a414-f294ae5d6d08}": 12.983977350179366,
+      "{76013090-0de9-477f-ad1e-851b19522055}_L5": 203.27361684425722
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{4885fe29-5547-4f4b-8c8e-ef7cae6b69ab}"
@@ -148,7 +192,10 @@
     "label": "RoomC019",
     "x": 991.6658205233668,
     "y": -723.7404085908181,
-    "neighbors": {},
+    "neighbors": {
+      "{19538a94-762e-4fc0-84e7-2859b6c83ed6}": 6.06687838923581,
+      "{762e6d74-8bc5-411f-a58a-274b0b85dc66}": 28.23691687788527
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{032e2615-f99a-4d50-b509-80b86f85c8f9}"
@@ -159,7 +206,9 @@
     "label": "RoomC018",
     "x": 1016.1823299573291,
     "y": -737.7498425530823,
-    "neighbors": {},
+    "neighbors": {
+      "{032e2615-f99a-4d50-b509-80b86f85c8f9}": 28.23691687788527
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{762e6d74-8bc5-411f-a58a-274b0b85dc66}"
@@ -170,7 +219,9 @@
     "label": "RoomC016",
     "x": 964.8732645092158,
     "y": -738.6571317629878,
-    "neighbors": {},
+    "neighbors": {
+      "{71d77c00-4e8f-42e6-9aaa-629001f12bb9}": 20.513767688679195
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{b515c0b6-505f-4fd9-990d-fb813a1164a4}"
@@ -181,7 +232,10 @@
     "label": "stair near C016",
     "x": 985.2448299573291,
     "y": -746.5057387794974,
-    "neighbors": {},
+    "neighbors": {
+      "{19538a94-762e-4fc0-84e7-2859b6c83ed6}": 21.730101449068368,
+      "{fed8d7fe-62e3-4eb8-880c-e35a9547d077}_L5": 117.04213910686171
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{1539d1ca-985f-46e9-86fa-83b0d4a76031}"
@@ -192,7 +246,9 @@
     "label": "RoomC009",
     "x": 840.4806790139327,
     "y": -726.6590406662897,
-    "neighbors": {},
+    "neighbors": {
+      "{3a2d6a23-8f0a-468a-b281-3108c0e1f09e}": 54.51275986451419
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{d7c2b7af-c214-454a-a56a-7d4f2d4c149a}"
@@ -203,7 +259,10 @@
     "label": "stair btm",
     "x": 714.4846294856308,
     "y": -853.9587352376504,
-    "neighbors": {},
+    "neighbors": {
+      "{a1826786-dc44-4fc7-8bdf-6c1becc4183c}": 32.69030763934836,
+      "{fed8d7fe-62e3-4eb8-880c-e35a9547d077}_L5": 176.81720444006282
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{f3ba6db2-a9b4-4b22-93ec-6f54f0a64d83}"
@@ -214,7 +273,10 @@
     "label": "RoomC036",
     "x": 703.3049714667629,
     "y": -730.7451255719501,
-    "neighbors": {},
+    "neighbors": {
+      "{968643d9-92e0-4eee-aa99-f7db1398c0ff}": 74.46755651433335,
+      "{93832aaa-a8f4-4f9d-bf01-88ca84331801}": 33.78056588034899
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{9b791bb8-bda2-4ede-b632-6303b982c421}"
@@ -225,7 +287,10 @@
     "label": "RoomC037",
     "x": 709.1422356177063,
     "y": -764.0175312323274,
-    "neighbors": {},
+    "neighbors": {
+      "{9b791bb8-bda2-4ede-b632-6303b982c421}": 33.78056588034899,
+      "{f3fcef55-5223-494a-9bb8-472d1fb6fe09}": 51.39776550682359
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{93832aaa-a8f4-4f9d-bf01-88ca84331801}"
@@ -236,7 +301,10 @@
     "label": "Financial Aid, IT Services",
     "x": 760.5101601460082,
     "y": -765.7687104776105,
-    "neighbors": {},
+    "neighbors": {
+      "{93832aaa-a8f4-4f9d-bf01-88ca84331801}": 51.39776550682359,
+      "{adc6cefd-6926-4839-80d0-3415c472e14b}": 42.78076268499896
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{f3fcef55-5223-494a-9bb8-472d1fb6fe09}"
@@ -247,7 +315,9 @@
     "label": "RoomC023",
     "x": 916.3651129761968,
     "y": -630.6360453832708,
-    "neighbors": {},
+    "neighbors": {
+      "{19ce3df5-8b55-4a5e-8754-220f5be95ba6}": 15.46875
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{6386e4c8-370f-4c23-959c-cd815f615eac}"
@@ -255,10 +325,14 @@
   "{d5e1ac97-0cb8-44c1-86a7-108985d0a5b7}": {
     "id": "{d5e1ac97-0cb8-44c1-86a7-108985d0a5b7}",
     "type": "hallway_node",
-    "label": "hallway near C035",
+    "label": "hallway",
     "x": 699.8026129761969,
     "y": -656.611870854969,
-    "neighbors": {},
+    "neighbors": {
+      "{968643d9-92e0-4eee-aa99-f7db1398c0ff}": 12.586724941560616,
+      "{e888f373-2cc2-4aa6-b0a3-861bf5c26323}": 38.16160268253386,
+      "{9fd2d594-fd5f-4346-9323-c366e5628f70}": 75.50531948632342
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{d5e1ac97-0cb8-44c1-86a7-108985d0a5b7}"
@@ -269,7 +343,10 @@
     "label": "T-junction",
     "x": 695.7165280705365,
     "y": -618.6696538738369,
-    "neighbors": {},
+    "neighbors": {
+      "{d5e1ac97-0cb8-44c1-86a7-108985d0a5b7}": 38.16160268253386,
+      "{eed1b315-3a5d-4ca6-9175-70119f8836b0}": 85.92944374391988
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{e888f373-2cc2-4aa6-b0a3-861bf5c26323}"
@@ -277,10 +354,13 @@
   "{d3493e8a-8317-4e13-99f2-a77004cd6a18}": {
     "id": "{d3493e8a-8317-4e13-99f2-a77004cd6a18}",
     "type": "hallway_node",
-    "label": "hallway near stair",
+    "label": "hallway",
     "x": 800.7872827875176,
     "y": -621.5882859493086,
-    "neighbors": {},
+    "neighbors": {
+      "{3a2d6a23-8f0a-468a-b281-3108c0e1f09e}": 64.86561359435106,
+      "{868ba2cf-259f-400b-aea2-8f124075235f}": 135.79864446524215
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{d3493e8a-8317-4e13-99f2-a77004cd6a18}"
@@ -288,10 +368,13 @@
   "{1e7f7b68-faca-4dec-9fb3-2c1801682c59}": {
     "id": "{1e7f7b68-faca-4dec-9fb3-2c1801682c59}",
     "type": "hallway_node",
-    "label": "hallway near C024",
+    "label": "hallway",
     "x": 876.0879903346874,
     "y": -622.1720123644029,
-    "neighbors": {},
+    "neighbors": {
+      "{1df10265-fbe6-4c40-a79c-30f8fb354733}": 7.485940811394122,
+      "{7d3ec6dc-47cd-45b8-bb81-ab7f07ba8a4f}": 75.71616483934686
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{1e7f7b68-faca-4dec-9fb3-2c1801682c59}"
@@ -302,7 +385,9 @@
     "label": "its C022,023",
     "x": 916.3651129761968,
     "y": -622.1720123644028,
-    "neighbors": {},
+    "neighbors": {
+      "{19ce3df5-8b55-4a5e-8754-220f5be95ba6}": 7.004716981131992
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{fcffed36-86fa-474a-b896-fca547b2fde6}"
@@ -313,7 +398,9 @@
     "label": "its stair, C021",
     "x": 971.8191224101591,
     "y": -608.7463048172331,
-    "neighbors": {},
+    "neighbors": {
+      "{7420334c-38fa-4749-a414-f294ae5d6d08}": 7.7573043942718805
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{b24fa3f6-837f-40d9-9adc-0e6de44393c0}"
@@ -324,7 +411,9 @@
     "label": "T-junction",
     "x": 970.6516695799704,
     "y": -621.0045595342142,
-    "neighbors": {},
+    "neighbors": {
+      "{19538a94-762e-4fc0-84e7-2859b6c83ed6}": 104.8593821861749
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{81be516a-b61f-4493-b913-f95e95eecc51}"
@@ -335,7 +424,9 @@
     "label": "T-junction",
     "x": 972.1134178111025,
     "y": -684.6576550530823,
-    "neighbors": {},
+    "neighbors": {
+      "{19538a94-762e-4fc0-84e7-2859b6c83ed6}": 42.35687354490933
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{0e2c5cfa-bbe4-4805-a078-f4c887dad765}"
@@ -343,10 +434,13 @@
   "{becb32da-a8fa-4073-929b-e9fe91f10fe6}": {
     "id": "{becb32da-a8fa-4073-929b-e9fe91f10fe6}",
     "type": "hallway_node",
-    "label": "hallway near C015",
+    "label": "hallway",
     "x": 943.1528046035554,
     "y": -683.4509628361011,
-    "neighbors": {},
+    "neighbors": {
+      "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}": 51.19324444924869,
+      "{2cd2a236-0cf9-478e-bd2d-23c8b5ad9b34}": 10.052669448429919
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{becb32da-a8fa-4073-929b-e9fe91f10fe6}"
@@ -357,7 +451,10 @@
     "label": "its T- junction Stair C018 C016",
     "x": 985.387032197895,
     "y": -738.6571317629878,
-    "neighbors": {},
+    "neighbors": {
+      "{19538a94-762e-4fc0-84e7-2859b6c83ed6}": 13.880239162900008,
+      "{b515c0b6-505f-4fd9-990d-fb813a1164a4}": 20.513767688679195
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{71d77c00-4e8f-42e6-9aaa-629001f12bb9}"
@@ -368,7 +465,13 @@
     "label": "its C019, its T-junction",
     "x": 985.6887052521403,
     "y": -724.7801712677048,
-    "neighbors": {},
+    "neighbors": {
+      "{1539d1ca-985f-46e9-86fa-83b0d4a76031}": 21.730101449068368,
+      "{71d77c00-4e8f-42e6-9aaa-629001f12bb9}": 13.880239162900008,
+      "{032e2615-f99a-4d50-b509-80b86f85c8f9}": 6.06687838923581,
+      "{81be516a-b61f-4493-b913-f95e95eecc51}": 104.8593821861749,
+      "{0e2c5cfa-bbe4-4805-a078-f4c887dad765}": 42.35687354490933
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{19538a94-762e-4fc0-84e7-2859b6c83ed6}"
@@ -379,7 +482,9 @@
     "label": "its C008,C009",
     "x": 841.1873122686496,
     "y": -697.0262502771388,
-    "neighbors": {},
+    "neighbors": {
+      "{3a2d6a23-8f0a-468a-b281-3108c0e1f09e}": 24.873002620599674
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{53ed050a-5e37-4b9a-8dbe-8fb545c0c905}"
@@ -390,7 +495,9 @@
     "label": "T-junction",
     "x": 714.7863025398761,
     "y": -702.4563652535539,
-    "neighbors": {},
+    "neighbors": {
+      "{e888f373-2cc2-4aa6-b0a3-861bf5c26323}": 85.92944374391988
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{eed1b315-3a5d-4ca6-9175-70119f8836b0}"
@@ -398,10 +505,12 @@
   "{9fd2d594-fd5f-4346-9323-c366e5628f70}": {
     "id": "{9fd2d594-fd5f-4346-9323-c366e5628f70}",
     "type": "hallway_node",
-    "label": "hallway near C036",
+    "label": "hallway",
     "x": 720.2164175162912,
     "y": -729.3052670813842,
-    "neighbors": {},
+    "neighbors": {
+      "{d5e1ac97-0cb8-44c1-86a7-108985d0a5b7}": 75.50531948632342
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{9fd2d594-fd5f-4346-9323-c366e5628f70}"
@@ -412,7 +521,9 @@
     "label": "its C037, Financail aid",
     "x": 717.751179022078,
     "y": -764.4037236082302,
-    "neighbors": {},
+    "neighbors": {
+      "{f3fcef55-5223-494a-9bb8-472d1fb6fe09}": 42.78076268499896
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{adc6cefd-6926-4839-80d0-3415c472e14b}"
@@ -420,10 +531,12 @@
   "{4983e894-1be4-476c-b001-dfa782c14ab1}": {
     "id": "{4983e894-1be4-476c-b001-dfa782c14ab1}",
     "type": "hallway_node",
-    "label": "hallway near stair btm",
+    "label": "hallway",
     "x": 716.0802590314445,
     "y": -827.6308477317241,
-    "neighbors": {},
+    "neighbors": {
+      "{3edd6dcb-2b87-47c2-b549-7bc5399a0e26}": 29.074018438666663
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{4983e894-1be4-476c-b001-dfa782c14ab1}"
@@ -434,7 +547,10 @@
     "label": "RoomC010",
     "x": 852.6803165338439,
     "y": -672.1396159025663,
-    "neighbors": {},
+    "neighbors": {
+      "{3a2d6a23-8f0a-468a-b281-3108c0e1f09e}": 11.265135357501801,
+      "{d18ebd75-7773-4ccf-a4c0-eaf153242e64}": 32.63617811364849
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{9a206785-063d-4d23-a5dd-08f78c1789cb}"
@@ -445,7 +561,10 @@
     "label": "RoomC012",
     "x": 885.2203643116857,
     "y": -669.6365353042709,
-    "neighbors": {},
+    "neighbors": {
+      "{9a206785-063d-4d23-a5dd-08f78c1789cb}": 32.63617811364849,
+      "{2241f2ab-fa00-4214-895b-bffef11455fc}": 12.655418071322867
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{d18ebd75-7773-4ccf-a4c0-eaf153242e64}"
@@ -456,7 +575,9 @@
     "label": "RoomC013",
     "x": 897.7357673031632,
     "y": -667.7592248555492,
-    "neighbors": {},
+    "neighbors": {
+      "{d18ebd75-7773-4ccf-a4c0-eaf153242e64}": 12.655418071322867
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{2241f2ab-fa00-4214-895b-bffef11455fc}"
@@ -467,7 +588,9 @@
     "label": "RoomC014",
     "x": 932.1531255297266,
     "y": -664.6303741076798,
-    "neighbors": {},
+    "neighbors": {
+      "{34460166-fa19-4766-a1ae-118601bcef51}": 11.032405159154344
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{85614fde-13b0-43a5-87e2-acea7f20aafa}"
@@ -478,7 +601,10 @@
     "label": "Kiosk",
     "x": 693.1089283925046,
     "y": -809.8090488088199,
-    "neighbors": {},
+    "neighbors": {
+      "{4983e894-1be4-476c-b001-dfa782c14ab1}": 29.074018438666663,
+      "{46896af9-c0d4-409b-97d5-9ad346d0a5e7}": 22.09711528365992
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{3edd6dcb-2b87-47c2-b549-7bc5399a0e26}"
@@ -489,7 +615,9 @@
     "label": "its kiosk,stair",
     "x": 715.1974605881701,
     "y": -810.4248810103211,
-    "neighbors": {},
+    "neighbors": {
+      "{3edd6dcb-2b87-47c2-b549-7bc5399a0e26}": 22.09711528365992
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{46896af9-c0d4-409b-97d5-9ad346d0a5e7}"
@@ -497,10 +625,13 @@
   "{7d3ec6dc-47cd-45b8-bb81-ab7f07ba8a4f}": {
     "id": "{7d3ec6dc-47cd-45b8-bb81-ab7f07ba8a4f}",
     "type": "hallway_node",
-    "label": "hallway near C010",
+    "label": "hallway",
     "x": 856.4349374312872,
     "y": -695.2931114367999,
-    "neighbors": {},
+    "neighbors": {
+      "{1e7f7b68-faca-4dec-9fb3-2c1801682c59}": 75.71616483934686,
+      "{6fede0b7-a3c7-4470-8e27-e00506e74677}": 30.821959177136314
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{7d3ec6dc-47cd-45b8-bb81-ab7f07ba8a4f}"
@@ -508,10 +639,13 @@
   "{6fede0b7-a3c7-4470-8e27-e00506e74677}": {
     "id": "{6fede0b7-a3c7-4470-8e27-e00506e74677}",
     "type": "hallway_node",
-    "label": "hallway near C012",
+    "label": "hallway",
     "x": 887.0976747604072,
     "y": -692.1642606889305,
-    "neighbors": {},
+    "neighbors": {
+      "{7d3ec6dc-47cd-45b8-bb81-ab7f07ba8a4f}": 30.821959177136314,
+      "{09823fca-7479-4b3b-b6e3-2298fd2b9496}": 13.894352165112783
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{6fede0b7-a3c7-4470-8e27-e00506e74677}"
@@ -519,10 +653,12 @@
   "{09823fca-7479-4b3b-b6e3-2298fd2b9496}": {
     "id": "{09823fca-7479-4b3b-b6e3-2298fd2b9496}",
     "type": "hallway_node",
-    "label": "hallway near C013",
+    "label": "hallway",
     "x": 900.8646180510326,
     "y": -690.2869502402089,
-    "neighbors": {},
+    "neighbors": {
+      "{6fede0b7-a3c7-4470-8e27-e00506e74677}": 13.894352165112783
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{09823fca-7479-4b3b-b6e3-2298fd2b9496}"
@@ -530,10 +666,12 @@
   "{2cd2a236-0cf9-478e-bd2d-23c8b5ad9b34}": {
     "id": "{2cd2a236-0cf9-478e-bd2d-23c8b5ad9b34}",
     "type": "hallway_node",
-    "label": "hallway near C014",
+    "label": "hallway",
     "x": 933.4046658288744,
     "y": -685.9065591931917,
-    "neighbors": {},
+    "neighbors": {
+      "{becb32da-a8fa-4073-929b-e9fe91f10fe6}": 10.052669448429919
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{2cd2a236-0cf9-478e-bd2d-23c8b5ad9b34}"
@@ -544,7 +682,9 @@
     "label": "StudentLounge",
     "x": 984.3712115073847,
     "y": -693.6809968760977,
-    "neighbors": {},
+    "neighbors": {
+      "{9308fb61-6c2a-435a-99c8-7f796dee69d6}": 52.41111133945981
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{ff0245df-492f-4190-82e9-41ff37326284}"
@@ -552,10 +692,12 @@
   "{5d75da6c-7970-4b29-8ab4-7ef42a5ffa84}": {
     "id": "{5d75da6c-7970-4b29-8ab4-7ef42a5ffa84}",
     "type": "hallway_node",
-    "label": "hallway near Student lounge",
+    "label": "hallway",
     "x": 972.9985406358338,
     "y": -694.5908105458217,
-    "neighbors": {},
+    "neighbors": {
+      "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}": 53.696351853320685
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{5d75da6c-7970-4b29-8ab4-7ef42a5ffa84}"
@@ -566,7 +708,10 @@
     "label": "StudentLounge_stair",
     "x": 981.1868636633507,
     "y": -641.3667108669639,
-    "neighbors": {},
+    "neighbors": {
+      "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}": 9.563868514082252,
+      "{ff0245df-492f-4190-82e9-41ff37326284}": 52.41111133945981
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{9308fb61-6c2a-435a-99c8-7f796dee69d6}"
@@ -574,10 +719,15 @@
   "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}": {
     "id": "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}",
     "type": "hallway_node",
-    "label": "hallway near student lounge stair ",
+    "label": "hallway",
     "x": 971.633820131248,
     "y": -640.9118040321018,
-    "neighbors": {},
+    "neighbors": {
+      "{9308fb61-6c2a-435a-99c8-7f796dee69d6}": 9.563868514082252,
+      "{34460166-fa19-4766-a1ae-118601bcef51}": 35.391588272117374,
+      "{becb32da-a8fa-4073-929b-e9fe91f10fe6}": 51.19324444924869,
+      "{5d75da6c-7970-4b29-8ab4-7ef42a5ffa84}": 53.696351853320685
+    },
     "level": 6,
     "source": "source_1",
     "originalId": "{31e034d7-9aa2-44a3-8c98-ef4acc46b1aa}"
@@ -589,7 +739,8 @@
     "x": 746.1796182426189,
     "y": -845.9534931270309,
     "neighbors": {
-      "{31d93104-05d1-450b-8510-81c5b995bd52}": 1
+      "{31d93104-05d1-450b-8510-81c5b995bd52}": 1,
+      "{f3ba6db2-a9b4-4b22-93ec-6f54f0a64d83}": 32.69030763934836
     },
     "level": 6,
     "source": "source_1",
@@ -598,7 +749,7 @@
   "{789aacee-9885-4f0c-a930-2b38fefd482d}_L1": {
     "id": "{789aacee-9885-4f0c-a930-2b38fefd482d}_L1",
     "type": "entrance",
-    "label": "lower right entrance to building C",
+    "label": "entrance",
     "x": 1072.6394509265572,
     "y": -1062.1703390894863,
     "neighbors": {
@@ -616,7 +767,8 @@
     "x": 607.9498763564798,
     "y": -993.6225622861461,
     "neighbors": {
-      "{3e828981-877f-49c4-8542-5a4bf29e20bb}_L1": 9.592263542136324
+      "{3e828981-877f-49c4-8542-5a4bf29e20bb}_L1": 9.592263542136324,
+      "{aaa659dc-07b0-4d79-93fe-8d0efe360a9a}": 1
     },
     "originalId": "{a253dcd6-ef0d-412a-b3e4-b4cf8ffbb86f}_L1",
     "level": 1,
@@ -625,7 +777,7 @@
   "{3f8964cd-b784-49b4-84dc-50b9904edf5a}_L1": {
     "id": "{3f8964cd-b784-49b4-84dc-50b9904edf5a}_L1",
     "type": "entrance",
-    "label": "entrance to building A",
+    "label": "entrance",
     "x": 921.25566737439,
     "y": -532.1415618691781,
     "neighbors": {
@@ -638,13 +790,14 @@
   "{151bde12-548b-494b-86c1-4f112eb05263}_L1": {
     "id": "{151bde12-548b-494b-86c1-4f112eb05263}_L1",
     "type": "entrance",
-    "label": "lower court entrance to building B",
+    "label": "entrance",
     "x": 504.93711498388535,
     "y": -742.2798164969316,
     "neighbors": {
       "{5146f3a5-48cb-4530-9e78-df738a406508}_L1": 212.08477383811828,
       "{d7cc5dd8-5901-4517-b075-88ebe5429c4f}_L1": 349.5139051400972,
-      "{6f90fdf7-f29d-4a2b-8749-089cf9254516}_L1": 367.6886887104124
+      "{6f90fdf7-f29d-4a2b-8749-089cf9254516}_L1": 367.6886887104124,
+      "{aaa659dc-07b0-4d79-93fe-8d0efe360a9a}": 1
     },
     "originalId": "{151bde12-548b-494b-86c1-4f112eb05263}_L1",
     "level": 1,
@@ -653,7 +806,7 @@
   "{46278693-b361-46a6-96dd-a00f00366049}_L1": {
     "id": "{46278693-b361-46a6-96dd-a00f00366049}_L1",
     "type": "entrance",
-    "label": "lower entrance to building A",
+    "label": "entrance",
     "x": 536.8976833437762,
     "y": -515.3597811417071,
     "neighbors": {
@@ -667,7 +820,7 @@
   "{4acd1805-c043-457b-b7a4-8b41433e54b7}_L1": {
     "id": "{4acd1805-c043-457b-b7a4-8b41433e54b7}_L1",
     "type": "entrance",
-    "label": "court entrance to building A",
+    "label": "entrance",
     "x": 915.630418408482,
     "y": -488.19329803579996,
     "neighbors": {
@@ -681,7 +834,7 @@
   "{043f9be8-64f9-4b46-bc10-f7f51709d237}_L1": {
     "id": "{043f9be8-64f9-4b46-bc10-f7f51709d237}_L1",
     "type": "entrance",
-    "label": "upper entrance to building A",
+    "label": "entrance",
     "x": 623.034945026978,
     "y": -389.19376538944914,
     "neighbors": {
@@ -740,7 +893,7 @@
   "{e24f9d4c-a87f-44de-a66f-7a67ca53c3c1}_L1": {
     "id": "{e24f9d4c-a87f-44de-a66f-7a67ca53c3c1}_L1",
     "type": "entrance",
-    "label": "entrance to building B",
+    "label": "entrance",
     "x": 492.62558251493937,
     "y": -916.9681266146405,
     "neighbors": {
@@ -754,11 +907,12 @@
   "{0b8518f9-b037-4048-837e-7013365c4059}_L1": {
     "id": "{0b8518f9-b037-4048-837e-7013365c4059}_L1",
     "type": "entrance",
-    "label": "bridge to building J",
+    "label": "entrance",
     "x": 1167.6858119890214,
     "y": -823.3802311648246,
     "neighbors": {
-      "{6a56c4d5-b100-4c74-b41f-a12ad6f50e7f}_L1": 9.909230359278391
+      "{6a56c4d5-b100-4c74-b41f-a12ad6f50e7f}_L1": 9.909230359278391,
+      "{ad47e639-5ee6-4ad2-8c54-35293d1dc55d}": 1
     },
     "originalId": "{0b8518f9-b037-4048-837e-7013365c4059}_L1",
     "level": 1,
@@ -771,7 +925,8 @@
     "x": 1229.0549237593925,
     "y": -792.6956752796391,
     "neighbors": {
-      "{69d2233d-995c-4c7a-9640-e0dc9574875f}_L1": 53.97308756676303
+      "{69d2233d-995c-4c7a-9640-e0dc9574875f}_L1": 53.97308756676303,
+      "{31d93104-05d1-450b-8510-81c5b995bd52}": 1
     },
     "originalId": "{42df2b9d-f256-4e47-a771-638d58e22baf}_L1",
     "level": 1,
@@ -1362,7 +1517,8 @@
     "x": 968.8718653123722,
     "y": -901.811639695443,
     "neighbors": {
-      "{bf9ec61b-36cc-4634-97cb-0dbfa7f3a19c}_L1": 10.961951592713657
+      "{bf9ec61b-36cc-4634-97cb-0dbfa7f3a19c}_L1": 10.961951592713657,
+      "{d156e739-80b3-4a02-8641-0812d4443ec9}_L3": 14.205525021040572
     },
     "originalId": "{2fe4bfa2-c997-4706-ac25-ebd878e7d50e}_L1",
     "level": 1,
@@ -1375,7 +1531,8 @@
     "x": 876.0029154976475,
     "y": -756.6934728868472,
     "neighbors": {
-      "{6ffd1101-fe19-4376-973b-a2f4ec1e7d48}_L1": 14.774597009449522
+      "{6ffd1101-fe19-4376-973b-a2f4ec1e7d48}_L1": 14.774597009449522,
+      "{fed8d7fe-62e3-4eb8-880c-e35a9547d077}_L5": 50.79071771461379
     },
     "originalId": "{caaa7d4a-e552-4ae7-9b09-8db09a2e0701}_L1",
     "level": 1,
@@ -1389,7 +1546,8 @@
     "y": -591.1410434382981,
     "neighbors": {
       "{5849526e-bfa0-4be0-b8d3-f7b9eba6133c}_L1": 16.41413413089945,
-      "{c4d3217d-56f8-4d1a-b8b1-838d329f3ed7}_L1": 60.47760030941312
+      "{c4d3217d-56f8-4d1a-b8b1-838d329f3ed7}_L1": 60.47760030941312,
+      "{67b94667-1c4c-4b8a-95db-13bb40711de7}_L3": 168.26674717863153
     },
     "originalId": "{35546ca7-7ee1-4cd0-b4d6-c825d711a478}_L1",
     "level": 1,
@@ -1454,7 +1612,8 @@
     "x": 1094.4902532407664,
     "y": -1074.365074239595,
     "neighbors": {
-      "{b6ed0878-59b6-4ced-b09f-e5f96a4da825}_L1": 22.03111197214973
+      "{b6ed0878-59b6-4ced-b09f-e5f96a4da825}_L1": 22.03111197214973,
+      "{f6699638-4232-4d04-91ab-515349dec091}_L3": 9.508729044439383
     },
     "originalId": "{77590b0c-8ac3-47ab-b722-8a90b6702c29}_L1",
     "level": 1,
@@ -1467,7 +1626,8 @@
     "x": 1209.964570008118,
     "y": -590.4245352035895,
     "neighbors": {
-      "{16af6bba-c5a8-4a0b-953f-7f79ad0accbf}_L1": 16.53718429329535
+      "{16af6bba-c5a8-4a0b-953f-7f79ad0accbf}_L1": 16.53718429329535,
+      "{1fbc5286-65db-4413-a4f0-271b2def4874}_L3": 36.44904246501902
     },
     "originalId": "{8bb89b0d-8f3f-4082-8d84-056f905639e3}_L1",
     "level": 1,
@@ -1550,7 +1710,7 @@
   "{56e18504-5a07-4a88-907e-1523645296c3}_L1": {
     "id": "{56e18504-5a07-4a88-907e-1523645296c3}_L1",
     "type": "hallway_node",
-    "label": "hallway3",
+    "label": "hallway",
     "x": 592.1362734618159,
     "y": -982.6633915650026,
     "neighbors": {
@@ -1579,7 +1739,7 @@
   "{775abf8d-d27c-457a-9175-e998096e73e7}_L1": {
     "id": "{775abf8d-d27c-457a-9175-e998096e73e7}_L1",
     "type": "hallway_node",
-    "label": "hallway2",
+    "label": "hallway",
     "x": 570.7038082499294,
     "y": -958.9508768624898,
     "neighbors": {
@@ -1624,7 +1784,7 @@
   "{0bb3fff5-3197-460c-8783-f91dd19d0297}_L1": {
     "id": "{0bb3fff5-3197-460c-8783-f91dd19d0297}_L1",
     "type": "intersection",
-    "label": "hallway1",
+    "label": "hallway",
     "x": 564.319669676176,
     "y": -919.2780157255934,
     "neighbors": {
@@ -1639,7 +1799,7 @@
   "{3bab9793-1fed-4202-8a87-26545c4c0175}_L1": {
     "id": "{3bab9793-1fed-4202-8a87-26545c4c0175}_L1",
     "type": "hallway_node",
-    "label": "hallway4",
+    "label": "hallway",
     "x": 642.9327121847542,
     "y": -907.4061890257481,
     "neighbors": {
@@ -1744,7 +1904,7 @@
   "{dde04cd6-e861-4bcc-97a0-5882cdf82e75}_L1": {
     "id": "{dde04cd6-e861-4bcc-97a0-5882cdf82e75}_L1",
     "type": "intersection",
-    "label": "hallway5",
+    "label": "hallway",
     "x": 877.38460495579,
     "y": -905.9895870810137,
     "neighbors": {
@@ -1861,7 +2021,7 @@
   "{3a83cd1c-8a6b-4599-b9b3-ed061488ada4}_L1": {
     "id": "{3a83cd1c-8a6b-4599-b9b3-ed061488ada4}_L1",
     "type": "hallway_node",
-    "label": "hallway10",
+    "label": "hallway",
     "x": 984.0280486107547,
     "y": -1055.3402656335948,
     "neighbors": {
@@ -1875,7 +2035,7 @@
   "{c865fcbe-a16a-47d0-8820-18f5164f2971}_L1": {
     "id": "{c865fcbe-a16a-47d0-8820-18f5164f2971}_L1",
     "type": "entrance",
-    "label": "lower entrance to building C",
+    "label": "entrance",
     "x": 1032.0271533833222,
     "y": -1058.0027889298713,
     "neighbors": {
@@ -1891,7 +2051,7 @@
   "{31bb5033-6ef0-4b5a-9fd4-0ac5cbf79a69}_L1": {
     "id": "{31bb5033-6ef0-4b5a-9fd4-0ac5cbf79a69}_L1",
     "type": "hallway_node",
-    "label": "hallway from lower right entrance",
+    "label": "hallway",
     "x": 1072.0929923497374,
     "y": -1056.3050838889217,
     "neighbors": {
@@ -1905,7 +2065,7 @@
   "{806151bb-7262-4110-ad8f-b2b2687d736a}_L1": {
     "id": "{806151bb-7262-4110-ad8f-b2b2687d736a}_L1",
     "type": "hallway_node",
-    "label": "hallway8",
+    "label": "hallway",
     "x": 1010.2291272487054,
     "y": -969.5882221242124,
     "neighbors": {
@@ -1920,7 +2080,7 @@
   "{d23848b9-592b-4195-91f0-80f751fc86d1}_L1": {
     "id": "{d23848b9-592b-4195-91f0-80f751fc86d1}_L1",
     "type": "intersection",
-    "label": "hallway7",
+    "label": "hallway",
     "x": 1012.521886118429,
     "y": -913.4156298159814,
     "neighbors": {
@@ -1935,7 +2095,7 @@
   "{2badf34d-ee0b-4dd2-9ec8-ccdf356ffddb}_L1": {
     "id": "{2badf34d-ee0b-4dd2-9ec8-ccdf356ffddb}_L1",
     "type": "hallway_node",
-    "label": "hallway6",
+    "label": "hallway",
     "x": 924.2506696340662,
     "y": -905.9641634893794,
     "neighbors": {
@@ -1994,7 +2154,7 @@
   "{ef7899fc-de02-4e63-97e1-9efb19fe461b}_L1": {
     "id": "{ef7899fc-de02-4e63-97e1-9efb19fe461b}_L1",
     "type": "hallway_node",
-    "label": "hallway to J",
+    "label": "hallway",
     "x": 1156.732850660296,
     "y": -815.9309566407871,
     "neighbors": {
@@ -2022,7 +2182,7 @@
   "{d9382adf-3ade-4f9a-858b-d7f08fe8eb61}_L1": {
     "id": "{d9382adf-3ade-4f9a-858b-d7f08fe8eb61}_L1",
     "type": "intersection",
-    "label": "hallway11",
+    "label": "hallway",
     "x": 1014.925428768663,
     "y": -814.8766263664999,
     "neighbors": {
@@ -2037,7 +2197,7 @@
   "{ead4ee66-37b5-436d-8363-e23783dfc030}_L1": {
     "id": "{ead4ee66-37b5-436d-8363-e23783dfc030}_L1",
     "type": "intersection",
-    "label": "hallway12",
+    "label": "hallway",
     "x": 924.2530251799608,
     "y": -874.4462868637287,
     "neighbors": {
@@ -2051,7 +2211,7 @@
   "{5ef0905c-cece-406a-9162-b4c6b3c8b870}_L1": {
     "id": "{5ef0905c-cece-406a-9162-b4c6b3c8b870}_L1",
     "type": "intersection",
-    "label": "hallway13",
+    "label": "hallway",
     "x": 918.454208671381,
     "y": -812.7679658179254,
     "neighbors": {
@@ -2068,7 +2228,7 @@
   "{36704eec-0f6a-4a82-9048-5620930b8566}_L1": {
     "id": "{36704eec-0f6a-4a82-9048-5620930b8566}_L1",
     "type": "intersection",
-    "label": "hallway14",
+    "label": "hallway",
     "x": 918.420472713292,
     "y": -770.644817213302,
     "neighbors": {
@@ -2130,7 +2290,7 @@
   "{ac283b34-c44f-4f4d-acca-9f434643bbc9}_L1": {
     "id": "{ac283b34-c44f-4f4d-acca-9f434643bbc9}_L1",
     "type": "intersection",
-    "label": "hallway15",
+    "label": "hallway",
     "x": 917.9020578301362,
     "y": -724.5999771568597,
     "neighbors": {
@@ -2160,7 +2320,7 @@
   "{2ceb867a-f543-460d-a9bc-f1f61dd886c6}_L1": {
     "id": "{2ceb867a-f543-460d-a9bc-f1f61dd886c6}_L1",
     "type": "intersection",
-    "label": "hallway16",
+    "label": "hallway",
     "x": 918.7789494442717,
     "y": -613.8238868099419,
     "neighbors": {
@@ -2416,7 +2576,7 @@
   "{27c2f21d-b1f6-443e-a612-2595a4e852df}_L1": {
     "id": "{27c2f21d-b1f6-443e-a612-2595a4e852df}_L1",
     "type": "hallway_node",
-    "label": "lower hallway corner",
+    "label": "hallway",
     "x": 1237.3056471608722,
     "y": -729.8598987104469,
     "neighbors": {
@@ -2669,7 +2829,7 @@
   "{b6993189-d7cc-4aa7-a21f-b9eadf023286}_L1": {
     "id": "{b6993189-d7cc-4aa7-a21f-b9eadf023286}_L1",
     "type": "intersection",
-    "label": "upper hallway corner",
+    "label": "hallway",
     "x": 1229.058087409733,
     "y": -606.1561268930027,
     "neighbors": {
@@ -2726,7 +2886,7 @@
   "{ae633795-f467-4587-975f-b6ad4b9663c2}_L1": {
     "id": "{ae633795-f467-4587-975f-b6ad4b9663c2}_L1",
     "type": "hallway_node",
-    "label": "hallway9",
+    "label": "hallway",
     "x": 985.3810076717049,
     "y": -989.7161205050413,
     "neighbors": {
@@ -2778,7 +2938,8 @@
     "x": 1090.0595197870364,
     "y": -1065.9517200272394,
     "neighbors": {
-      "{fab92475-d00a-41a7-822b-dd962a05dcfd}_L3": 12.70111976624195
+      "{fab92475-d00a-41a7-822b-dd962a05dcfd}_L3": 12.70111976624195,
+      "{77590b0c-8ac3-47ab-b722-8a90b6702c29}_L1": 9.508729044439383
     },
     "originalId": "{f6699638-4232-4d04-91ab-515349dec091}_L3",
     "level": 3,
@@ -2805,7 +2966,9 @@
     "x": 885.2812876100828,
     "y": -549.8552294731604,
     "neighbors": {
-      "{acbe7559-50b2-4c60-a70d-121aa1334673}_L3": 18.038300301027444
+      "{acbe7559-50b2-4c60-a70d-121aa1334673}_L3": 18.038300301027444,
+      "{44845562-12b8-4dec-8fea-669a98d784f8}_L4": 162.7222207703231,
+      "{35546ca7-7ee1-4cd0-b4d6-c825d711a478}_L1": 168.26674717863153
     },
     "originalId": "{67b94667-1c4c-4b8a-95db-13bb40711de7}_L3",
     "level": 3,
@@ -2936,7 +3099,8 @@
     "x": 1045.6737781530458,
     "y": -629.2267503559984,
     "neighbors": {
-      "{7f5a87d4-e0ff-4366-ab3f-90291363f388}_L3": 8.549559997817891
+      "{7f5a87d4-e0ff-4366-ab3f-90291363f388}_L3": 8.549559997817891,
+      "{86c7a5c2-0558-42bd-b7e6-2b2c773d368e}_L4": 243.93965764572044
     },
     "originalId": "{1a6caa42-d4cb-405c-ab3e-a4c200741df3}_L3",
     "level": 3,
@@ -2963,7 +3127,8 @@
     "x": 1209.1166450821345,
     "y": -626.863713568869,
     "neighbors": {
-      "{7b9fa305-3733-4d1e-910b-ef4afe7ada4b}_L3": 8.855893343831957
+      "{7b9fa305-3733-4d1e-910b-ef4afe7ada4b}_L3": 8.855893343831957,
+      "{8bb89b0d-8f3f-4082-8d84-056f905639e3}_L1": 36.44904246501902
     },
     "originalId": "{1fbc5286-65db-4413-a4f0-271b2def4874}_L3",
     "level": 3,
@@ -3746,7 +3911,9 @@
     "x": 956.3797360820141,
     "y": -895.0482346051468,
     "neighbors": {
-      "{cca8e694-cdf5-4a3f-aa82-944fd15f49a8}_L3": 14.070564463705608
+      "{cca8e694-cdf5-4a3f-aa82-944fd15f49a8}_L3": 14.070564463705608,
+      "{86c7a5c2-0558-42bd-b7e6-2b2c773d368e}_L4": 116.87221095018592,
+      "{2fe4bfa2-c997-4706-ac25-ebd878e7d50e}_L1": 14.205525021040572
     },
     "originalId": "{d156e739-80b3-4a02-8641-0812d4443ec9}_L3",
     "level": 3,
@@ -3955,7 +4122,8 @@
     "x": 748.125543427188,
     "y": -637.4156256009879,
     "neighbors": {
-      "{fd78dbc8-c0ee-49f2-bf80-de7fd1bb2ecf}_L4": 14.46303974969569
+      "{fd78dbc8-c0ee-49f2-bf80-de7fd1bb2ecf}_L4": 14.46303974969569,
+      "{67b94667-1c4c-4b8a-95db-13bb40711de7}_L3": 162.7222207703231
     },
     "originalId": "{44845562-12b8-4dec-8fea-669a98d784f8}_L4",
     "level": 4,
@@ -3969,7 +4137,9 @@
     "y": -807.4051814825955,
     "neighbors": {
       "{3eb41200-77b7-462b-9e74-295211888c01}_L4": 5.31470049053089,
-      "{cb3a345f-56be-46ba-a8fd-664db56c1a25}_L5": 1
+      "{cb3a345f-56be-46ba-a8fd-664db56c1a25}_L5": 1,
+      "{1a6caa42-d4cb-405c-ab3e-a4c200741df3}_L3": 243.93965764572044,
+      "{d156e739-80b3-4a02-8641-0812d4443ec9}_L3": 116.87221095018592
     },
     "originalId": "{86c7a5c2-0558-42bd-b7e6-2b2c773d368e}_L4",
     "level": 4,
@@ -4555,7 +4725,7 @@
   "{8c9d8942-fa0f-47a1-97b8-7f1f08658bef}_L4": {
     "id": "{8c9d8942-fa0f-47a1-97b8-7f1f08658bef}_L4",
     "type": "hallway_node",
-    "label": "lower left hallway corner",
+    "label": "hallway",
     "x": 774.2705213476404,
     "y": -795.4969457247373,
     "neighbors": {
@@ -4629,7 +4799,7 @@
   "{6fd8c43b-00ad-4e72-b80c-01b5331223bd}_L4": {
     "id": "{6fd8c43b-00ad-4e72-b80c-01b5331223bd}_L4",
     "type": "intersection",
-    "label": "lower right hallway corner",
+    "label": "hallway",
     "x": 873.0236977516664,
     "y": -796.708829326123,
     "neighbors": {
@@ -4734,7 +4904,7 @@
   "{d6a21890-1ecc-40d4-9378-a5c4b499003d}_L4": {
     "id": "{d6a21890-1ecc-40d4-9378-a5c4b499003d}_L4",
     "type": "hallway_node",
-    "label": "upper right hallway corner",
+    "label": "hallway",
     "x": 870.5457354237763,
     "y": -650.3678513642805,
     "neighbors": {
@@ -4794,7 +4964,7 @@
   "{c443df0d-b287-41a1-9cd7-78d433b296a3}_L4": {
     "id": "{c443df0d-b287-41a1-9cd7-78d433b296a3}_L4",
     "type": "intersection",
-    "label": "upper left hallway corner",
+    "label": "hallway",
     "x": 771.2804726977178,
     "y": -650.1761732273648,
     "neighbors": {
@@ -4830,7 +5000,9 @@
     "x": 772.1971389412704,
     "y": -640.1017097865624,
     "neighbors": {
-      "{b3d7b461-6fd3-45ad-a18b-0f14a4958a1a}_L5": 17.395674730296214
+      "{b3d7b461-6fd3-45ad-a18b-0f14a4958a1a}_L5": 17.395674730296214,
+      "{654c60f4-39f7-4276-b027-52ef69920310}": 50.1943106622247,
+      "{4885fe29-5547-4f4b-8c8e-ef7cae6b69ab}": 203.27361684425722
     },
     "originalId": "{76013090-0de9-477f-ad1e-851b19522055}_L5",
     "level": 5,
@@ -4843,7 +5015,10 @@
     "x": 884.8704398187634,
     "y": -806.7041119387529,
     "neighbors": {
-      "{cb3a345f-56be-46ba-a8fd-664db56c1a25}_L5": 6.257718378247904
+      "{cb3a345f-56be-46ba-a8fd-664db56c1a25}_L5": 6.257718378247904,
+      "{1539d1ca-985f-46e9-86fa-83b0d4a76031}": 117.04213910686171,
+      "{f3ba6db2-a9b4-4b22-93ec-6f54f0a64d83}": 176.81720444006282,
+      "{caaa7d4a-e552-4ae7-9b09-8db09a2e0701}_L1": 50.79071771461379
     },
     "originalId": "{fed8d7fe-62e3-4eb8-880c-e35a9547d077}_L5",
     "level": 5,
@@ -5558,7 +5733,7 @@
   "{160d1671-3ece-4d2f-a34a-56a379ea1bc7}_L5": {
     "id": "{160d1671-3ece-4d2f-a34a-56a379ea1bc7}_L5",
     "type": "hallway_node",
-    "label": "corner hallway",
+    "label": "hallway",
     "x": 878.3533337199451,
     "y": -798.5059945149305,
     "neighbors": {
