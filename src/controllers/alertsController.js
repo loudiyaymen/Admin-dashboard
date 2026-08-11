@@ -8,6 +8,7 @@ import {
 } from "../errors/apiErrors.js";
 
 function buildResolutionMessage(alertType, originalMessage) {
+  // Generate domain-specific resolution copy so follow-up alerts are explicit and actionable.
   const title = String(alertType || "General alert").trim();
   const normalized = title.toLowerCase();
 
@@ -45,6 +46,7 @@ function isResolutionUpdateType(alertType) {
 }
 
 function buildAlertWsPayload(created, campus, building) {
+  // WebSocket payload mirrors REST fields and includes resolved campus/building names for clients.
   const message = String(created.message || "").trim();
   const createdAtIso = created?.created_at
     ? new Date(created.created_at).toISOString()
@@ -266,6 +268,7 @@ export async function createGlobalAlert(req, res) {
 
     const wsPayload = buildAlertWsPayload(created, campus, building);
 
+    // Broadcast both a simple event and full payload for backward-compatible websocket consumers.
     broadcast("ALERT_CREATED");
     broadcast(JSON.stringify(wsPayload));
     res.status(201).json({
