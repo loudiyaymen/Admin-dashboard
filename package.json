@@ -1,0 +1,44 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test node --test --experimental-test-module-mocks",
+    "prestart": "prisma migrate deploy --schema prisma/schema.prisma && prisma generate --schema prisma/schema.prisma",
+    "start": "node src/serverWithWebsocket.js",
+    "predev": "prisma migrate deploy --schema prisma/schema.prisma && prisma generate --schema prisma/schema.prisma",
+    "dev": "node --watch src/serverWithWebsocket.js",
+    "seed:navigation": "node scripts/import-navigation-graphs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard/issues"
+  },
+  "homepage": "https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "^7.5.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
+    "pg": "^8.20.0",
+    "ws": "^8.19.0",
+    "xss": "^1.0.15"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1",
+    "prisma": "^7.5.0",
+    "supertest": "^7.2.2"
+  }
+}

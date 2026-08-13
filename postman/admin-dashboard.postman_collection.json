@@ -1,0 +1,780 @@
+{
+  "info": {
+    "_postman_id": "7e324864-3f1b-4f7b-95af-04c31f5c1937",
+    "name": "Admin Dashboard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection generated from current Express routes. Update variables before running."
+  },
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "GET /health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Campuses",
+      "item": [
+        {
+          "name": "GET /api/v1/campuses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/campuses",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "campuses"]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/campuses/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/campuses/{{campusId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "campuses", "{{campusId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/campuses",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"campus_id\": \"11111111-1111-1111-1111-111111111111\",\n  \"name\": \"Main Campus\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/campuses",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "campuses"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/campuses/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Main Campus Renamed\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/campuses/{{campusId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "campuses", "{{campusId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/campuses/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/campuses/{{campusId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "campuses", "{{campusId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Buildings",
+      "item": [
+        {
+          "name": "GET /api/v1/buildings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/buildings?campus_id={{campusId}}&limit=20&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "buildings"],
+              "query": [
+                { "key": "campus_id", "value": "{{campusId}}" },
+                { "key": "limit", "value": "20" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/buildings/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/buildings/{{buildingId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "buildings", "{{buildingId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/buildings",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"building_id\": \"BLDG-A\",\n  \"campus_id\": \"{{campusId}}\",\n  \"code\": \"A\",\n  \"name\": \"Science Building\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/buildings",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "buildings"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/buildings/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Science Building North Wing\",\n  \"code\": \"A1\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/buildings/{{buildingId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "buildings", "{{buildingId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/buildings/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/buildings/{{buildingId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "buildings", "{{buildingId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Floors",
+      "item": [
+        {
+          "name": "GET /api/v1/floors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/floors?building_id={{buildingId}}&limit=20&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "floors"],
+              "query": [
+                { "key": "building_id", "value": "{{buildingId}}" },
+                { "key": "limit", "value": "20" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/floors/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/floors/{{floorId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "floors", "{{floorId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/floors",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"floor_id\": \"FLOOR-A-1\",\n  \"building_id\": \"{{buildingId}}\",\n  \"floor_number\": 1,\n  \"floor_label\": \"Ground Floor\",\n  \"elevation_meters\": 0,\n  \"map_asset_key\": \"maps/building-a/floor-1.png\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/floors",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "floors"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/floors/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"floor_label\": \"First Floor\",\n  \"elevation_meters\": 3.5\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/floors/{{floorId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "floors", "{{floorId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/floors/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/floors/{{floorId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "floors", "{{floorId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Announcements",
+      "item": [
+        {
+          "name": "GET /api/v1/announcements",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/announcements?campus_id={{campusId}}&severity=info&limit=20&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "announcements"],
+              "query": [
+                { "key": "campus_id", "value": "{{campusId}}" },
+                { "key": "severity", "value": "info" },
+                { "key": "limit", "value": "20" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/announcements/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/announcements/{{announcementId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "announcements", "{{announcementId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/announcements",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"announcement_id\": \"ANN-001\",\n  \"title\": \"Campus Transit Update\",\n  \"body\": \"Shuttle route B is delayed by 10 minutes.\",\n  \"severity\": \"info\",\n  \"campus_id\": \"{{campusId}}\",\n  \"building_id\": null,\n  \"published_at\": \"2026-03-24T12:00:00.000Z\",\n  \"expires_at\": \"2026-03-25T12:00:00.000Z\",\n  \"created_by_admin_id\": \"admin-1\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/announcements",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "announcements"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/announcements/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Campus Transit Update (Revised)\",\n  \"severity\": \"warning\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/announcements/{{announcementId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "announcements", "{{announcementId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/announcements/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/announcements/{{announcementId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "announcements", "{{announcementId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alerts",
+      "item": [
+        {
+          "name": "GET /api/v1/alerts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alerts?severity=high&campus_id={{campusId}}&limit=20&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "alerts"],
+              "query": [
+                { "key": "severity", "value": "high" },
+                { "key": "campus_id", "value": "{{campusId}}" },
+                { "key": "limit", "value": "20" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/alerts/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alerts/{{alertId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "alerts", "{{alertId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/alerts/create",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"System maintenance starts at 8PM\",\n  \"alert_type\": \"system\",\n  \"severity\": \"medium\",\n  \"starts_at\": \"2026-03-24T20:00:00.000Z\",\n  \"ends_at\": \"2026-03-24T23:00:00.000Z\",\n  \"created_by_admin_id\": \"admin-1\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alerts/create",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "alerts", "create"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/alerts",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"alert_id\": \"ALERT-001\",\n  \"alert_type\": \"security\",\n  \"message\": \"Suspicious activity near north parking\",\n  \"severity\": \"high\",\n  \"campus_id\": \"{{campusId}}\",\n  \"building_id\": \"{{buildingId}}\",\n  \"starts_at\": \"2026-03-24T16:00:00.000Z\",\n  \"ends_at\": null,\n  \"created_by_admin_id\": \"admin-1\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alerts",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "alerts"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/alerts/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"Police have secured the area\",\n  \"severity\": \"low\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alerts/{{alertId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "alerts", "{{alertId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/alerts/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alerts/{{alertId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "alerts", "{{alertId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "GET /api/v1/events",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-admin", "value": "true" }],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events?campus_id={{campusId}}&limit=20&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events"],
+              "query": [
+                { "key": "campus_id", "value": "{{campusId}}" },
+                { "key": "limit", "value": "20" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/events/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events/{{eventId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events", "{{eventId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/events",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "x-admin", "value": "true" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Safety Workshop\",\n  \"event_date\": \"2026-04-05T18:00:00.000Z\",\n  \"campus_id\": \"{{campusId}}\",\n  \"location_node_id\": \"{{locationNodeId}}\",\n  \"host_type\": \"admin\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/events/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Safety Workshop - Updated\",\n  \"event_date\": \"2026-04-05T19:00:00.000Z\",\n  \"location_node_id\": \"{{locationNodeId}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events/{{eventId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events", "{{eventId}}"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/events/:id/approve",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "x-admin", "value": "true" }],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events/{{eventId}}/approve",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events", "{{eventId}}", "approve"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/events/:id/reject",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "x-admin", "value": "true" }],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events/{{eventId}}/reject",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events", "{{eventId}}", "reject"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/events/:id/drawWinner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events/{{eventId}}/drawWinner",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events", "{{eventId}}", "drawWinner"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/events/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/events/{{eventId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "events", "{{eventId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SOS",
+      "item": [
+        {
+          "name": "GET /api/v1/sos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sos?status=active&limit=20&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sos"],
+              "query": [
+                { "key": "status", "value": "active" },
+                { "key": "limit", "value": "20" },
+                { "key": "offset", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/sos/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sos/{{sosEventId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sos", "{{sosEventId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/sos/trigger",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              {
+                "key": "X-Device-Installation-Id",
+                "value": "device-installation-001"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceInstallationId\": \"device-installation-001\",\n  \"estimatedFloor\": \"{{floorId}}\",\n  \"campusId\": \"{{campusId}}\",\n  \"userId\": null\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sos/trigger",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sos", "trigger"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/sos/end/:sosId",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sos/end/{{sosEventId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sos", "end", "{{sosEventId}}"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/sos/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"ended\",\n  \"ended_at\": \"2026-03-24T18:00:00.000Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sos/{{sosEventId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sos", "{{sosEventId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "GET /api/v1/reports",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/reports?sort_by=created_at&order=DESC&page=1&limit=10&status=new&type=lost_item",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "reports"],
+              "query": [
+                { "key": "sort_by", "value": "created_at" },
+                { "key": "order", "value": "DESC" },
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" },
+                { "key": "status", "value": "new" },
+                { "key": "type", "value": "lost_item" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /api/v1/reports/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/reports/{{reportId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "reports", "{{reportId}}"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/reports (JSON)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"lost_item\",\n  \"description\": \"Lost black backpack near cafeteria\",\n  \"campus_id\": \"{{campusId}}\",\n  \"user_id\": null\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/reports",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "reports"]
+            }
+          }
+        },
+        {
+          "name": "POST /api/v1/reports (Multipart + photo)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "type", "value": "lost_item", "type": "text" },
+                {
+                  "key": "description",
+                  "value": "Lost wallet at parking lot",
+                  "type": "text"
+                },
+                { "key": "campus_id", "value": "{{campusId}}", "type": "text" },
+                { "key": "user_id", "value": "", "type": "text" },
+                { "key": "photo", "type": "file", "src": "" }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/reports",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "reports"]
+            }
+          }
+        },
+        {
+          "name": "PATCH /api/v1/reports/:id",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"in_review\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/reports/{{reportId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "reports", "{{reportId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE /api/v1/reports/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/reports/{{reportId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "reports", "{{reportId}}"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:4000"
+    },
+    {
+      "key": "campusId",
+      "value": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "key": "buildingId",
+      "value": "BLDG-A"
+    },
+    {
+      "key": "floorId",
+      "value": "FLOOR-A-1"
+    },
+    {
+      "key": "announcementId",
+      "value": "ANN-001"
+    },
+    {
+      "key": "alertId",
+      "value": "ALERT-001"
+    },
+    {
+      "key": "eventId",
+      "value": "11111111-1111-1111-1111-111111111112"
+    },
+    {
+      "key": "sosEventId",
+      "value": "11111111-1111-1111-1111-111111111113"
+    },
+    {
+      "key": "reportId",
+      "value": "11111111-1111-1111-1111-111111111114"
+    },
+    {
+      "key": "locationNodeId",
+      "value": "NODE-001"
+    }
+  ]
+}

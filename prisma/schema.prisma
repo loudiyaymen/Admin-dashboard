@@ -1,0 +1,233 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  extensions = [postgis]
+}
+
+model User {
+  id         String   @id @default(uuid()) @db.Uuid
+  email      String?  @unique
+  role       Role     @default(student)
+  device_id  String?  @unique
+  created_at DateTime @default(now())
+  reports    Report[]
+  sos_logs   SosLog[]
+}
+
+model Campus {
+  id               String                   @id @default(uuid()) @db.Uuid
+  name             String
+  boundary         Unsupported("geometry")?
+  events           Event[]
+  navigation_nodes NavigationNode[]
+  reports          Report[]
+  sos_logs         SosLog[]
+}
+
+model Report {
+  id            String       @id @default(uuid()) @db.Uuid
+  user_id       String?      @db.Uuid
+  campus_id     String       @db.Uuid
+  incident_type IncidentType
+  description   String
+  location_text String?
+  incident_at   DateTime?
+  is_anonymous  Boolean      @default(false)
+  email_updates Boolean      @default(false)
+  photo_url     String?
+  status        ReportStatus @default(pending)
+  created_at    DateTime     @default(now())
+  campus        Campus       @relation(fields: [campus_id], references: [id])
+  user          User?        @relation(fields: [user_id], references: [id])
+}
+
+model SosLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  campus_id     String   @db.Uuid
+  user_id       String?  @db.Uuid
+  device_id     String?
+  dispatched_at DateTime @default(now())
+  campus        Campus   @relation(fields: [campus_id], references: [id])
+  user          User?    @relation(fields: [user_id], references: [id])
+}
+
+model NavigationNode {
+  id           String                   @id
+  campus_id    String                   @db.Uuid
+  name         String?
+  floor_level  Int                      @default(1)
+  geom         Unsupported("geometry")?
+  events       Event[]
+  source_edges NavigationEdge[]         @relation("SourceEdges")
+  target_edges NavigationEdge[]         @relation("TargetEdges")
+  campus       Campus                   @relation(fields: [campus_id], references: [id])
+}
+
+model NavigationEdge {
+  id             String                   @id @default(uuid()) @db.Uuid
+  source_node_id String
+  target_node_id String
+  weight         Float
+  is_stairs      Boolean                  @default(false)
+  geom           Unsupported("geometry")?
+  source_node    NavigationNode           @relation("SourceEdges", fields: [source_node_id], references: [id])
+  target_node    NavigationNode           @relation("TargetEdges", fields: [target_node_id], references: [id])
+}
+
+model Event {
+  id               String             @id @default(uuid()) @db.Uuid
+  campus_id        String             @db.Uuid
+  location_node_id String?
+  title            String
+  event_type       String?
+  description      String?
+  location_text    String?
+  registration_start_at DateTime?
+  registration_end_at   DateTime?
+  max_participants Int?
+  is_unlimited     Boolean            @default(false)
+  event_url        String?
+  fee_cents        Int?
+  event_image_url  String?
+  host_type        Role
+  is_approved      Boolean            @default(false)
+  event_date       DateTime
+  campus           Campus             @relation(fields: [campus_id], references: [id])
+  location_node    NavigationNode?    @relation(fields: [location_node_id], references: [id])
+  participants     EventParticipant[]
+}
+
+model EventParticipant {
+  event_id  String   @db.Uuid
+  device_id String
+  name      String?
+  email     String?
+  joined_at DateTime @default(now())
+  event     Event    @relation(fields: [event_id], references: [id])
+
+  @@id([event_id, device_id])
+}
+
+model DailyActiveUser {
+  device_id  String
+  login_date DateTime @db.Date
+
+  @@id([device_id, login_date])
+}
+
+model AdminCredential {
+  id            Int      @id @default(autoincrement())
+  username      String   @unique
+  password_hash String
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("admin_credentials")
+}
+
+model Alert {
+  alert_id            String    @id
+  alert_type          String?
+  message             String
+  severity            String?
+  campus_id           String?
+  building_id         String?
+  starts_at           DateTime?
+  ends_at             DateTime?
+  is_resolved         Boolean   @default(false)
+  resolved_at         DateTime?
+  created_by_admin_id String?
+  created_at          DateTime  @default(now())
+
+  @@map("alerts")
+}
+
+model Announcement {
+  announcement_id     String    @id
+  title               String
+  body                String?
+  severity            String?
+  campus_id           String?
+  building_id         String?
+  published_at        DateTime?
+  expires_at          DateTime?
+  created_by_admin_id String?
+  created_at          DateTime  @default(now())
+
+  @@map("announcements")
+}
+
+model Building {
+  building_id      String            @id
+  campus_id        String
+  code             String?
+  name             String
+  created_at       DateTime          @default(now())
+  navigation_graph NavigationGraph?
+
+  @@map("buildings")
+}
+
+model Floor {
+  floor_id          String   @id
+  building_id       String
+  floor_number      Int?
+  floor_label       String?
+  elevation_meters  Float?
+  map_asset_key     String?
+  created_at        DateTime @default(now())
+  @@map("floors")
+}
+
+model NavigationGraph {
+  building_id String   @id
+  graph_data   Json
+  source_file  String?
+  updated_at   DateTime @updatedAt
+  building     Building @relation(fields: [building_id], references: [building_id], onDelete: Cascade)
+
+  @@map("navigation_graphs")
+}
+
+model SosEvent {
+  sos_event_id            String    @id
+  device_installation_id  String
+  status                  String
+  created_at              DateTime  @default(now())
+  ended_at                DateTime?
+  estimated_floor_id      String?
+
+  @@map("sos_events")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model spatial_ref_sys {
+  srid      Int     @id
+  auth_name String? @db.VarChar(256)
+  auth_srid Int?
+  srtext    String? @db.VarChar(2048)
+  proj4text String? @db.VarChar(2048)
+}
+
+enum Role {
+  admin
+  student
+}
+
+enum IncidentType {
+  sexual
+  lostandfound
+  suspicious
+  other
+}
+
+enum ReportStatus {
+  pending
+  acknowledged
+  resolved
+  dismissed
+}

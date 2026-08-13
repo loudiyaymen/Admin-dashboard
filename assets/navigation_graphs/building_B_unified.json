@@ -1,0 +1,4734 @@
+{
+  "{09946d6a-fb6c-4414-815c-a1054c6a6765}": {
+    "id": "{09946d6a-fb6c-4414-815c-a1054c6a6765}",
+    "type": "entrance",
+    "label": "west-upperside entrance",
+    "x": 465.6936129485072,
+    "y": -509.8079696595533,
+    "neighbors": {
+      "{20aa8738-2471-4e3c-bc53-31bad5be4798}": 1,
+      "{2ed22a97-2356-4533-b19e-b3f2f4751727}_L3": 1,
+      "{267ed979-006f-4103-9996-b4e8f58c3595}": 31.24654127777662,
+      "{34333fdc-05d1-42fd-873d-160f97d8f2ae}": 28.038179998381068,
+      "{739a73fe-0973-47e5-9acc-df1ab4d4d8b1}_L2": 1
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{09946d6a-fb6c-4414-815c-a1054c6a6765}"
+  },
+  "{267ed979-006f-4103-9996-b4e8f58c3595}": {
+    "id": "{267ed979-006f-4103-9996-b4e8f58c3595}",
+    "type": "stairs",
+    "label": "stair near entrance",
+    "x": 494.2840160029707,
+    "y": -522.4149199254631,
+    "neighbors": {
+      "{09946d6a-fb6c-4414-815c-a1054c6a6765}": 31.24654127777662,
+      "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}": 11.738493524179617
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{267ed979-006f-4103-9996-b4e8f58c3595}"
+  },
+  "{34333fdc-05d1-42fd-873d-160f97d8f2ae}": {
+    "id": "{34333fdc-05d1-42fd-873d-160f97d8f2ae}",
+    "type": "intersection",
+    "label": "entrance-stair intersection",
+    "x": 493.6602099118209,
+    "y": -511.8102163759171,
+    "neighbors": {
+      "{09946d6a-fb6c-4414-815c-a1054c6a6765}": 28.038179998381068,
+      "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}": 17.117424470310645,
+      "{15bdc6a5-10e0-4fa0-b457-b462a5638ff7}": 73.30716938676721,
+      "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}": 73.61969098104208
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{34333fdc-05d1-42fd-873d-160f97d8f2ae}"
+  },
+  "{15bdc6a5-10e0-4fa0-b457-b462a5638ff7}": {
+    "id": "{15bdc6a5-10e0-4fa0-b457-b462a5638ff7}",
+    "type": "room_door",
+    "label": "RoomB152",
+    "x": 566.6455225763438,
+    "y": -504.94834937326965,
+    "neighbors": {
+      "{34333fdc-05d1-42fd-873d-160f97d8f2ae}": 73.30716938676721
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{15bdc6a5-10e0-4fa0-b457-b462a5638ff7}"
+  },
+  "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}": {
+    "id": "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}",
+    "type": "intersection",
+    "label": "itsRoomB152-entrance",
+    "x": 567.2693286674935,
+    "y": -513.0578285582166,
+    "neighbors": {
+      "{34333fdc-05d1-42fd-873d-160f97d8f2ae}": 73.61969098104208,
+      "{f046d0f6-a8bd-4de6-b405-76a48ede9fc0}": 70.76557038890171,
+      "{909fbc36-eee8-4639-bd28-4b8b90e95735}": 37.49269963726698,
+      "{a8051618-e28d-4c3a-a31e-3465fc4fd1da}": 18.491473652481197
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}"
+  },
+  "{f046d0f6-a8bd-4de6-b405-76a48ede9fc0}": {
+    "id": "{f046d0f6-a8bd-4de6-b405-76a48ede9fc0}",
+    "type": "room_door",
+    "label": "RoomB157",
+    "x": 637.7594169674172,
+    "y": -519.2958894697143,
+    "neighbors": {
+      "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}": 70.76557038890171,
+      "{e297c42b-4aab-4585-a544-ab4be6d56633}": 33.061722830937704,
+      "{17ea8877-fc67-4996-ae7e-37851eedd44f}": 18.49107892470042
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f046d0f6-a8bd-4de6-b405-76a48ede9fc0}"
+  },
+  "{e297c42b-4aab-4585-a544-ab4be6d56633}": {
+    "id": "{e297c42b-4aab-4585-a544-ab4be6d56633}",
+    "type": "room_door",
+    "label": "RoomB156",
+    "x": 620.2928464152237,
+    "y": -491.22461536797476,
+    "neighbors": {
+      "{f046d0f6-a8bd-4de6-b405-76a48ede9fc0}": 33.061722830937704
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e297c42b-4aab-4585-a544-ab4be6d56633}"
+  },
+  "{909fbc36-eee8-4639-bd28-4b8b90e95735}": {
+    "id": "{909fbc36-eee8-4639-bd28-4b8b90e95735}",
+    "type": "room_door",
+    "label": "RoomB149",
+    "x": 547.3705013934444,
+    "y": -544.8342222996071,
+    "neighbors": {
+      "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}": 37.49269963726698,
+      "{73173c95-7db4-499b-92a0-7ba5fcef9b28}": 12.686015451883431,
+      "{44a65fe3-b1d3-4db1-b2fd-c5042a33c8e9}": 20.503477917900636
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{909fbc36-eee8-4639-bd28-4b8b90e95735}"
+  },
+  "{442a17fb-7ff8-417b-9f62-7d1d087c775b}": {
+    "id": "{442a17fb-7ff8-417b-9f62-7d1d087c775b}",
+    "type": "room_door",
+    "label": "RoomB142",
+    "x": 632.2855653908123,
+    "y": -599.099470297925,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 40.119247389483
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{442a17fb-7ff8-417b-9f62-7d1d087c775b}"
+  },
+  "{249402cf-9e03-425d-9fd3-d35226cbb931}": {
+    "id": "{249402cf-9e03-425d-9fd3-d35226cbb931}",
+    "type": "room_door",
+    "label": "RoomB143",
+    "x": 628.7683733909213,
+    "y": -627.2370062970527,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 20.13259830617437
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{249402cf-9e03-425d-9fd3-d35226cbb931}"
+  },
+  "{229acdda-fceb-4a43-a5fd-05dfbfd8140f}": {
+    "id": "{229acdda-fceb-4a43-a5fd-05dfbfd8140f}",
+    "type": "room_door",
+    "label": "RoomB140",
+    "x": 665.4476613897842,
+    "y": -622.7149022971929,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 23.393554130527367
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{229acdda-fceb-4a43-a5fd-05dfbfd8140f}"
+  },
+  "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}": {
+    "id": "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}",
+    "type": "room_door",
+    "label": "RoomB139",
+    "x": 676.5016933894416,
+    "y": -663.9162942959158,
+    "neighbors": {
+      "{ef7f13a9-6b50-4731-a4a5-0013d41f7a86}": 32.87745952769781,
+      "{4848e285-ec8d-4d94-bd55-6690f7c9ae58}": 32.66350481646753,
+      "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}": 58.150463932295075,
+      "{24525147-00b3-4e63-85fa-6d6eb271d258}": 28.7461939338373
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}"
+  },
+  "{10d3e65d-505c-4f33-871c-b41278b608d7}": {
+    "id": "{10d3e65d-505c-4f33-871c-b41278b608d7}",
+    "type": "room_door",
+    "label": "RoomB158",
+    "x": 758.7770592031333,
+    "y": -534.1339910028825,
+    "neighbors": {
+      "{321084d5-a3a6-4fd7-9954-c942cf8507fa}": 103.04991312695381,
+      "{e987312e-dd6c-4292-a738-dd0afd1e17cc}": 33.64470539613378,
+      "{af168f25-3ca1-47d5-b553-910fffe0eb3a}": 59.570189420327054
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{10d3e65d-505c-4f33-871c-b41278b608d7}"
+  },
+  "{e987312e-dd6c-4292-a738-dd0afd1e17cc}": {
+    "id": "{e987312e-dd6c-4292-a738-dd0afd1e17cc}",
+    "type": "room_door",
+    "label": "RoomB159",
+    "x": 792.0665733858593,
+    "y": -529.25808630009,
+    "neighbors": {
+      "{10d3e65d-505c-4f33-871c-b41278b608d7}": 33.64470539613378
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e987312e-dd6c-4292-a738-dd0afd1e17cc}"
+  },
+  "{af168f25-3ca1-47d5-b553-910fffe0eb3a}": {
+    "id": "{af168f25-3ca1-47d5-b553-910fffe0eb3a}",
+    "type": "room_door",
+    "label": "RoomB164",
+    "x": 767.4462293866226,
+    "y": -593.069998298112,
+    "neighbors": {
+      "{10d3e65d-505c-4f33-871c-b41278b608d7}": 59.570189420327054
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{af168f25-3ca1-47d5-b553-910fffe0eb3a}"
+  },
+  "{328eea8e-d384-4931-8301-311073b59ccd}": {
+    "id": "{328eea8e-d384-4931-8301-311073b59ccd}",
+    "type": "room_door",
+    "label": "RoomB165",
+    "x": 857.2118750007666,
+    "y": -582.5242155756686,
+    "neighbors": {
+      "{6d35bc28-d842-45ab-a180-77d935f47ac8}": 20.61604091998439
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{328eea8e-d384-4931-8301-311073b59ccd}"
+  },
+  "{4848e285-ec8d-4d94-bd55-6690f7c9ae58}": {
+    "id": "{4848e285-ec8d-4d94-bd55-6690f7c9ae58}",
+    "type": "room_door",
+    "label": "RoomB132",
+    "x": 709.1613333884293,
+    "y": -663.4138382959314,
+    "neighbors": {
+      "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}": 32.66350481646753
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{4848e285-ec8d-4d94-bd55-6690f7c9ae58}"
+  },
+  "{48c29e31-5798-461e-ad62-8fd30bb89b2b}": {
+    "id": "{48c29e31-5798-461e-ad62-8fd30bb89b2b}",
+    "type": "room_door",
+    "label": "RoomB130",
+    "x": 794.5788533857816,
+    "y": -752.3485502931746,
+    "neighbors": {
+      "{75b2ef1d-8674-4c6a-b509-1f6c9579ea9e}": 35.526647161434475,
+      "{ba146a42-3396-4e9a-9aad-a25f8f321dc7}": 26.649121857801155
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{48c29e31-5798-461e-ad62-8fd30bb89b2b}"
+  },
+  "{ba146a42-3396-4e9a-9aad-a25f8f321dc7}": {
+    "id": "{ba146a42-3396-4e9a-9aad-a25f8f321dc7}",
+    "type": "room_door",
+    "label": "RoomB133",
+    "x": 767.9486853866072,
+    "y": -753.3534622931435,
+    "neighbors": {
+      "{48c29e31-5798-461e-ad62-8fd30bb89b2b}": 26.649121857801155,
+      "{7c8c58e3-4533-4ec6-8d1b-140f60d1f501}": 17.833878498179473
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ba146a42-3396-4e9a-9aad-a25f8f321dc7}"
+  },
+  "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}": {
+    "id": "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}",
+    "type": "room_door",
+    "label": "RoomB139A",
+    "x": 669.9697653896443,
+    "y": -721.6987342941247,
+    "neighbors": {
+      "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}": 58.150463932295075,
+      "{7c84b561-58b3-4129-a46b-a129ca0e0d0c}": 17.8068580761295,
+      "{477a8a95-2943-45b5-9017-46599e1cc8c9}": 9.346132440874058,
+      "{d067f4c8-31c5-406d-a673-f1a339f86600}": 10.693762364583238,
+      "{20f777a3-d75c-4c2c-8194-adba217f8d64}": 4.468694620580493
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}"
+  },
+  "{672815de-1f96-499a-a5ed-b9f7f916d276}": {
+    "id": "{672815de-1f96-499a-a5ed-b9f7f916d276}",
+    "type": "room_door",
+    "label": "RoomB168",
+    "x": 986.5170453798321,
+    "y": -602.1142062978315,
+    "neighbors": {
+      "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}": 89.50183702603913,
+      "{fd553066-20d2-48de-b5e6-31579d1b807b}": 11.291294262385332,
+      "{bbe8a928-3d93-44ff-b5bb-22e63f284665}": 22.788470761772437,
+      "{5d792194-e75e-4e79-b4af-62266eb5834d}": 6.014216575121884
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{672815de-1f96-499a-a5ed-b9f7f916d276}"
+  },
+  "{fd553066-20d2-48de-b5e6-31579d1b807b}": {
+    "id": "{fd553066-20d2-48de-b5e6-31579d1b807b}",
+    "type": "room_door",
+    "label": "RoomB166",
+    "x": 976.9703813801281,
+    "y": -608.1436782976447,
+    "neighbors": {
+      "{672815de-1f96-499a-a5ed-b9f7f916d276}": 11.291294262385332,
+      "{5c8ea1e4-bce2-4964-a33a-b6bb9ffd9500}": 11.291294262385271
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{fd553066-20d2-48de-b5e6-31579d1b807b}"
+  },
+  "{5c8ea1e4-bce2-4964-a33a-b6bb9ffd9500}": {
+    "id": "{5c8ea1e4-bce2-4964-a33a-b6bb9ffd9500}",
+    "type": "room_door",
+    "label": "RoomB167",
+    "x": 986.5170453798321,
+    "y": -614.1731502974577,
+    "neighbors": {
+      "{fd553066-20d2-48de-b5e6-31579d1b807b}": 11.291294262385271
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{5c8ea1e4-bce2-4964-a33a-b6bb9ffd9500}"
+  },
+  "{bbe8a928-3d93-44ff-b5bb-22e63f284665}": {
+    "id": "{bbe8a928-3d93-44ff-b5bb-22e63f284665}",
+    "type": "room_door",
+    "label": "RoomB170UL",
+    "x": 1008.6251093791468,
+    "y": -596.5871902980028,
+    "neighbors": {
+      "{672815de-1f96-499a-a5ed-b9f7f916d276}": 22.788470761772437,
+      "{9c8affa3-30a1-4ba8-ab3a-795e11919fcc}": 24.741994830533233,
+      "{9fd7eb15-8a53-48c0-8b35-ac90107c323e}": 7.890686773785041
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{bbe8a928-3d93-44ff-b5bb-22e63f284665}"
+  },
+  "{00606d9a-9660-491d-bf4a-6e093a1eb6d6}": {
+    "id": "{00606d9a-9660-491d-bf4a-6e093a1eb6d6}",
+    "type": "room_door",
+    "label": "RoomB170BR",
+    "x": 1090.5254373766081,
+    "y": -679.9948862954175,
+    "neighbors": {
+      "{76ad718a-3f16-430e-8b9c-1d778f6231e7}": 19.099938118352654,
+      "{f06c8651-4a9e-49d6-a9ac-13365b485b27}": 110.65831483092016,
+      "{db68d5de-cc71-4904-80fd-6bc137ca89a3}": 8.117597462817399
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{00606d9a-9660-491d-bf4a-6e093a1eb6d6}"
+  },
+  "{76ad718a-3f16-430e-8b9c-1d778f6231e7}": {
+    "id": "{76ad718a-3f16-430e-8b9c-1d778f6231e7}",
+    "type": "room_door",
+    "label": "RoomB182",
+    "x": 1079.4714053769508,
+    "y": -695.5710222949346,
+    "neighbors": {
+      "{06686508-15c3-400f-8a11-a4ad8f3bb832}": 83.98743756786457,
+      "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}": 72.6229951345778,
+      "{00606d9a-9660-491d-bf4a-6e093a1eb6d6}": 19.099938118352654,
+      "{34cecdb2-d33f-4753-a9ff-86f655a81846}": 106.16575443656009
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{76ad718a-3f16-430e-8b9c-1d778f6231e7}"
+  },
+  "{34cecdb2-d33f-4753-a9ff-86f655a81846}": {
+    "id": "{34cecdb2-d33f-4753-a9ff-86f655a81846}",
+    "type": "room_door",
+    "label": "RoomB183",
+    "x": 1103.0868373762187,
+    "y": -799.0769582917262,
+    "neighbors": {
+      "{76ad718a-3f16-430e-8b9c-1d778f6231e7}": 106.16575443656009,
+      "{6f8481b5-dec3-4409-b468-836adcf936ed}": 18.116308716083704,
+      "{c152ae4f-8fe0-423c-bf06-416304a8b87d}": 10.060047870664148
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{34cecdb2-d33f-4753-a9ff-86f655a81846}"
+  },
+  "{6f8481b5-dec3-4409-b468-836adcf936ed}": {
+    "id": "{6f8481b5-dec3-4409-b468-836adcf936ed}",
+    "type": "room_door",
+    "label": "RoomB184",
+    "x": 1102.08192537625,
+    "y": -817.1653742911654,
+    "neighbors": {
+      "{34cecdb2-d33f-4753-a9ff-86f655a81846}": 18.116308716083704
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{6f8481b5-dec3-4409-b468-836adcf936ed}"
+  },
+  "{50552795-f5f1-4320-a110-51da32da55f8}": {
+    "id": "{50552795-f5f1-4320-a110-51da32da55f8}",
+    "type": "room_door",
+    "label": "RoomB185",
+    "x": 1079.9738613769352,
+    "y": -906.6025422883934,
+    "neighbors": {
+      "{56160496-159d-4baf-87ff-176a543329bd}": 42.403538513967575,
+      "{d8ed074a-0698-4ce1-bd57-889e75ed99c7}": 10.788187832777027
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{50552795-f5f1-4320-a110-51da32da55f8}"
+  },
+  "{d8ed074a-0698-4ce1-bd57-889e75ed99c7}": {
+    "id": "{d8ed074a-0698-4ce1-bd57-889e75ed99c7}",
+    "type": "room_door",
+    "label": "RoomB186",
+    "x": 1074.9493013770912,
+    "y": -916.1492062880974,
+    "neighbors": {
+      "{50552795-f5f1-4320-a110-51da32da55f8}": 10.788187832777027,
+      "{502e4177-b39f-406f-92dd-71f15797af61}": 10.561814695990108,
+      "{8cdde55f-104f-40c5-8be4-88dfd343b637}": 5.163440034057894
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{d8ed074a-0698-4ce1-bd57-889e75ed99c7}"
+  },
+  "{de0cb7ca-acfb-4444-bfde-8153a386a3f0}": {
+    "id": "{de0cb7ca-acfb-4444-bfde-8153a386a3f0}",
+    "type": "room_door",
+    "label": "RoomB119",
+    "x": 922.7051333818099,
+    "y": -880.4748302892034,
+    "neighbors": {
+      "{304ed652-43f7-433d-a88a-6d6066f7a8ad}": 11.829698263825529,
+      "{323fdf13-f765-4851-be0a-9765b24836aa}": 96.3734437556444
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{de0cb7ca-acfb-4444-bfde-8153a386a3f0}"
+  },
+  "{e100fe85-8287-4134-8dc5-61ed7fdd0028}": {
+    "id": "{e100fe85-8287-4134-8dc5-61ed7fdd0028}",
+    "type": "room_door",
+    "label": "RoomC145",
+    "x": 1115.6482373758292,
+    "y": -946.7990222871473,
+    "neighbors": {
+      "{56160496-159d-4baf-87ff-176a543329bd}": 14.687778972213794
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e100fe85-8287-4134-8dc5-61ed7fdd0028}"
+  },
+  "{b59d1b39-44fb-4e94-b061-105552a8a1be}": {
+    "id": "{b59d1b39-44fb-4e94-b061-105552a8a1be}",
+    "type": "room_door",
+    "label": "RoomB117",
+    "x": 931.7493413815296,
+    "y": -930.7204302876457,
+    "neighbors": {
+      "{8071bbf0-c27c-466f-8192-5dcdd4e01881}": 11.263922320894954,
+      "{29d75e24-1c63-4c53-95df-e913475731d5}": 69.62400745685075,
+      "{81f77744-1bb2-49ee-8ec4-656b6b993931}": 20.02195705298971
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{b59d1b39-44fb-4e94-b061-105552a8a1be}"
+  },
+  "{fc61cbdb-6035-49ec-b820-2d4b2bc7fa1e}": {
+    "id": "{fc61cbdb-6035-49ec-b820-2d4b2bc7fa1e}",
+    "type": "room_door",
+    "label": "RoomB110",
+    "x": 1018.1717733788506,
+    "y": -985.488134285948,
+    "neighbors": {
+      "{0661062d-50d9-4287-91ff-2366fdca0c94}": 27.011391527461303
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{fc61cbdb-6035-49ec-b820-2d4b2bc7fa1e}"
+  },
+  "{0661062d-50d9-4287-91ff-2366fdca0c94}": {
+    "id": "{0661062d-50d9-4287-91ff-2366fdca0c94}",
+    "type": "room_door",
+    "label": "RoomB111",
+    "x": 1013.6496693789908,
+    "y": -1012.1183022851226,
+    "neighbors": {
+      "{f06ea448-efc7-4987-b394-8d6ac0cdcd15}": 20.372820537566273,
+      "{7a9d7b8f-6077-4fb6-88eb-c1cf31a16ce1}": 14.745665057704727,
+      "{c18d67a6-2b3a-4e6e-b83b-bffd83f277e0}": 16.858416400106528,
+      "{fc61cbdb-6035-49ec-b820-2d4b2bc7fa1e}": 27.011391527461303
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0661062d-50d9-4287-91ff-2366fdca0c94}"
+  },
+  "{945f42fc-1a8d-4a78-9f8c-3ae8813d9b50}": {
+    "id": "{945f42fc-1a8d-4a78-9f8c-3ae8813d9b50}",
+    "type": "room_door",
+    "label": "RoomB127",
+    "x": 804.4033939431222,
+    "y": -802.6853623233776,
+    "neighbors": {
+      "{3dfe3156-5544-4775-a2fc-4a77dc7064a2}": 15.24501838340015
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{945f42fc-1a8d-4a78-9f8c-3ae8813d9b50}"
+  },
+  "{085bcd52-8f31-406e-b338-bdec9ff0169e}": {
+    "id": "{085bcd52-8f31-406e-b338-bdec9ff0169e}",
+    "type": "stairs",
+    "label": "stair near B165",
+    "x": 863.4157499459956,
+    "y": -535.3747659919283,
+    "neighbors": {
+      "{0432934a-a3d2-46e3-beee-acbf888db99c}": 31.128917984489256,
+      "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}": 6.537793502818539
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{085bcd52-8f31-406e-b338-bdec9ff0169e}"
+  },
+  "{9c2d42b0-b7d4-4bc3-82bc-b53e1f76637d}": {
+    "id": "{9c2d42b0-b7d4-4bc3-82bc-b53e1f76637d}",
+    "type": "stairs",
+    "label": "stair near B139",
+    "x": 636.6238318396992,
+    "y": -664.6470713442609,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 29.79144963595991,
+      "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}": 3.554496763115045
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{9c2d42b0-b7d4-4bc3-82bc-b53e1f76637d}"
+  },
+  "{0f8dcc3b-d1fc-4ad5-ae46-5abd18e503a2}": {
+    "id": "{0f8dcc3b-d1fc-4ad5-ae46-5abd18e503a2}",
+    "type": "stairs",
+    "label": "stair near B127,B133",
+    "x": 766.5802556654718,
+    "y": -794.6034951700335,
+    "neighbors": {
+      "{69e197e3-a138-4b42-bab5-8f295711174e}": 31.17097295725342,
+      "{273e3552-f85a-480b-8f54-4fa4070ff4bb}": 1.959188024287195
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0f8dcc3b-d1fc-4ad5-ae46-5abd18e503a2}"
+  },
+  "{70325b5a-fac7-40ed-9d34-288d138e5f36}": {
+    "id": "{70325b5a-fac7-40ed-9d34-288d138e5f36}",
+    "type": "stairs",
+    "label": "stair near B117",
+    "x": 893.3039326299069,
+    "y": -921.3271721344685,
+    "neighbors": {
+      "{1e730db3-d477-4cf0-a2ed-a0c691f8b8ef}": 32.68956894530387,
+      "{a1491e5f-e5bc-4a3e-9348-684908413102}": 4.773064425621836
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{70325b5a-fac7-40ed-9d34-288d138e5f36}"
+  },
+  "{f06ea448-efc7-4987-b394-8d6ac0cdcd15}": {
+    "id": "{f06ea448-efc7-4987-b394-8d6ac0cdcd15}",
+    "type": "stairs",
+    "label": "stair near B111",
+    "x": 1029.0793008060873,
+    "y": -1025.4216210695402,
+    "neighbors": {
+      "{0661062d-50d9-4287-91ff-2366fdca0c94}": 20.372820537566273,
+      "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}": 4.146510507060214
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f06ea448-efc7-4987-b394-8d6ac0cdcd15}"
+  },
+  "{2b4dfa78-b7ce-46d2-8550-82112f05b497}": {
+    "id": "{2b4dfa78-b7ce-46d2-8550-82112f05b497}",
+    "type": "elevator",
+    "label": "elevator near B101",
+    "x": 1047.8292326018454,
+    "y": -963.3528813318576,
+    "neighbors": {
+      "{7a9d7b8f-6077-4fb6-88eb-c1cf31a16ce1}": 52.78755027649568
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{2b4dfa78-b7ce-46d2-8550-82112f05b497}"
+  },
+  "{06686508-15c3-400f-8a11-a4ad8f3bb832}": {
+    "id": "{06686508-15c3-400f-8a11-a4ad8f3bb832}",
+    "type": "stairs",
+    "label": "stair center of B",
+    "x": 995.9217936600467,
+    "y": -704.1356034972181,
+    "neighbors": {
+      "{76ad718a-3f16-430e-8b9c-1d778f6231e7}": 83.98743756786457,
+      "{7c2d6d0a-bfca-4cdc-bced-5229619386e3}": 19.909782419476528
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{06686508-15c3-400f-8a11-a4ad8f3bb832}"
+  },
+  "{07a73c59-e0ed-46f8-90d6-23d004a639a3}": {
+    "id": "{07a73c59-e0ed-46f8-90d6-23d004a639a3}",
+    "type": "stairs",
+    "label": "stair near C145",
+    "x": 1151.2771321646496,
+    "y": -924.559918995806,
+    "neighbors": {
+      "{56160496-159d-4baf-87ff-176a543329bd}": 38.29988150426342,
+      "{b32a098f-cc94-412c-a6b5-308d624894f6}": 21.989954679354913
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{07a73c59-e0ed-46f8-90d6-23d004a639a3}"
+  },
+  "{0432934a-a3d2-46e3-beee-acbf888db99c}": {
+    "id": "{0432934a-a3d2-46e3-beee-acbf888db99c}",
+    "type": "elevator",
+    "label": "elevator near B165",
+    "x": 849.3385753157152,
+    "y": -563.1388198982592,
+    "neighbors": {
+      "{085bcd52-8f31-406e-b338-bdec9ff0169e}": 31.128917984489256,
+      "{321084d5-a3a6-4fd7-9954-c942cf8507fa}": 22.54363236873604,
+      "{6d35bc28-d842-45ab-a180-77d935f47ac8}": 12.098084342945105
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0432934a-a3d2-46e3-beee-acbf888db99c}"
+  },
+  "{29d75e24-1c63-4c53-95df-e913475731d5}": {
+    "id": "{29d75e24-1c63-4c53-95df-e913475731d5}",
+    "type": "room_door",
+    "label": "RoomB114S",
+    "x": 927.4445921571246,
+    "y": -1000.21123218593,
+    "neighbors": {
+      "{b59d1b39-44fb-4e94-b061-105552a8a1be}": 69.62400745685075,
+      "{f0605795-a973-48a0-ad5b-8342cf2b858f}": 12.30703886516583,
+      "{01edf31c-3897-4c1a-8f65-8fb898fa890b}": 10.260129164271378
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{29d75e24-1c63-4c53-95df-e913475731d5}"
+  },
+  "{502e4177-b39f-406f-92dd-71f15797af61}": {
+    "id": "{502e4177-b39f-406f-92dd-71f15797af61}",
+    "type": "room_door",
+    "label": "RoomB187",
+    "x": 1085.4605884471127,
+    "y": -917.1810850619995,
+    "neighbors": {
+      "{d8ed074a-0698-4ce1-bd57-889e75ed99c7}": 10.561814695990108
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{502e4177-b39f-406f-92dd-71f15797af61}"
+  },
+  "{81f77744-1bb2-49ee-8ec4-656b6b993931}": {
+    "id": "{81f77744-1bb2-49ee-8ec4-656b6b993931}",
+    "type": "room_door",
+    "label": "RoomB115D",
+    "x": 917.7530045602273,
+    "y": -945.0375989957536,
+    "neighbors": {
+      "{b59d1b39-44fb-4e94-b061-105552a8a1be}": 20.02195705298971,
+      "{ee4b20d4-b0a6-45b4-98af-15764a66e02d}": 18.762662670550274
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{81f77744-1bb2-49ee-8ec4-656b6b993931}"
+  },
+  "{ee4b20d4-b0a6-45b4-98af-15764a66e02d}": {
+    "id": "{ee4b20d4-b0a6-45b4-98af-15764a66e02d}",
+    "type": "room_door",
+    "label": "RoomB115C",
+    "x": 918.0372547024084,
+    "y": -963.7981083797104,
+    "neighbors": {
+      "{81f77744-1bb2-49ee-8ec4-656b6b993931}": 18.762662670550274
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ee4b20d4-b0a6-45b4-98af-15764a66e02d}"
+  },
+  "{f0605795-a973-48a0-ad5b-8342cf2b858f}": {
+    "id": "{f0605795-a973-48a0-ad5b-8342cf2b858f}",
+    "type": "room_door",
+    "label": "RoomB116",
+    "x": 926.2805088256622,
+    "y": -987.9593704651093,
+    "neighbors": {
+      "{29d75e24-1c63-4c53-95df-e913475731d5}": 12.30703886516583,
+      "{ffb83d32-ac40-457f-bd31-f56629b3a3a7}": 11.511253409651811
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f0605795-a973-48a0-ad5b-8342cf2b858f}"
+  },
+  "{ffb83d32-ac40-457f-bd31-f56629b3a3a7}": {
+    "id": "{ffb83d32-ac40-457f-bd31-f56629b3a3a7}",
+    "type": "room_door",
+    "label": "RoomB115B",
+    "x": 916.6160039915026,
+    "y": -981.7058673371237,
+    "neighbors": {
+      "{f0605795-a973-48a0-ad5b-8342cf2b858f}": 11.511253409651811
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ffb83d32-ac40-457f-bd31-f56629b3a3a7}"
+  },
+  "{01edf31c-3897-4c1a-8f65-8fb898fa890b}": {
+    "id": "{01edf31c-3897-4c1a-8f65-8fb898fa890b}",
+    "type": "room_door",
+    "label": "RoomB115A",
+    "x": 917.1845042758649,
+    "y": -1000.1821265788992,
+    "neighbors": {
+      "{29d75e24-1c63-4c53-95df-e913475731d5}": 10.260129164271378,
+      "{7baac431-4bad-4baf-b0e5-2f832d64d9f1}": 22.07655771551879,
+      "{0e20c251-e723-4635-8ffe-d9c41c038ed4}": 5.0369961510502295
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{01edf31c-3897-4c1a-8f65-8fb898fa890b}"
+  },
+  "{7baac431-4bad-4baf-b0e5-2f832d64d9f1}": {
+    "id": "{7baac431-4bad-4baf-b0e5-2f832d64d9f1}",
+    "type": "room_door",
+    "label": "RoomB114",
+    "x": 921.7325065507636,
+    "y": -1021.7851373846677,
+    "neighbors": {
+      "{01edf31c-3897-4c1a-8f65-8fb898fa890b}": 22.07655771551879,
+      "{df224a3d-d902-4aaf-b67a-1ed6509413c3}": 22.633166563966963,
+      "{f1b45eb1-ae67-4067-b3c6-a09c8b34ab32}": 3.952459314691308
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{7baac431-4bad-4baf-b0e5-2f832d64d9f1}"
+  },
+  "{df224a3d-d902-4aaf-b67a-1ed6509413c3}": {
+    "id": "{df224a3d-d902-4aaf-b67a-1ed6509413c3}",
+    "type": "room_door",
+    "label": "RoomB112D",
+    "x": 943.9040176408943,
+    "y": -1026.3331396595663,
+    "neighbors": {
+      "{7baac431-4bad-4baf-b0e5-2f832d64d9f1}": 22.633166563966963,
+      "{8b3d0368-d6b9-45c4-963a-bdcd8548ae10}": 14.121254113515198
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{df224a3d-d902-4aaf-b67a-1ed6509413c3}"
+  },
+  "{8b3d0368-d6b9-45c4-963a-bdcd8548ae10}": {
+    "id": "{8b3d0368-d6b9-45c4-963a-bdcd8548ae10}",
+    "type": "room_door",
+    "label": "RoomB113",
+    "x": 954.7055230437785,
+    "y": -1017.237135109769,
+    "neighbors": {
+      "{df224a3d-d902-4aaf-b67a-1ed6509413c3}": 14.121254113515198,
+      "{04766ef0-30ba-40d3-b819-91786176f009}": 11.82972460573695
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{8b3d0368-d6b9-45c4-963a-bdcd8548ae10}"
+  },
+  "{04766ef0-30ba-40d3-b819-91786176f009}": {
+    "id": "{04766ef0-30ba-40d3-b819-91786176f009}",
+    "type": "room_door",
+    "label": "RoomB112C",
+    "x": 961.5275264561263,
+    "y": -1026.9016399439286,
+    "neighbors": {
+      "{8b3d0368-d6b9-45c4-963a-bdcd8548ae10}": 11.82972460573695,
+      "{1b42bdbc-4653-47cf-9566-7cd1fdc7dbbc}": 18.760509383956787
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{04766ef0-30ba-40d3-b819-91786176f009}"
+  },
+  "{1b42bdbc-4653-47cf-9566-7cd1fdc7dbbc}": {
+    "id": "{1b42bdbc-4653-47cf-9566-7cd1fdc7dbbc}",
+    "type": "room_door",
+    "label": "RoomB112B",
+    "x": 980.2880358400831,
+    "y": -1026.9016399439286,
+    "neighbors": {
+      "{04766ef0-30ba-40d3-b819-91786176f009}": 18.760509383956787,
+      "{1cc95e10-6aee-4cbe-9ba2-f058dfbbdc45}": 18.211984470938265
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{1b42bdbc-4653-47cf-9566-7cd1fdc7dbbc}"
+  },
+  "{1cc95e10-6aee-4cbe-9ba2-f058dfbbdc45}": {
+    "id": "{1cc95e10-6aee-4cbe-9ba2-f058dfbbdc45}",
+    "type": "room_door",
+    "label": "RoomB112A",
+    "x": 998.4800449396776,
+    "y": -1026.048889517385,
+    "neighbors": {
+      "{1b42bdbc-4653-47cf-9566-7cd1fdc7dbbc}": 18.211984470938265
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{1cc95e10-6aee-4cbe-9ba2-f058dfbbdc45}"
+  },
+  "{69e197e3-a138-4b42-bab5-8f295711174e}": {
+    "id": "{69e197e3-a138-4b42-bab5-8f295711174e}",
+    "type": "room_door",
+    "label": "RoomB125D",
+    "x": 788.9876901521601,
+    "y": -816.2722845876866,
+    "neighbors": {
+      "{0f8dcc3b-d1fc-4ad5-ae46-5abd18e503a2}": 31.17097295725342,
+      "{24890b61-afa1-489d-87b3-38fd18eafe73}": 19.05324271565711
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{69e197e3-a138-4b42-bab5-8f295711174e}"
+  },
+  "{24890b61-afa1-489d-87b3-38fd18eafe73}": {
+    "id": "{24890b61-afa1-489d-87b3-38fd18eafe73}",
+    "type": "room_door",
+    "label": "RoomB125C",
+    "x": 788.4191898677977,
+    "y": -835.3170441138245,
+    "neighbors": {
+      "{69e197e3-a138-4b42-bab5-8f295711174e}": 19.05324271565711,
+      "{34ca518e-fec1-4f2b-ae3f-e0ca15b1e00c}": 18.19422966830573
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{24890b61-afa1-489d-87b3-38fd18eafe73}"
+  },
+  "{34ca518e-fec1-4f2b-ae3f-e0ca15b1e00c}": {
+    "id": "{34ca518e-fec1-4f2b-ae3f-e0ca15b1e00c}",
+    "type": "room_door",
+    "label": "RoomB125B",
+    "x": 788.7034400099789,
+    "y": -853.509053213419,
+    "neighbors": {
+      "{24890b61-afa1-489d-87b3-38fd18eafe73}": 18.19422966830573,
+      "{56369261-f3e3-41cb-8a04-cd359885fcbd}": 11.992526636510776
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{34ca518e-fec1-4f2b-ae3f-e0ca15b1e00c}"
+  },
+  "{56369261-f3e3-41cb-8a04-cd359885fcbd}": {
+    "id": "{56369261-f3e3-41cb-8a04-cd359885fcbd}",
+    "type": "room_door",
+    "label": "RoomB126",
+    "x": 798.9364451285007,
+    "y": -859.7625563414045,
+    "neighbors": {
+      "{34ca518e-fec1-4f2b-ae3f-e0ca15b1e00c}": 11.992526636510776,
+      "{fc4f3825-2cc3-43e7-8e60-a4f555b48546}": 11.373558259020994
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{56369261-f3e3-41cb-8a04-cd359885fcbd}"
+  },
+  "{fc4f3825-2cc3-43e7-8e60-a4f555b48546}": {
+    "id": "{fc4f3825-2cc3-43e7-8e60-a4f555b48546}",
+    "type": "room_door",
+    "label": "RoomB124S",
+    "x": 799.220695270682,
+    "y": -871.1325620286509,
+    "neighbors": {
+      "{56369261-f3e3-41cb-8a04-cd359885fcbd}": 11.373558259020994,
+      "{2d982ba0-dc54-45a1-b41a-a8e621bd988f}": 10.89460749874851,
+      "{5a555d5b-207e-4063-a275-df2588649b4f}": 5.129402551050577
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{fc4f3825-2cc3-43e7-8e60-a4f555b48546}"
+  },
+  "{2d982ba0-dc54-45a1-b41a-a8e621bd988f}": {
+    "id": "{2d982ba0-dc54-45a1-b41a-a8e621bd988f}",
+    "type": "room_door",
+    "label": "RoomB125A",
+    "x": 788.4191898677977,
+    "y": -872.5538127395566,
+    "neighbors": {
+      "{fc4f3825-2cc3-43e7-8e60-a4f555b48546}": 10.89460749874851,
+      "{b17c215b-57e5-48a3-b33d-8f6ed9e6d045}": 20.617444847972646
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{2d982ba0-dc54-45a1-b41a-a8e621bd988f}"
+  },
+  "{b17c215b-57e5-48a3-b33d-8f6ed9e6d045}": {
+    "id": "{b17c215b-57e5-48a3-b33d-8f6ed9e6d045}",
+    "type": "room_door",
+    "label": "RoomB124",
+    "x": 793.8199425692399,
+    "y": -892.4513226922381,
+    "neighbors": {
+      "{2d982ba0-dc54-45a1-b41a-a8e621bd988f}": 20.617444847972646,
+      "{aaeb0c37-a173-4ce0-b9a1-147d12d0966a}": 21.09588048557591,
+      "{50a392c9-1188-490e-b956-1050afbf5bb4}": 4.273141679106927
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{b17c215b-57e5-48a3-b33d-8f6ed9e6d045}"
+  },
+  "{aaeb0c37-a173-4ce0-b9a1-147d12d0966a}": {
+    "id": "{aaeb0c37-a173-4ce0-b9a1-147d12d0966a}",
+    "type": "room_door",
+    "label": "RoomB122D",
+    "x": 814.2859528062836,
+    "y": -897.567825251499,
+    "neighbors": {
+      "{b17c215b-57e5-48a3-b33d-8f6ed9e6d045}": 21.09588048557591,
+      "{5a83aaa4-e8f1-4d68-adbc-0fdd1be6b92c}": 15.137487720355487
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{aaeb0c37-a173-4ce0-b9a1-147d12d0966a}"
+  },
+  "{5a83aaa4-e8f1-4d68-adbc-0fdd1be6b92c}": {
+    "id": "{5a83aaa4-e8f1-4d68-adbc-0fdd1be6b92c}",
+    "type": "room_door",
+    "label": "RoomB123",
+    "x": 826.7929590622548,
+    "y": -889.0403209860641,
+    "neighbors": {
+      "{aaeb0c37-a173-4ce0-b9a1-147d12d0966a}": 15.137487720355487,
+      "{10c3ff97-753a-419f-9b8a-20798c8d63ff}": 10.972202767070806
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{5a83aaa4-e8f1-4d68-adbc-0fdd1be6b92c}"
+  },
+  "{10c3ff97-753a-419f-9b8a-20798c8d63ff}": {
+    "id": "{10c3ff97-753a-419f-9b8a-20798c8d63ff}",
+    "type": "room_door",
+    "label": "RoomB122C",
+    "x": 833.3307123324215,
+    "y": -897.8520753936801,
+    "neighbors": {
+      "{5a83aaa4-e8f1-4d68-adbc-0fdd1be6b92c}": 10.972202767070806,
+      "{2099441c-1810-443f-aaf6-7340b1ebe4b0}": 18.478445651965064
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{10c3ff97-753a-419f-9b8a-20798c8d63ff}"
+  },
+  "{2099441c-1810-443f-aaf6-7340b1ebe4b0}": {
+    "id": "{2099441c-1810-443f-aaf6-7340b1ebe4b0}",
+    "type": "room_door",
+    "label": "RoomB122B",
+    "x": 851.8069715741971,
+    "y": -898.1363255358614,
+    "neighbors": {
+      "{10c3ff97-753a-419f-9b8a-20798c8d63ff}": 18.478445651965064
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{2099441c-1810-443f-aaf6-7340b1ebe4b0}"
+  },
+  "{1e730db3-d477-4cf0-a2ed-a0c691f8b8ef}": {
+    "id": "{1e730db3-d477-4cf0-a2ed-a0c691f8b8ef}",
+    "type": "room_door",
+    "label": "RoomB122A",
+    "x": 870.8517311003351,
+    "y": -897.567825251499,
+    "neighbors": {
+      "{70325b5a-fac7-40ed-9d34-288d138e5f36}": 32.68956894530387
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{1e730db3-d477-4cf0-a2ed-a0c691f8b8ef}"
+  },
+  "{5d792194-e75e-4e79-b4af-62266eb5834d}": {
+    "id": "{5d792194-e75e-4e79-b4af-62266eb5834d}",
+    "type": "intersection",
+    "label": "itsRoomB166-168",
+    "x": 986.6279823937806,
+    "y": -608.127399625125,
+    "neighbors": {
+      "{672815de-1f96-499a-a5ed-b9f7f916d276}": 6.014216575121884
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{5d792194-e75e-4e79-b4af-62266eb5834d}"
+  },
+  "{9c8affa3-30a1-4ba8-ab3a-795e11919fcc}": {
+    "id": "{9c8affa3-30a1-4ba8-ab3a-795e11919fcc}",
+    "type": "intersection",
+    "label": "T-junction",
+    "x": 999.6705669983734,
+    "y": -573.5224449288238,
+    "neighbors": {
+      "{bbe8a928-3d93-44ff-b5bb-22e63f284665}": 24.741994830533233,
+      "{592173ee-eff8-4389-921e-1c3adb36ad15}": 160.33243713878437
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{9c8affa3-30a1-4ba8-ab3a-795e11919fcc}"
+  },
+  "{f06c8651-4a9e-49d6-a9ac-13365b485b27}": {
+    "id": "{f06c8651-4a9e-49d6-a9ac-13365b485b27}",
+    "type": "entrance",
+    "label": "east-upper entrance",
+    "x": 1117.4031879874121,
+    "y": -572.6503514400162,
+    "neighbors": {
+      "{00606d9a-9660-491d-bf4a-6e093a1eb6d6}": 110.65831483092016,
+      "{20aa8738-2471-4e3c-bc53-31bad5be4798}": 1
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f06c8651-4a9e-49d6-a9ac-13365b485b27}"
+  },
+  "{592173ee-eff8-4389-921e-1c3adb36ad15}": {
+    "id": "{592173ee-eff8-4389-921e-1c3adb36ad15}",
+    "type": "interaction",
+    "label": "T-junction",
+    "x": 1113.0427205433737,
+    "y": -686.8945984738241,
+    "neighbors": {
+      "{9c8affa3-30a1-4ba8-ab3a-795e11919fcc}": 160.33243713878437
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{592173ee-eff8-4389-921e-1c3adb36ad15}"
+  },
+  "{17ea8877-fc67-4996-ae7e-37851eedd44f}": {
+    "id": "{17ea8877-fc67-4996-ae7e-37851eedd44f}",
+    "type": "interaction",
+    "label": "itsRoomB156-157",
+    "x": 619.2755813531626,
+    "y": -518.7783754267051,
+    "neighbors": {
+      "{f046d0f6-a8bd-4de6-b405-76a48ede9fc0}": 18.49107892470042
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{17ea8877-fc67-4996-ae7e-37851eedd44f}"
+  },
+  "{35377c55-7867-484c-9662-eb8a8bf668d5}": {
+    "id": "{35377c55-7867-484c-9662-eb8a8bf668d5}",
+    "type": "hallway_node",
+    "label": "hallway_near B159",
+    "x": 793.3047436000548,
+    "y": -541.5038330397014,
+    "neighbors": {
+      "{321084d5-a3a6-4fd7-9954-c942cf8507fa}": 68.09105191519949,
+      "{bc964439-c50b-4a92-9238-fdeb6576d42f}": 36.60675694009855
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{35377c55-7867-484c-9662-eb8a8bf668d5}"
+  },
+  "{bc964439-c50b-4a92-9238-fdeb6576d42f}": {
+    "id": "{bc964439-c50b-4a92-9238-fdeb6576d42f}",
+    "type": "hallway_node",
+    "label": "hallway near B158",
+    "x": 756.7091008880569,
+    "y": -542.4058242631878,
+    "neighbors": {
+      "{35377c55-7867-484c-9662-eb8a8bf668d5}": 36.60675694009855,
+      "{6bac6fbe-69cf-43e1-87da-9adc57523fbe}": 50.54632173956072
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{bc964439-c50b-4a92-9238-fdeb6576d42f}"
+  },
+  "{6bac6fbe-69cf-43e1-87da-9adc57523fbe}": {
+    "id": "{6bac6fbe-69cf-43e1-87da-9adc57523fbe}",
+    "type": "hallway_node",
+    "label": "hallway near B164",
+    "x": 758.020480464087,
+    "y": -592.9351318480614,
+    "neighbors": {
+      "{bc964439-c50b-4a92-9238-fdeb6576d42f}": 50.54632173956072,
+      "{74762746-67f8-48a1-bf16-ecf4fd6b14b6}": 84.8389788464482
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{6bac6fbe-69cf-43e1-87da-9adc57523fbe}"
+  },
+  "{321084d5-a3a6-4fd7-9954-c942cf8507fa}": {
+    "id": "{321084d5-a3a6-4fd7-9954-c942cf8507fa}",
+    "type": "intersection",
+    "label": "its stair and hallway",
+    "x": 861.3477916309192,
+    "y": -544.0601909152489,
+    "neighbors": {
+      "{0432934a-a3d2-46e3-beee-acbf888db99c}": 22.54363236873604,
+      "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}": 14.124113658072469,
+      "{10d3e65d-505c-4f33-871c-b41278b608d7}": 103.04991312695381,
+      "{35377c55-7867-484c-9662-eb8a8bf668d5}": 68.09105191519949,
+      "{c2f80b7a-a08d-4f94-b8eb-8ca089108b5a}": 30.7062216366834
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{321084d5-a3a6-4fd7-9954-c942cf8507fa}"
+  },
+  "{db68d5de-cc71-4904-80fd-6bc137ca89a3}": {
+    "id": "{db68d5de-cc71-4904-80fd-6bc137ca89a3}",
+    "type": "hallway_node",
+    "label": "hallway near b170br",
+    "x": 1091.7258843601896,
+    "y": -688.0232308077033,
+    "neighbors": {
+      "{00606d9a-9660-491d-bf4a-6e093a1eb6d6}": 8.117597462817399,
+      "{a80d81f6-7f01-4b62-ad86-88bcc36b2754}": 12.020422233877103
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{db68d5de-cc71-4904-80fd-6bc137ca89a3}"
+  },
+  "{a80d81f6-7f01-4b62-ad86-88bcc36b2754}": {
+    "id": "{a80d81f6-7f01-4b62-ad86-88bcc36b2754}",
+    "type": "hallway_node",
+    "label": "hallway near B182",
+    "x": 1079.7651171954549,
+    "y": -689.2193075241767,
+    "neighbors": {
+      "{db68d5de-cc71-4904-80fd-6bc137ca89a3}": 12.020422233877103
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{a80d81f6-7f01-4b62-ad86-88bcc36b2754}"
+  },
+  "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}": {
+    "id": "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}",
+    "type": "intersection",
+    "label": "its center stair B182 B166-170",
+    "x": 1007.1274699472981,
+    "y": -689.2106426783429,
+    "neighbors": {
+      "{76ad718a-3f16-430e-8b9c-1d778f6231e7}": 72.6229951345778,
+      "{7c2d6d0a-bfca-4cdc-bced-5229619386e3}": 23.289030101380046,
+      "{672815de-1f96-499a-a5ed-b9f7f916d276}": 89.50183702603913,
+      "{22a3154d-235d-4a6b-8555-f1960efda616}": 94.97360545116688
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}"
+  },
+  "{9fd7eb15-8a53-48c0-8b35-ac90107c323e}": {
+    "id": "{9fd7eb15-8a53-48c0-8b35-ac90107c323e}",
+    "type": "hallway_node",
+    "label": "hallway near b170 ul",
+    "x": 1000.8240539082045,
+    "y": -597.7731377257026,
+    "neighbors": {
+      "{bbe8a928-3d93-44ff-b5bb-22e63f284665}": 7.890686773785041,
+      "{118ee328-edbf-437d-a502-16084cc51635}": 10.952910717848424
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{9fd7eb15-8a53-48c0-8b35-ac90107c323e}"
+  },
+  "{118ee328-edbf-437d-a502-16084cc51635}": {
+    "id": "{118ee328-edbf-437d-a502-16084cc51635}",
+    "type": "intersection",
+    "label": "its 166-168 hw b170",
+    "x": 1001.4316120806474,
+    "y": -608.7091848296728,
+    "neighbors": {
+      "{9fd7eb15-8a53-48c0-8b35-ac90107c323e}": 10.952910717848424
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{118ee328-edbf-437d-a502-16084cc51635}"
+  },
+  "{22a3154d-235d-4a6b-8555-f1960efda616}": {
+    "id": "{22a3154d-235d-4a6b-8555-f1960efda616}",
+    "type": "poi",
+    "label": "Banding machines",
+    "x": 912.3483950462224,
+    "y": -683.135060953915,
+    "neighbors": {
+      "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}": 94.97360545116688
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{22a3154d-235d-4a6b-8555-f1960efda616}"
+  },
+  "{74762746-67f8-48a1-bf16-ecf4fd6b14b6}": {
+    "id": "{74762746-67f8-48a1-bf16-ecf4fd6b14b6}",
+    "type": "hallway_node",
+    "label": "hallway to banding machine",
+    "x": 762.2815264528524,
+    "y": -677.66703740193,
+    "neighbors": {
+      "{6bac6fbe-69cf-43e1-87da-9adc57523fbe}": 84.8389788464482,
+      "{4cffc05e-1d06-4f04-b70e-8f129da891d3}": 29.9587969222722
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{74762746-67f8-48a1-bf16-ecf4fd6b14b6}"
+  },
+  "{94bf3bbf-3a7a-497d-8d55-ad1821d2d784}": {
+    "id": "{94bf3bbf-3a7a-497d-8d55-ad1821d2d784}",
+    "type": "hallway_node",
+    "label": "hallway near B139",
+    "x": 675.7044868797541,
+    "y": -649.7193614695615,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 31.93114037582475,
+      "{7d4ad9c4-8a37-4c6b-b904-a54e093ee644}": 32.21347683999396,
+      "{ff37b7c9-c5b0-4fe8-ba74-c1459f263228}": 10.92924823243264
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{94bf3bbf-3a7a-497d-8d55-ad1821d2d784}"
+  },
+  "{7d4ad9c4-8a37-4c6b-b904-a54e093ee644}": {
+    "id": "{7d4ad9c4-8a37-4c6b-b904-a54e093ee644}",
+    "type": "hallway_node",
+    "label": "hallway near B132",
+    "x": 707.9050700192222,
+    "y": -648.8080242108973,
+    "neighbors": {
+      "{94bf3bbf-3a7a-497d-8d55-ad1821d2d784}": 32.21347683999396
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{7d4ad9c4-8a37-4c6b-b904-a54e093ee644}"
+  },
+  "{73173c95-7db4-499b-92a0-7ba5fcef9b28}": {
+    "id": "{73173c95-7db4-499b-92a0-7ba5fcef9b28}",
+    "type": "hallway_node",
+    "label": "hallway near B149",
+    "x": 546.9021543218821,
+    "y": -532.1568551018809,
+    "neighbors": {
+      "{909fbc36-eee8-4639-bd28-4b8b90e95735}": 12.686015451883431,
+      "{2f4c0204-2b2b-4ff2-8f03-f6fdb825c777}": 15.39194377655138,
+      "{b6582868-abfb-47b8-9447-f967c83efb7a}": 9.582523235776742
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{73173c95-7db4-499b-92a0-7ba5fcef9b28}"
+  },
+  "{a8051618-e28d-4c3a-a31e-3465fc4fd1da}": {
+    "id": "{a8051618-e28d-4c3a-a31e-3465fc4fd1da}",
+    "type": "intersection",
+    "label": "its hwB149, itsb152",
+    "x": 567.2553530987157,
+    "y": -531.549296929438,
+    "neighbors": {
+      "{1e13a8a4-d533-4fa4-84f3-2b418b82bc2a}": 18.491473652481197
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{a8051618-e28d-4c3a-a31e-3465fc4fd1da}"
+  },
+  "{ae99e4f4-8af3-4e86-8df8-68689dc910ca}": {
+    "id": "{ae99e4f4-8af3-4e86-8df8-68689dc910ca}",
+    "type": "hallway_node",
+    "label": "hallway near B115D",
+    "x": 923.5882212364138,
+    "y": -945.2964123629804,
+    "neighbors": {
+      "{8071bbf0-c27c-466f-8192-5dcdd4e01881}": 27.28267692505682,
+      "{8e707026-d737-4200-8c71-f22da40c46c3}": 17.925540301235372
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ae99e4f4-8af3-4e86-8df8-68689dc910ca}"
+  },
+  "{8e707026-d737-4200-8c71-f22da40c46c3}": {
+    "id": "{8e707026-d737-4200-8c71-f22da40c46c3}",
+    "type": "hallway_node",
+    "label": "hallway near B115C",
+    "x": 923.2844421501925,
+    "y": -963.2193784500428,
+    "neighbors": {
+      "{ae99e4f4-8af3-4e86-8df8-68689dc910ca}": 17.925540301235372,
+      "{41fc5100-1dbf-404e-9b0e-09288ded85f0}": 18.477061808519956
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{8e707026-d737-4200-8c71-f22da40c46c3}"
+  },
+  "{41fc5100-1dbf-404e-9b0e-09288ded85f0}": {
+    "id": "{41fc5100-1dbf-404e-9b0e-09288ded85f0}",
+    "type": "hallway_node",
+    "label": "hallway near B115B",
+    "x": 923.3476574875017,
+    "y": -981.6963321193302,
+    "neighbors": {
+      "{8e707026-d737-4200-8c71-f22da40c46c3}": 18.477061808519956,
+      "{b0054f2d-e010-47d1-8470-db63fe38cd1d}": 6.129478303656329
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{41fc5100-1dbf-404e-9b0e-09288ded85f0}"
+  },
+  "{b0054f2d-e010-47d1-8470-db63fe38cd1d}": {
+    "id": "{b0054f2d-e010-47d1-8470-db63fe38cd1d}",
+    "type": "hallway_node",
+    "label": "hallway near B116",
+    "x": 923.2844421501919,
+    "y": -987.8254844339756,
+    "neighbors": {
+      "{41fc5100-1dbf-404e-9b0e-09288ded85f0}": 6.129478303656329
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{b0054f2d-e010-47d1-8470-db63fe38cd1d}"
+  },
+  "{7a9d7b8f-6077-4fb6-88eb-c1cf31a16ce1}": {
+    "id": "{7a9d7b8f-6077-4fb6-88eb-c1cf31a16ce1}",
+    "type": "intersection",
+    "label": "its B111, stair",
+    "x": 1028.3920059827951,
+    "y": -1012.4315904179088,
+    "neighbors": {
+      "{0661062d-50d9-4287-91ff-2366fdca0c94}": 14.745665057704727,
+      "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}": 12.028209248699016,
+      "{2b4dfa78-b7ce-46d2-8550-82112f05b497}": 52.78755027649568
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{7a9d7b8f-6077-4fb6-88eb-c1cf31a16ce1}"
+  },
+  "{8cdde55f-104f-40c5-8be4-88dfd343b637}": {
+    "id": "{8cdde55f-104f-40c5-8be4-88dfd343b637}",
+    "type": "intersection",
+    "label": "its B185-187",
+    "x": 1080.0344506404326,
+    "y": -917.0449573443901,
+    "neighbors": {
+      "{d8ed074a-0698-4ce1-bd57-889e75ed99c7}": 5.163440034057894,
+      "{46954848-1a8a-4b9f-9548-eae02b12dbc7}": 17.33937388860087
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{8cdde55f-104f-40c5-8be4-88dfd343b637}"
+  },
+  "{c152ae4f-8fe0-423c-bf06-416304a8b87d}": {
+    "id": "{c152ae4f-8fe0-423c-bf06-416304a8b87d}",
+    "type": "hallway_node",
+    "label": "hallway near B183",
+    "x": 1113.1463710385651,
+    "y": -799.1786718904881,
+    "neighbors": {
+      "{34cecdb2-d33f-4753-a9ff-86f655a81846}": 10.060047870664148,
+      "{a03010c1-64f7-41b1-8991-69cddc1cb078}": 17.0224746240989
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{c152ae4f-8fe0-423c-bf06-416304a8b87d}"
+  },
+  "{a03010c1-64f7-41b1-8991-69cddc1cb078}": {
+    "id": "{a03010c1-64f7-41b1-8991-69cddc1cb078}",
+    "type": "hallway_node",
+    "label": "hallway near B184",
+    "x": 1113.7539292110077,
+    "y": -816.1903007188863,
+    "neighbors": {
+      "{c152ae4f-8fe0-423c-bf06-416304a8b87d}": 17.0224746240989,
+      "{30bbbb54-9aa8-42ba-8cab-0e798aac143d}": 48.376282976256576
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{a03010c1-64f7-41b1-8991-69cddc1cb078}"
+  },
+  "{30bbbb54-9aa8-42ba-8cab-0e798aac143d}": {
+    "id": "{30bbbb54-9aa8-42ba-8cab-0e798aac143d}",
+    "type": "room_door",
+    "label": "RoomC152A-D",
+    "x": 1123.4748599700924,
+    "y": -863.5798381694242,
+    "neighbors": {
+      "{a03010c1-64f7-41b1-8991-69cddc1cb078}": 48.376282976256576,
+      "{c2580bc2-0914-4278-8e8e-c4960fadbbec}": 8.291555418195195
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{30bbbb54-9aa8-42ba-8cab-0e798aac143d}"
+  },
+  "{c2580bc2-0914-4278-8e8e-c4960fadbbec}": {
+    "id": "{c2580bc2-0914-4278-8e8e-c4960fadbbec}",
+    "type": "hallway_node",
+    "label": "hallway near C152A-D",
+    "x": 1115.2728246421148,
+    "y": -864.7949545143098,
+    "neighbors": {
+      "{30bbbb54-9aa8-42ba-8cab-0e798aac143d}": 8.291555418195195
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{c2580bc2-0914-4278-8e8e-c4960fadbbec}"
+  },
+  "{56160496-159d-4baf-87ff-176a543329bd}": {
+    "id": "{56160496-159d-4baf-87ff-176a543329bd}",
+    "type": "intersection",
+    "label": "T-junction, hallway C145",
+    "x": 1113.7539292110077,
+    "y": -932.2339116554598,
+    "neighbors": {
+      "{07a73c59-e0ed-46f8-90d6-23d004a639a3}": 38.29988150426342,
+      "{57479526-790b-421b-8d2e-ff8b58d57c53}": 38.07777523502995,
+      "{50552795-f5f1-4320-a110-51da32da55f8}": 42.403538513967575,
+      "{e100fe85-8287-4134-8dc5-61ed7fdd0028}": 14.687778972213794,
+      "{444e9a8e-5677-4d29-bcf5-b8685924272e}": 83.43092265740998,
+      "{d9b89b57-d3ea-4c8c-a2f8-fb32794ff14e}": 176.169892255096
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{56160496-159d-4baf-87ff-176a543329bd}"
+  },
+  "{46954848-1a8a-4b9f-9548-eae02b12dbc7}": {
+    "id": "{46954848-1a8a-4b9f-9548-eae02b12dbc7}",
+    "type": "intersection",
+    "label": "its B185-187, hwC145",
+    "x": 1079.1231133817687,
+    "y": -934.3603652590095,
+    "neighbors": {
+      "{8cdde55f-104f-40c5-8be4-88dfd343b637}": 17.33937388860087,
+      "{c02f1c31-788d-4d41-aca3-07a388e6bc12}": 41.65762827269055
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{46954848-1a8a-4b9f-9548-eae02b12dbc7}"
+  },
+  "{444e9a8e-5677-4d29-bcf5-b8685924272e}": {
+    "id": "{444e9a8e-5677-4d29-bcf5-b8685924272e}",
+    "type": "hallway_node",
+    "label": "hallway near elevator",
+    "x": 1036.2902622245517,
+    "y": -963.2193784500422,
+    "neighbors": {
+      "{56160496-159d-4baf-87ff-176a543329bd}": 83.43092265740998,
+      "{b8da5beb-937e-47e0-a4b8-257a13d49129}": 21.927926736731123,
+      "{0d61345e-06d6-4599-a3e7-a2eafd5d4cab}": 68.712183607784,
+      "{e4f02585-9c19-4c1d-b5de-1052ffc7d857}": 52.72089557148717
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{444e9a8e-5677-4d29-bcf5-b8685924272e}"
+  },
+  "{c02f1c31-788d-4d41-aca3-07a388e6bc12}": {
+    "id": "{c02f1c31-788d-4d41-aca3-07a388e6bc12}",
+    "type": "intersection",
+    "label": "its elevator, its B185-187-hwC145",
+    "x": 1037.5053785694372,
+    "y": -936.183039776338,
+    "neighbors": {
+      "{46954848-1a8a-4b9f-9548-eae02b12dbc7}": 41.65762827269055
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{c02f1c31-788d-4d41-aca3-07a388e6bc12}"
+  },
+  "{aaa659dc-07b0-4d79-93fe-8d0efe360a9a}": {
+    "id": "{aaa659dc-07b0-4d79-93fe-8d0efe360a9a}",
+    "type": "entrance",
+    "label": "east down entrance",
+    "x": 1266.8585886665928,
+    "y": -934.6641443452296,
+    "neighbors": {
+      "{57479526-790b-421b-8d2e-ff8b58d57c53}": 115.04626863913337,
+      "{151bde12-548b-494b-86c1-4f112eb05263}_L1": 1,
+      "{a253dcd6-ef0d-412a-b3e4-b4cf8ffbb86f}_L1": 1
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{aaa659dc-07b0-4d79-93fe-8d0efe360a9a}"
+  },
+  "{b8da5beb-937e-47e0-a4b8-257a13d49129}": {
+    "id": "{b8da5beb-937e-47e0-a4b8-257a13d49129}",
+    "type": "intersection",
+    "label": "its B110,hw elevator",
+    "x": 1030.3665700432355,
+    "y": -984.3320249424282,
+    "neighbors": {
+      "{444e9a8e-5677-4d29-bcf5-b8685924272e}": 21.927926736731123
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{b8da5beb-937e-47e0-a4b8-257a13d49129}"
+  },
+  "{c18d67a6-2b3a-4e6e-b83b-bffd83f277e0}": {
+    "id": "{c18d67a6-2b3a-4e6e-b83b-bffd83f277e0}",
+    "type": "intersection",
+    "label": "its stair, hw",
+    "x": 1028.6957850690178,
+    "y": -1019.722288487221,
+    "neighbors": {
+      "{0661062d-50d9-4287-91ff-2366fdca0c94}": 16.858416400106528,
+      "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}": 5.556501214987576
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{c18d67a6-2b3a-4e6e-b83b-bffd83f277e0}"
+  },
+  "{0d61345e-06d6-4599-a3e7-a2eafd5d4cab}": {
+    "id": "{0d61345e-06d6-4599-a3e7-a2eafd5d4cab}",
+    "type": "hallway_node",
+    "label": "hallway near B112A",
+    "x": 998.7735450762101,
+    "y": -1020.785515288996,
+    "neighbors": {
+      "{444e9a8e-5677-4d29-bcf5-b8685924272e}": 68.712183607784,
+      "{389d0ef2-4465-4f78-954e-e22367a67e8a}": 18.23244014145067
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0d61345e-06d6-4599-a3e7-a2eafd5d4cab}"
+  },
+  "{389d0ef2-4465-4f78-954e-e22367a67e8a}": {
+    "id": "{389d0ef2-4465-4f78-954e-e22367a67e8a}",
+    "type": "hallway_node",
+    "label": "hallway near B112B",
+    "x": 980.5467999029263,
+    "y": -1021.241183918328,
+    "neighbors": {
+      "{0d61345e-06d6-4599-a3e7-a2eafd5d4cab}": 18.23244014145067,
+      "{abb9e5b4-82f3-43bb-b879-520e52277254}": 18.98680043728902
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{389d0ef2-4465-4f78-954e-e22367a67e8a}"
+  },
+  "{abb9e5b4-82f3-43bb-b879-520e52277254}": {
+    "id": "{abb9e5b4-82f3-43bb-b879-520e52277254}",
+    "type": "hallway_node",
+    "label": "hallway near B112C",
+    "x": 961.5606070140891,
+    "y": -1021.3930734614387,
+    "neighbors": {
+      "{389d0ef2-4465-4f78-954e-e22367a67e8a}": 18.98680043728902,
+      "{e350b2f0-8490-4775-81eb-e1ad403120be}": 6.6848656915791835
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{abb9e5b4-82f3-43bb-b879-520e52277254}"
+  },
+  "{e350b2f0-8490-4775-81eb-e1ad403120be}": {
+    "id": "{e350b2f0-8490-4775-81eb-e1ad403120be}",
+    "type": "hallway_node",
+    "label": "hallway near B113",
+    "x": 954.8774671172183,
+    "y": -1021.2411839183279,
+    "neighbors": {
+      "{abb9e5b4-82f3-43bb-b879-520e52277254}": 6.6848656915791835,
+      "{1b706fb2-dfe1-4346-aeac-13bfe2988f4c}": 10.936047103970282
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e350b2f0-8490-4775-81eb-e1ad403120be}"
+  },
+  "{1b706fb2-dfe1-4346-aeac-13bfe2988f4c}": {
+    "id": "{1b706fb2-dfe1-4346-aeac-13bfe2988f4c}",
+    "type": "hallway_node",
+    "label": "hallway near B112D",
+    "x": 943.941420013248,
+    "y": -1021.2411839183279,
+    "neighbors": {
+      "{e350b2f0-8490-4775-81eb-e1ad403120be}": 10.936047103970282
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{1b706fb2-dfe1-4346-aeac-13bfe2988f4c}"
+  },
+  "{0e20c251-e723-4635-8ffe-d9c41c038ed4}": {
+    "id": "{0e20c251-e723-4635-8ffe-d9c41c038ed4}",
+    "type": "intersection",
+    "label": "its B115A-B114S",
+    "x": 922.2212153484181,
+    "y": -1000.1285374259409,
+    "neighbors": {
+      "{01edf31c-3897-4c1a-8f65-8fb898fa890b}": 5.0369961510502295
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0e20c251-e723-4635-8ffe-d9c41c038ed4}"
+  },
+  "{f1b45eb1-ae67-4067-b3c6-a09c8b34ab32}": {
+    "id": "{f1b45eb1-ae67-4067-b3c6-a09c8b34ab32}",
+    "type": "intersection",
+    "label": "its hwB112D, B114",
+    "x": 924.4995584950786,
+    "y": -1018.9628407716675,
+    "neighbors": {
+      "{7baac431-4bad-4baf-b0e5-2f832d64d9f1}": 3.952459314691308
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f1b45eb1-ae67-4067-b3c6-a09c8b34ab32}"
+  },
+  "{1e734d90-1761-462a-ba35-0aae3283499a}": {
+    "id": "{1e734d90-1761-462a-ba35-0aae3283499a}",
+    "type": "intersection",
+    "label": "its stair, hw B115",
+    "x": 923.1325526070821,
+    "y": -919.6270795772708,
+    "neighbors": {
+      "{8071bbf0-c27c-466f-8192-5dcdd4e01881}": 9.266507042372242,
+      "{a1491e5f-e5bc-4a3e-9348-684908413102}": 34.311935014371905
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{1e734d90-1761-462a-ba35-0aae3283499a}"
+  },
+  "{8071bbf0-c27c-466f-8192-5dcdd4e01881}": {
+    "id": "{8071bbf0-c27c-466f-8192-5dcdd4e01881}",
+    "type": "hallway_node",
+    "label": "hallway near B117",
+    "x": 932.3978147368347,
+    "y": -919.47519003416,
+    "neighbors": {
+      "{1e734d90-1761-462a-ba35-0aae3283499a}": 9.266507042372242,
+      "{b59d1b39-44fb-4e94-b061-105552a8a1be}": 11.263922320894954,
+      "{ae99e4f4-8af3-4e86-8df8-68689dc910ca}": 27.28267692505682
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{8071bbf0-c27c-466f-8192-5dcdd4e01881}"
+  },
+  "{60dccdc0-b1bd-47b6-8274-91268f85cce1}": {
+    "id": "{60dccdc0-b1bd-47b6-8274-91268f85cce1}",
+    "type": "intersection",
+    "label": "its stair, B112a",
+    "x": 903.3273454269685,
+    "y": -892.7179628371182,
+    "neighbors": {
+      "{304ed652-43f7-433d-a88a-6d6066f7a8ad}": 19.443207575185983,
+      "{a1491e5f-e5bc-4a3e-9348-684908413102}": 30.625120422569168
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{60dccdc0-b1bd-47b6-8274-91268f85cce1}"
+  },
+  "{304ed652-43f7-433d-a88a-6d6066f7a8ad}": {
+    "id": "{304ed652-43f7-433d-a88a-6d6066f7a8ad}",
+    "type": "hallway_node",
+    "label": "hallway near B119",
+    "x": 922.7661535886859,
+    "y": -892.3043711741029,
+    "neighbors": {
+      "{60dccdc0-b1bd-47b6-8274-91268f85cce1}": 19.443207575185983,
+      "{de0cb7ca-acfb-4444-bfde-8153a386a3f0}": 11.829698263825529,
+      "{45e571e0-88cd-4afa-866d-ee4e1350dce6}": 51.90616565066869
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{304ed652-43f7-433d-a88a-6d6066f7a8ad}"
+  },
+  "{45e571e0-88cd-4afa-866d-ee4e1350dce6}": {
+    "id": "{45e571e0-88cd-4afa-866d-ee4e1350dce6}",
+    "type": "hallway_node",
+    "label": "hallway near B122A",
+    "x": 870.86039988027,
+    "y": -892.5111670056106,
+    "neighbors": {
+      "{304ed652-43f7-433d-a88a-6d6066f7a8ad}": 51.90616565066869,
+      "{fac578b1-2885-438e-a383-9ae3ff52000e}": 18.82864405768127
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{45e571e0-88cd-4afa-866d-ee4e1350dce6}"
+  },
+  "{fac578b1-2885-438e-a383-9ae3ff52000e}": {
+    "id": "{fac578b1-2885-438e-a383-9ae3ff52000e}",
+    "type": "hallway_node",
+    "label": "hallway near B122B",
+    "x": 852.0419792130755,
+    "y": -893.1315545001335,
+    "neighbors": {
+      "{45e571e0-88cd-4afa-866d-ee4e1350dce6}": 18.82864405768127,
+      "{fd03bfe1-ecb4-4f1a-8f6a-c0a56438f85d}": 18.61277366596091
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{fac578b1-2885-438e-a383-9ae3ff52000e}"
+  },
+  "{fd03bfe1-ecb4-4f1a-8f6a-c0a56438f85d}": {
+    "id": "{fd03bfe1-ecb4-4f1a-8f6a-c0a56438f85d}",
+    "type": "hallway_node",
+    "label": "hallway near B122C",
+    "x": 833.4303543773885,
+    "y": -892.9247586686258,
+    "neighbors": {
+      "{fac578b1-2885-438e-a383-9ae3ff52000e}": 18.61277366596091,
+      "{7017c474-233e-4f87-b116-61ccf0244f66}": 6.414005326130798
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{fd03bfe1-ecb4-4f1a-8f6a-c0a56438f85d}"
+  },
+  "{7017c474-233e-4f87-b116-61ccf0244f66}": {
+    "id": "{7017c474-233e-4f87-b116-61ccf0244f66}",
+    "type": "hallway_node",
+    "label": "hallway near B123",
+    "x": 827.0196836006519,
+    "y": -893.1315545001335,
+    "neighbors": {
+      "{fd03bfe1-ecb4-4f1a-8f6a-c0a56438f85d}": 6.414005326130798,
+      "{87cc9d04-4478-4947-8fb9-60fc6793c0a1}": 13.034700678790198
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{7017c474-233e-4f87-b116-61ccf0244f66}"
+  },
+  "{87cc9d04-4478-4947-8fb9-60fc6793c0a1}": {
+    "id": "{87cc9d04-4478-4947-8fb9-60fc6793c0a1}",
+    "type": "hallway_node",
+    "label": "hallway near B122D",
+    "x": 813.991546215671,
+    "y": -892.7179628371182,
+    "neighbors": {
+      "{7017c474-233e-4f87-b116-61ccf0244f66}": 13.034700678790198,
+      "{08f1a1ed-e7bf-4f39-8a2a-0924d1b5c35c}": 38.48014246386443
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{87cc9d04-4478-4947-8fb9-60fc6793c0a1}"
+  },
+  "{50a392c9-1188-490e-b956-1050afbf5bb4}": {
+    "id": "{50a392c9-1188-490e-b956-1050afbf5bb4}",
+    "type": "intersection",
+    "label": "its hwB122D, 124",
+    "x": 797.8614713580756,
+    "y": -891.0635961850572,
+    "neighbors": {
+      "{b17c215b-57e5-48a3-b33d-8f6ed9e6d045}": 4.273141679106927
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{50a392c9-1188-490e-b956-1050afbf5bb4}"
+  },
+  "{5a555d5b-207e-4063-a275-df2588649b4f}": {
+    "id": "{5a555d5b-207e-4063-a275-df2588649b4f}",
+    "type": "intersection",
+    "label": "its B125A, B124S",
+    "x": 794.1391463909382,
+    "y": -871.8315838548474,
+    "neighbors": {
+      "{fc4f3825-2cc3-43e7-8e60-a4f555b48546}": 5.129402551050577
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{5a555d5b-207e-4063-a275-df2588649b4f}"
+  },
+  "{08f1a1ed-e7bf-4f39-8a2a-0924d1b5c35c}": {
+    "id": "{08f1a1ed-e7bf-4f39-8a2a-0924d1b5c35c}",
+    "type": "hallway_node",
+    "label": "hallway near B126",
+    "x": 794.3459422224458,
+    "y": -859.6306297958971,
+    "neighbors": {
+      "{87cc9d04-4478-4947-8fb9-60fc6793c0a1}": 38.48014246386443,
+      "{6786eb4d-f068-410e-afb8-24d9430f8ecf}": 6.011323977290609
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{08f1a1ed-e7bf-4f39-8a2a-0924d1b5c35c}"
+  },
+  "{6786eb4d-f068-410e-afb8-24d9430f8ecf}": {
+    "id": "{6786eb4d-f068-410e-afb8-24d9430f8ecf}",
+    "type": "hallway_node",
+    "label": "hallway near B125B",
+    "x": 793.9323505594306,
+    "y": -853.6335506821757,
+    "neighbors": {
+      "{08f1a1ed-e7bf-4f39-8a2a-0924d1b5c35c}": 6.011323977290609,
+      "{78665431-4fc4-44c7-a001-2779a54fe2c0}": 17.784441509656403
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{6786eb4d-f068-410e-afb8-24d9430f8ecf}"
+  },
+  "{78665431-4fc4-44c7-a001-2779a54fe2c0}": {
+    "id": "{78665431-4fc4-44c7-a001-2779a54fe2c0}",
+    "type": "hallway_node",
+    "label": "hallway near B125C",
+    "x": 793.9323505594306,
+    "y": -835.8491091725193,
+    "neighbors": {
+      "{6786eb4d-f068-410e-afb8-24d9430f8ecf}": 17.784441509656403,
+      "{842383ce-ee25-442c-b3f7-493da753f524}": 19.448705442558865
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{78665431-4fc4-44c7-a001-2779a54fe2c0}"
+  },
+  "{842383ce-ee25-442c-b3f7-493da753f524}": {
+    "id": "{842383ce-ee25-442c-b3f7-493da753f524}",
+    "type": "hallway_node",
+    "label": "hallway near B125D",
+    "x": 794.5527380539535,
+    "y": -816.4103010108017,
+    "neighbors": {
+      "{78665431-4fc4-44c7-a001-2779a54fe2c0}": 19.448705442558865
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{842383ce-ee25-442c-b3f7-493da753f524}"
+  },
+  "{3dfe3156-5544-4775-a2fc-4a77dc7064a2}": {
+    "id": "{3dfe3156-5544-4775-a2fc-4a77dc7064a2}",
+    "type": "hallway_node",
+    "label": "hallway near B127",
+    "x": 803.6517546402896,
+    "y": -787.458884599733,
+    "neighbors": {
+      "{75b2ef1d-8674-4c6a-b509-1f6c9579ea9e}": 9.521595127358625,
+      "{945f42fc-1a8d-4a78-9f8c-3ae8813d9b50}": 15.24501838340015
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{3dfe3156-5544-4775-a2fc-4a77dc7064a2}"
+  },
+  "{75b2ef1d-8674-4c6a-b509-1f6c9579ea9e}": {
+    "id": "{75b2ef1d-8674-4c6a-b509-1f6c9579ea9e}",
+    "type": "intersection",
+    "label": "its stair, B125D",
+    "x": 794.1391463909384,
+    "y": -787.8724762627483,
+    "neighbors": {
+      "{3dfe3156-5544-4775-a2fc-4a77dc7064a2}": 9.521595127358625,
+      "{273e3552-f85a-480b-8f54-4fa4070ff4bb}": 29.845290915284856,
+      "{48c29e31-5798-461e-ad62-8fd30bb89b2b}": 35.526647161434475
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{75b2ef1d-8674-4c6a-b509-1f6c9579ea9e}"
+  },
+  "{7c8c58e3-4533-4ec6-8d1b-140f60d1f501}": {
+    "id": "{7c8c58e3-4533-4ec6-8d1b-140f60d1f501}",
+    "type": "intersection",
+    "label": "its B130-133, hw",
+    "x": 781.5246006689729,
+    "y": -764.918138965401,
+    "neighbors": {
+      "{ba146a42-3396-4e9a-9aad-a25f8f321dc7}": 17.833878498179473,
+      "{be0a0d3a-b700-4116-b5a1-6679eb1354b8}": 11.582412808610407
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{7c8c58e3-4533-4ec6-8d1b-140f60d1f501}"
+  },
+  "{be0a0d3a-b700-4116-b5a1-6679eb1354b8}": {
+    "id": "{be0a0d3a-b700-4116-b5a1-6679eb1354b8}",
+    "type": "intersection",
+    "label": "its B130-133",
+    "x": 781.7313965004805,
+    "y": -753.3375724009736,
+    "neighbors": {
+      "{7c8c58e3-4533-4ec6-8d1b-140f60d1f501}": 11.582412808610407
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{be0a0d3a-b700-4116-b5a1-6679eb1354b8}"
+  },
+  "{c2f80b7a-a08d-4f94-b8eb-8ca089108b5a}": {
+    "id": "{c2f80b7a-a08d-4f94-b8eb-8ca089108b5a}",
+    "type": "hallway_node",
+    "label": "hallway near B165",
+    "x": 858.8662416528276,
+    "y": -574.6659739783786,
+    "neighbors": {
+      "{321084d5-a3a6-4fd7-9954-c942cf8507fa}": 30.7062216366834
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{c2f80b7a-a08d-4f94-b8eb-8ca089108b5a}"
+  },
+  "{6d35bc28-d842-45ab-a180-77d935f47ac8}": {
+    "id": "{6d35bc28-d842-45ab-a180-77d935f47ac8}",
+    "type": "intersection",
+    "label": "its elevator, hwB165, stair",
+    "x": 861.410271386778,
+    "y": -562.3401968727344,
+    "neighbors": {
+      "{0432934a-a3d2-46e3-beee-acbf888db99c}": 12.098084342945105,
+      "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}": 31.01691610685225,
+      "{328eea8e-d384-4931-8301-311073b59ccd}": 20.61604091998439
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{6d35bc28-d842-45ab-a180-77d935f47ac8}"
+  },
+  "{4cffc05e-1d06-4f04-b70e-8f129da891d3}": {
+    "id": "{4cffc05e-1d06-4f04-b70e-8f129da891d3}",
+    "type": "intersection",
+    "label": "its hwB132,hwBM",
+    "x": 754.6411425729806,
+    "y": -648.6988816581112,
+    "neighbors": {
+      "{74762746-67f8-48a1-bf16-ecf4fd6b14b6}": 29.9587969222722
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{4cffc05e-1d06-4f04-b70e-8f129da891d3}"
+  },
+  "{841ae107-06bd-4b81-b15c-96e4cb8bdd95}": {
+    "id": "{841ae107-06bd-4b81-b15c-96e4cb8bdd95}",
+    "type": "hallway_node",
+    "label": "hallway_middle",
+    "x": 641.7306185698129,
+    "y": -552.7456158385697,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 83.97271920715004
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{841ae107-06bd-4b81-b15c-96e4cb8bdd95}"
+  },
+  "{44a65fe3-b1d3-4db1-b2fd-c5042a33c8e9}": {
+    "id": "{44a65fe3-b1d3-4db1-b2fd-c5042a33c8e9}",
+    "type": "room_door",
+    "label": "RoomB147d",
+    "x": 533.26141656961,
+    "y": -559.711262736592,
+    "neighbors": {
+      "{909fbc36-eee8-4639-bd28-4b8b90e95735}": 20.503477917900636,
+      "{e9891b5b-c952-403d-921f-082a80051c49}": 19.184839068383326
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{44a65fe3-b1d3-4db1-b2fd-c5042a33c8e9}"
+  },
+  "{e9891b5b-c952-403d-921f-082a80051c49}": {
+    "id": "{e9891b5b-c952-403d-921f-082a80051c49}",
+    "type": "room_door",
+    "label": "RoomB147c",
+    "x": 533.26141656961,
+    "y": -578.8961018049753,
+    "neighbors": {
+      "{44a65fe3-b1d3-4db1-b2fd-c5042a33c8e9}": 19.184839068383326,
+      "{b10a49f6-495b-4522-9bcc-edafbdeb6352}": 17.677457384560736,
+      "{df2b74b6-76bb-4e65-a351-8d5b105cb942}": 5.302576312198825
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e9891b5b-c952-403d-921f-082a80051c49}"
+  },
+  "{b10a49f6-495b-4522-9bcc-edafbdeb6352}": {
+    "id": "{b10a49f6-495b-4522-9bcc-edafbdeb6352}",
+    "type": "room_door",
+    "label": "RoomB147b",
+    "x": 532.7565523835999,
+    "y": -596.5663483153284,
+    "neighbors": {
+      "{e9891b5b-c952-403d-921f-082a80051c49}": 17.677457384560736,
+      "{9f511807-5458-47fe-a96f-33c84d13b464}": 12.930832424211925
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{b10a49f6-495b-4522-9bcc-edafbdeb6352}"
+  },
+  "{9f511807-5458-47fe-a96f-33c84d13b464}": {
+    "id": "{9f511807-5458-47fe-a96f-33c84d13b464}",
+    "type": "room_door",
+    "label": "RoomB148",
+    "x": 542.8538361038017,
+    "y": -604.6441752914897,
+    "neighbors": {
+      "{b10a49f6-495b-4522-9bcc-edafbdeb6352}": 12.930832424211925,
+      "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}": 14.641061394292525
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{9f511807-5458-47fe-a96f-33c84d13b464}"
+  },
+  "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}": {
+    "id": "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}",
+    "type": "room_door",
+    "label": "RoomB147a",
+    "x": 532.7565523835999,
+    "y": -615.2463231977015,
+    "neighbors": {
+      "{9f511807-5458-47fe-a96f-33c84d13b464}": 14.641061394292525,
+      "{2ea866ed-6ded-4d91-8755-f4b6662f8755}": 10.097283720201744,
+      "{f58a84ca-82b2-456c-b715-742520012309}": 21.79703983416855,
+      "{77044240-649e-490d-a1af-c1e7196dc77f}": 4.797870217125468
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}"
+  },
+  "{2ea866ed-6ded-4d91-8755-f4b6662f8755}": {
+    "id": "{2ea866ed-6ded-4d91-8755-f4b6662f8755}",
+    "type": "room_door",
+    "label": "RoomB146s",
+    "x": 542.8538361038017,
+    "y": -615.2463231977015,
+    "neighbors": {
+      "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}": 10.097283720201744,
+      "{f9a081fb-87cf-4b0f-af34-fc13ff4b7945}": 31.690031784199448
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{2ea866ed-6ded-4d91-8755-f4b6662f8755}"
+  },
+  "{f58a84ca-82b2-456c-b715-742520012309}": {
+    "id": "{f58a84ca-82b2-456c-b715-742520012309}",
+    "type": "room_door",
+    "label": "RoomB146",
+    "x": 537.8051942437008,
+    "y": -636.4506190101251,
+    "neighbors": {
+      "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}": 21.79703983416855
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f58a84ca-82b2-456c-b715-742520012309}"
+  },
+  "{f9a081fb-87cf-4b0f-af34-fc13ff4b7945}": {
+    "id": "{f9a081fb-87cf-4b0f-af34-fc13ff4b7945}",
+    "type": "room_door",
+    "label": "RoomB145",
+    "x": 570.1165021483463,
+    "y": -631.4019771500243,
+    "neighbors": {
+      "{2ea866ed-6ded-4d91-8755-f4b6662f8755}": 31.690031784199448,
+      "{cd176fe6-ec67-41b9-81d1-ba6102d8ff1c}": 14.745146079548702,
+      "{ec730bb0-e877-4348-b7f8-a0e8034ace6a}": 12.621604650252197
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f9a081fb-87cf-4b0f-af34-fc13ff4b7945}"
+  },
+  "{cd176fe6-ec67-41b9-81d1-ba6102d8ff1c}": {
+    "id": "{cd176fe6-ec67-41b9-81d1-ba6102d8ff1c}",
+    "type": "room_door",
+    "label": "RoomB144d",
+    "x": 558.5046258701143,
+    "y": -640.4895324982059,
+    "neighbors": {
+      "{f9a081fb-87cf-4b0f-af34-fc13ff4b7945}": 14.745146079548702
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{cd176fe6-ec67-41b9-81d1-ba6102d8ff1c}"
+  },
+  "{ec730bb0-e877-4348-b7f8-a0e8034ace6a}": {
+    "id": "{ec730bb0-e877-4348-b7f8-a0e8034ace6a}",
+    "type": "room_door",
+    "label": "RoomB144c",
+    "x": 577.6894649384976,
+    "y": -641.4992608702261,
+    "neighbors": {
+      "{f9a081fb-87cf-4b0f-af34-fc13ff4b7945}": 12.621604650252197,
+      "{4134a0ee-dc3f-4fc3-9ef0-e520e34452a6}": 18.20313709804761
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ec730bb0-e877-4348-b7f8-a0e8034ace6a}"
+  },
+  "{4134a0ee-dc3f-4fc3-9ef0-e520e34452a6}": {
+    "id": "{4134a0ee-dc3f-4fc3-9ef0-e520e34452a6}",
+    "type": "room_door",
+    "label": "RoomB144b",
+    "x": 595.8645756348608,
+    "y": -640.4895324982059,
+    "neighbors": {
+      "{ec730bb0-e877-4348-b7f8-a0e8034ace6a}": 18.20313709804761,
+      "{bffbdeb7-e9bd-46ea-8a4c-458d8644c71e}": 18.203137098047495
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{4134a0ee-dc3f-4fc3-9ef0-e520e34452a6}"
+  },
+  "{bffbdeb7-e9bd-46ea-8a4c-458d8644c71e}": {
+    "id": "{bffbdeb7-e9bd-46ea-8a4c-458d8644c71e}",
+    "type": "room_door",
+    "label": "RoomB144a",
+    "x": 614.0396863312238,
+    "y": -641.4992608702261,
+    "neighbors": {
+      "{4134a0ee-dc3f-4fc3-9ef0-e520e34452a6}": 18.203137098047495
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{bffbdeb7-e9bd-46ea-8a4c-458d8644c71e}"
+  },
+  "{24525147-00b3-4e63-85fa-6d6eb271d258}": {
+    "id": "{24525147-00b3-4e63-85fa-6d6eb271d258}",
+    "type": "room_door",
+    "label": "RoomB137d",
+    "x": 659.9823272581417,
+    "y": -687.441901797144,
+    "neighbors": {
+      "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}": 28.7461939338373
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{24525147-00b3-4e63-85fa-6d6eb271d258}"
+  },
+  "{7c84b561-58b3-4129-a46b-a129ca0e0d0c}": {
+    "id": "{7c84b561-58b3-4129-a46b-a129ca0e0d0c}",
+    "type": "room_door",
+    "label": "RoomB137c",
+    "x": 660.4871914441518,
+    "y": -706.6267408655273,
+    "neighbors": {
+      "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}": 17.8068580761295,
+      "{42f7ecd2-2c58-4a27-929e-79c9f58e46f3}": 5.929282961571819
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{7c84b561-58b3-4129-a46b-a129ca0e0d0c}"
+  },
+  "{477a8a95-2943-45b5-9017-46599e1cc8c9}": {
+    "id": "{477a8a95-2943-45b5-9017-46599e1cc8c9}",
+    "type": "room_door",
+    "label": "RoomB137b",
+    "x": 660.9920556301619,
+    "y": -724.2969873758803,
+    "neighbors": {
+      "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}": 9.346132440874058,
+      "{aad0ae93-c566-4b00-9f68-36e5666711c2}": 18.679974882373244
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{477a8a95-2943-45b5-9017-46599e1cc8c9}"
+  },
+  "{aad0ae93-c566-4b00-9f68-36e5666711c2}": {
+    "id": "{aad0ae93-c566-4b00-9f68-36e5666711c2}",
+    "type": "room_door",
+    "label": "RoomB137a",
+    "x": 660.9920556301619,
+    "y": -742.9769622582536,
+    "neighbors": {
+      "{477a8a95-2943-45b5-9017-46599e1cc8c9}": 18.679974882373244,
+      "{52485a4a-8e82-4884-a4c5-e15961ab2b63}": 10.109897446194338,
+      "{3d09f2fc-8d30-47ed-9be8-ffd1771b45dd}": 22.288481609772315,
+      "{f9900ac2-5203-4b38-9fee-b39336a2b66e}": 4.246712576606945
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{aad0ae93-c566-4b00-9f68-36e5666711c2}"
+  },
+  "{d067f4c8-31c5-406d-a673-f1a339f86600}": {
+    "id": "{d067f4c8-31c5-406d-a673-f1a339f86600}",
+    "type": "room_door",
+    "label": "RoomB138",
+    "x": 670.5844751643535,
+    "y": -732.3748143520418,
+    "neighbors": {
+      "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}": 10.693762364583238
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{d067f4c8-31c5-406d-a673-f1a339f86600}"
+  },
+  "{52485a4a-8e82-4884-a4c5-e15961ab2b63}": {
+    "id": "{52485a4a-8e82-4884-a4c5-e15961ab2b63}",
+    "type": "room_door",
+    "label": "RoomB136s",
+    "x": 671.0893393503636,
+    "y": -742.4720980722435,
+    "neighbors": {
+      "{aad0ae93-c566-4b00-9f68-36e5666711c2}": 10.109897446194338
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{52485a4a-8e82-4884-a4c5-e15961ab2b63}"
+  },
+  "{3d09f2fc-8d30-47ed-9be8-ffd1771b45dd}": {
+    "id": "{3d09f2fc-8d30-47ed-9be8-ffd1771b45dd}",
+    "type": "room_door",
+    "label": "RoomB136",
+    "x": 666.0406974902628,
+    "y": -764.6861222566873,
+    "neighbors": {
+      "{aad0ae93-c566-4b00-9f68-36e5666711c2}": 22.288481609772315,
+      "{c605c924-f86e-463c-9683-b66c8250166c}": 22.28848160977229
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{3d09f2fc-8d30-47ed-9be8-ffd1771b45dd}"
+  },
+  "{c605c924-f86e-463c-9683-b66c8250166c}": {
+    "id": "{c605c924-f86e-463c-9683-b66c8250166c}",
+    "type": "room_door",
+    "label": "RoomB134d",
+    "x": 687.7498574886965,
+    "y": -769.7347641167881,
+    "neighbors": {
+      "{3d09f2fc-8d30-47ed-9be8-ffd1771b45dd}": 22.28848160977229,
+      "{ba2baaf7-bbd4-4465-abd1-5fe289a91cfb}": 14.641061394292525
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{c605c924-f86e-463c-9683-b66c8250166c}"
+  },
+  "{ba2baaf7-bbd4-4465-abd1-5fe289a91cfb}": {
+    "id": "{ba2baaf7-bbd4-4465-abd1-5fe289a91cfb}",
+    "type": "room_door",
+    "label": "RoomB135",
+    "x": 697.8471412088983,
+    "y": -759.1326162105763,
+    "neighbors": {
+      "{c605c924-f86e-463c-9683-b66c8250166c}": 14.641061394292525,
+      "{ca978a33-9980-41de-82d5-2dda43ac637f}": 12.742195968633261
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ba2baaf7-bbd4-4465-abd1-5fe289a91cfb}"
+  },
+  "{ca978a33-9980-41de-82d5-2dda43ac637f}": {
+    "id": "{ca978a33-9980-41de-82d5-2dda43ac637f}",
+    "type": "room_door",
+    "label": "RoomB134c",
+    "x": 704.9152398130394,
+    "y": -769.7347641167881,
+    "neighbors": {
+      "{ba2baaf7-bbd4-4465-abd1-5fe289a91cfb}": 12.742195968633261,
+      "{ada2c605-cbec-408c-8449-c1eca0593f73}": 19.19148086850212
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ca978a33-9980-41de-82d5-2dda43ac637f}"
+  },
+  "{ada2c605-cbec-408c-8449-c1eca0593f73}": {
+    "id": "{ada2c605-cbec-408c-8449-c1eca0593f73}",
+    "type": "room_door",
+    "label": "RoomB134b",
+    "x": 724.1000788814227,
+    "y": -770.2396283027982,
+    "neighbors": {
+      "{ca978a33-9980-41de-82d5-2dda43ac637f}": 19.19148086850212,
+      "{8d6b459c-8078-46c0-8256-e68cd396cc07}": 18.70724493321659
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ada2c605-cbec-408c-8449-c1eca0593f73}"
+  },
+  "{8d6b459c-8078-46c0-8256-e68cd396cc07}": {
+    "id": "{8d6b459c-8078-46c0-8256-e68cd396cc07}",
+    "type": "room_door",
+    "label": "RoomB134a",
+    "x": 742.780053763796,
+    "y": -769.2298999307781,
+    "neighbors": {
+      "{ada2c605-cbec-408c-8449-c1eca0593f73}": 18.70724493321659
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{8d6b459c-8078-46c0-8256-e68cd396cc07}"
+  },
+  "{2f4c0204-2b2b-4ff2-8f03-f6fdb825c777}": {
+    "id": "{2f4c0204-2b2b-4ff2-8f03-f6fdb825c777}",
+    "type": "intersection",
+    "label": "its B149,B147d",
+    "x": 537.3003300576906,
+    "y": -544.1866890167819,
+    "neighbors": {
+      "{73173c95-7db4-499b-92a0-7ba5fcef9b28}": 15.39194377655138,
+      "{2a691dbb-5a18-46a7-82d9-4003ad6dce96}": 15.669100738827682
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{2f4c0204-2b2b-4ff2-8f03-f6fdb825c777}"
+  },
+  "{2a691dbb-5a18-46a7-82d9-4003ad6dce96}": {
+    "id": "{2a691dbb-5a18-46a7-82d9-4003ad6dce96}",
+    "type": "hallway_node",
+    "label": "hallway near B147d",
+    "x": 538.0576263367058,
+    "y": -559.8374787830946,
+    "neighbors": {
+      "{2f4c0204-2b2b-4ff2-8f03-f6fdb825c777}": 15.669100738827682,
+      "{674533ea-db6d-4492-8cd1-b966f7c83734}": 36.85508557873629
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{2a691dbb-5a18-46a7-82d9-4003ad6dce96}"
+  },
+  "{df2b74b6-76bb-4e65-a351-8d5b105cb942}": {
+    "id": "{df2b74b6-76bb-4e65-a351-8d5b105cb942}",
+    "type": "hallway_node",
+    "label": "hallwy near B147c",
+    "x": 538.5624905227158,
+    "y": -579.0223178514779,
+    "neighbors": {
+      "{e9891b5b-c952-403d-921f-082a80051c49}": 5.302576312198825
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{df2b74b6-76bb-4e65-a351-8d5b105cb942}"
+  },
+  "{674533ea-db6d-4492-8cd1-b966f7c83734}": {
+    "id": "{674533ea-db6d-4492-8cd1-b966f7c83734}",
+    "type": "hallway_node",
+    "label": "hallway B147b",
+    "x": 538.0576263367058,
+    "y": -596.6925643618309,
+    "neighbors": {
+      "{2a691dbb-5a18-46a7-82d9-4003ad6dce96}": 36.85508557873629,
+      "{5bd7f9a7-b618-47e7-8f5e-d151240bef2f}": 7.572962790151337
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{674533ea-db6d-4492-8cd1-b966f7c83734}"
+  },
+  "{5bd7f9a7-b618-47e7-8f5e-d151240bef2f}": {
+    "id": "{5bd7f9a7-b618-47e7-8f5e-d151240bef2f}",
+    "type": "hallway_node",
+    "label": "hallway near B148",
+    "x": 538.0576263367058,
+    "y": -604.2655271519823,
+    "neighbors": {
+      "{674533ea-db6d-4492-8cd1-b966f7c83734}": 7.572962790151337,
+      "{d053fe3a-31d2-4ae2-addc-f8a4a4c081dc}": 29.716307704028214
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{5bd7f9a7-b618-47e7-8f5e-d151240bef2f}"
+  },
+  "{77044240-649e-490d-a1af-c1e7196dc77f}": {
+    "id": "{77044240-649e-490d-a1af-c1e7196dc77f}",
+    "type": "intersection",
+    "label": "its B147a,146s",
+    "x": 537.5527621506957,
+    "y": -615.1201071511991,
+    "neighbors": {
+      "{09b653cb-a94e-4bbb-b0af-286b04c1cf63}": 4.797870217125468
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{77044240-649e-490d-a1af-c1e7196dc77f}"
+  },
+  "{d053fe3a-31d2-4ae2-addc-f8a4a4c081dc}": {
+    "id": "{d053fe3a-31d2-4ae2-addc-f8a4a4c081dc}",
+    "type": "hallway_node",
+    "label": "hallway near B146",
+    "x": 541.3392435457713,
+    "y": -633.8000820335723,
+    "neighbors": {
+      "{5bd7f9a7-b618-47e7-8f5e-d151240bef2f}": 29.716307704028214,
+      "{365d67c7-5806-4d68-a2b7-901d82be659a}": 17.59978565878198
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{d053fe3a-31d2-4ae2-addc-f8a4a4c081dc}"
+  },
+  "{365d67c7-5806-4d68-a2b7-901d82be659a}": {
+    "id": "{365d67c7-5806-4d68-a2b7-901d82be659a}",
+    "type": "hallway_node",
+    "label": "hallway B144d",
+    "x": 558.7570579631193,
+    "y": -636.3244029636227,
+    "neighbors": {
+      "{d053fe3a-31d2-4ae2-addc-f8a4a4c081dc}": 17.59978565878198,
+      "{e2bc2eb8-a874-40ad-a921-2e9d4e431146}": 11.370657854477988
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{365d67c7-5806-4d68-a2b7-901d82be659a}"
+  },
+  "{e2bc2eb8-a874-40ad-a921-2e9d4e431146}": {
+    "id": "{e2bc2eb8-a874-40ad-a921-2e9d4e431146}",
+    "type": "hallway_node",
+    "label": "hallway near B145",
+    "x": 570.1165021483463,
+    "y": -635.8195387776126,
+    "neighbors": {
+      "{365d67c7-5806-4d68-a2b7-901d82be659a}": 11.370657854477988,
+      "{31b4a470-fc22-4b04-8bad-0820348558b7}": 7.577168823683133
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e2bc2eb8-a874-40ad-a921-2e9d4e431146}"
+  },
+  "{31b4a470-fc22-4b04-8bad-0820348558b7}": {
+    "id": "{31b4a470-fc22-4b04-8bad-0820348558b7}",
+    "type": "hallway_node",
+    "label": "hallway near B144c",
+    "x": 577.6894649384976,
+    "y": -636.0719708706176,
+    "neighbors": {
+      "{e2bc2eb8-a874-40ad-a921-2e9d4e431146}": 7.577168823683133,
+      "{0de55122-51c3-416c-89dd-7af1ac80ba3c}": 18.429271695201923
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{31b4a470-fc22-4b04-8bad-0820348558b7}"
+  },
+  "{0de55122-51c3-416c-89dd-7af1ac80ba3c}": {
+    "id": "{0de55122-51c3-416c-89dd-7af1ac80ba3c}",
+    "type": "hallway_node",
+    "label": "hallway near B144b",
+    "x": 596.1170077278657,
+    "y": -636.3244029636227,
+    "neighbors": {
+      "{31b4a470-fc22-4b04-8bad-0820348558b7}": 18.429271695201923,
+      "{01bf3c06-6dd0-429c-aa7c-bd8d7640213c}": 18.176863612478186
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0de55122-51c3-416c-89dd-7af1ac80ba3c}"
+  },
+  "{01bf3c06-6dd0-429c-aa7c-bd8d7640213c}": {
+    "id": "{01bf3c06-6dd0-429c-aa7c-bd8d7640213c}",
+    "type": "hallway_node",
+    "label": "hallway near B144a",
+    "x": 614.2921184242289,
+    "y": -636.5768350566277,
+    "neighbors": {
+      "{0de55122-51c3-416c-89dd-7af1ac80ba3c}": 18.176863612478186
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{01bf3c06-6dd0-429c-aa7c-bd8d7640213c}"
+  },
+  "{5e928e91-70c8-4206-a403-98d2115a3bd0}": {
+    "id": "{5e928e91-70c8-4206-a403-98d2115a3bd0}",
+    "type": "intersection",
+    "label": "its B142,B143,B140",
+    "x": 644.743120451895,
+    "y": -628.0253974982871,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 8.751446867239839
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{5e928e91-70c8-4206-a403-98d2115a3bd0}"
+  },
+  "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": {
+    "id": "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}",
+    "type": "intersection",
+    "label": "its itsb140-142, hallway",
+    "x": 646.6034263288744,
+    "y": -636.5768350566277,
+    "neighbors": {
+      "{9c2d42b0-b7d4-4bc3-82bc-b53e1f76637d}": 29.79144963595991,
+      "{ef7f13a9-6b50-4731-a4a5-0013d41f7a86}": 12.14038290714141,
+      "{442a17fb-7ff8-417b-9f62-7d1d087c775b}": 40.119247389483,
+      "{249402cf-9e03-425d-9fd3-d35226cbb931}": 20.13259830617437,
+      "{229acdda-fceb-4a43-a5fd-05dfbfd8140f}": 23.393554130527367,
+      "{94bf3bbf-3a7a-497d-8d55-ad1821d2d784}": 31.93114037582475,
+      "{841ae107-06bd-4b81-b15c-96e4cb8bdd95}": 83.97271920715004,
+      "{5e928e91-70c8-4206-a403-98d2115a3bd0}": 8.751446867239839
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}"
+  },
+  "{ef7f13a9-6b50-4731-a4a5-0013d41f7a86}": {
+    "id": "{ef7f13a9-6b50-4731-a4a5-0013d41f7a86}",
+    "type": "intersection",
+    "label": "its near stair",
+    "x": 647.3607226078896,
+    "y": -648.6935755208698,
+    "neighbors": {
+      "{70c0ab45-f03b-452d-ab8e-c13a7e98b501}": 12.14038290714141,
+      "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}": 22.783842366175335,
+      "{70faf4ff-3888-4b0c-9ed4-5e1fd86244cb}": 32.87745952769781
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ef7f13a9-6b50-4731-a4a5-0013d41f7a86}"
+  },
+  "{ff37b7c9-c5b0-4fe8-ba74-c1459f263228}": {
+    "id": "{ff37b7c9-c5b0-4fe8-ba74-c1459f263228}",
+    "type": "intersection",
+    "label": "its to B137d-134a",
+    "x": 664.7785370252376,
+    "y": -649.4508717998848,
+    "neighbors": {
+      "{94bf3bbf-3a7a-497d-8d55-ad1821d2d784}": 10.92924823243264,
+      "{e9896be5-20c6-4737-a95b-5a5e53143412}": 38.85581363810764
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{ff37b7c9-c5b0-4fe8-ba74-c1459f263228}"
+  },
+  "{e9896be5-20c6-4737-a95b-5a5e53143412}": {
+    "id": "{e9896be5-20c6-4737-a95b-5a5e53143412}",
+    "type": "hallway_node",
+    "label": "hallway near B137d",
+    "x": 666.797993769278,
+    "y": -688.2541712464306,
+    "neighbors": {
+      "{ff37b7c9-c5b0-4fe8-ba74-c1459f263228}": 38.85581363810764,
+      "{95cd2f56-adc0-4506-9c94-e746fd07b07c}": 44.29036403595678
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e9896be5-20c6-4737-a95b-5a5e53143412}"
+  },
+  "{42f7ecd2-2c58-4a27-929e-79c9f58e46f3}": {
+    "id": "{42f7ecd2-2c58-4a27-929e-79c9f58e46f3}",
+    "type": "room_door",
+    "label": "RoomB137c",
+    "x": 666.4061817015883,
+    "y": -706.2775263601611,
+    "neighbors": {
+      "{7c84b561-58b3-4129-a46b-a129ca0e0d0c}": 5.929282961571819
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{42f7ecd2-2c58-4a27-929e-79c9f58e46f3}"
+  },
+  "{20f777a3-d75c-4c2c-8194-adba217f8d64}": {
+    "id": "{20f777a3-d75c-4c2c-8194-adba217f8d64}",
+    "type": "intersection",
+    "label": "its B137b,B139a",
+    "x": 665.6225575662087,
+    "y": -722.7336332031324,
+    "neighbors": {
+      "{0cf5be8a-10ba-49c1-a6ee-87d888949a75}": 4.468694620580493
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{20f777a3-d75c-4c2c-8194-adba217f8d64}"
+  },
+  "{95cd2f56-adc0-4506-9c94-e746fd07b07c}": {
+    "id": "{95cd2f56-adc0-4506-9c94-e746fd07b07c}",
+    "type": "hallway_node",
+    "label": "hallway near B138",
+    "x": 665.6225575662087,
+    "y": -732.5289348953772,
+    "neighbors": {
+      "{e9896be5-20c6-4737-a95b-5a5e53143412}": 44.29036403595678,
+      "{9dc8c6e5-9dcc-4aa1-b7e2-d94718ad7b59}": 29.645962403295073
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{95cd2f56-adc0-4506-9c94-e746fd07b07c}"
+  },
+  "{f9900ac2-5203-4b38-9fee-b39336a2b66e}": {
+    "id": "{f9900ac2-5203-4b38-9fee-b39336a2b66e}",
+    "type": "intersection",
+    "label": "its B137a,B136s",
+    "x": 665.2307454985188,
+    "y": -742.7160486553119,
+    "neighbors": {
+      "{aad0ae93-c566-4b00-9f68-36e5666711c2}": 4.246712576606945
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f9900ac2-5203-4b38-9fee-b39336a2b66e}"
+  },
+  "{9dc8c6e5-9dcc-4aa1-b7e2-d94718ad7b59}": {
+    "id": "{9dc8c6e5-9dcc-4aa1-b7e2-d94718ad7b59}",
+    "type": "hallway_node",
+    "label": "hallway near B136",
+    "x": 669.5406782431065,
+    "y": -761.9148399721117,
+    "neighbors": {
+      "{95cd2f56-adc0-4506-9c94-e746fd07b07c}": 29.645962403295073,
+      "{3a73b3b8-0c12-4c68-babf-6ac67e8a3573}": 18.680028128684654
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{9dc8c6e5-9dcc-4aa1-b7e2-d94718ad7b59}"
+  },
+  "{3a73b3b8-0c12-4c68-babf-6ac67e8a3573}": {
+    "id": "{3a73b3b8-0c12-4c68-babf-6ac67e8a3573}",
+    "type": "hallway_node",
+    "label": "hallway near B134d",
+    "x": 687.9558454245268,
+    "y": -765.04933651363,
+    "neighbors": {
+      "{9dc8c6e5-9dcc-4aa1-b7e2-d94718ad7b59}": 18.680028128684654,
+      "{3394c8e3-d323-4204-b9eb-150d1940c501}": 10.194645822893337
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{3a73b3b8-0c12-4c68-babf-6ac67e8a3573}"
+  },
+  "{3394c8e3-d323-4204-b9eb-150d1940c501}": {
+    "id": "{3394c8e3-d323-4204-b9eb-150d1940c501}",
+    "type": "hallway_node",
+    "label": "hallway near B135",
+    "x": 698.1429591844615,
+    "y": -764.6575244459402,
+    "neighbors": {
+      "{3a73b3b8-0c12-4c68-babf-6ac67e8a3573}": 10.194645822893337,
+      "{0fbd68d9-fc2b-4417-afc8-eb592ed5620e}": 7.063492502005536
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{3394c8e3-d323-4204-b9eb-150d1940c501}"
+  },
+  "{0fbd68d9-fc2b-4417-afc8-eb592ed5620e}": {
+    "id": "{0fbd68d9-fc2b-4417-afc8-eb592ed5620e}",
+    "type": "hallway_node",
+    "label": "hallway near B134c",
+    "x": 705.1955764028777,
+    "y": -765.04933651363,
+    "neighbors": {
+      "{3394c8e3-d323-4204-b9eb-150d1940c501}": 7.063492502005536,
+      "{4f619d64-7a2c-4f04-bd33-f8906a19d7d3}": 18.8069792491101
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{0fbd68d9-fc2b-4417-afc8-eb592ed5620e}"
+  },
+  "{4f619d64-7a2c-4f04-bd33-f8906a19d7d3}": {
+    "id": "{4f619d64-7a2c-4f04-bd33-f8906a19d7d3}",
+    "type": "hallway_node",
+    "label": "hallway near B134b",
+    "x": 724.0025556519878,
+    "y": -765.04933651363,
+    "neighbors": {
+      "{0fbd68d9-fc2b-4417-afc8-eb592ed5620e}": 18.8069792491101,
+      "{f2e87c10-16bc-4272-8b4b-bf3b5ab50440}": 19.198791316799884
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{4f619d64-7a2c-4f04-bd33-f8906a19d7d3}"
+  },
+  "{f2e87c10-16bc-4272-8b4b-bf3b5ab50440}": {
+    "id": "{f2e87c10-16bc-4272-8b4b-bf3b5ab50440}",
+    "type": "hallway_node",
+    "label": "hallway near B134a",
+    "x": 743.2013469687877,
+    "y": -765.04933651363,
+    "neighbors": {
+      "{4f619d64-7a2c-4f04-bd33-f8906a19d7d3}": 19.198791316799884
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{f2e87c10-16bc-4272-8b4b-bf3b5ab50440}"
+  },
+  "{323fdf13-f765-4851-be0a-9765b24836aa}": {
+    "id": "{323fdf13-f765-4851-be0a-9765b24836aa}",
+    "type": "intersection",
+    "label": "its 4ways",
+    "x": 902.6688585185335,
+    "y": -786.2071881688788,
+    "neighbors": {
+      "{de0cb7ca-acfb-4444-bfde-8153a386a3f0}": 96.3734437556444
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{323fdf13-f765-4851-be0a-9765b24836aa}"
+  },
+  "{d9b89b57-d3ea-4c8c-a2f8-fb32794ff14e}": {
+    "id": "{d9b89b57-d3ea-4c8c-a2f8-fb32794ff14e}",
+    "type": "intersection",
+    "label": "T-junction",
+    "x": 1006.4990564563287,
+    "y": -792.4761812519156,
+    "neighbors": {
+      "{56160496-159d-4baf-87ff-176a543329bd}": 176.169892255096
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{d9b89b57-d3ea-4c8c-a2f8-fb32794ff14e}"
+  },
+  "{e4f02585-9c19-4c1d-b5de-1052ffc7d857}": {
+    "id": "{e4f02585-9c19-4c1d-b5de-1052ffc7d857}",
+    "type": "hallway_node",
+    "label": "hallway to center",
+    "x": 1005.5898312040104,
+    "y": -920.3594161890621,
+    "neighbors": {
+      "{444e9a8e-5677-4d29-bcf5-b8685924272e}": 52.72089557148717
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{e4f02585-9c19-4c1d-b5de-1052ffc7d857}"
+  },
+  "{b6582868-abfb-47b8-9447-f967c83efb7a}": {
+    "id": "{b6582868-abfb-47b8-9447-f967c83efb7a}",
+    "type": "intersection",
+    "label": "its hallway, itsB149-147d",
+    "x": 537.3226626756092,
+    "y": -532.3978766013132,
+    "neighbors": {
+      "{73173c95-7db4-499b-92a0-7ba5fcef9b28}": 9.582523235776742
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{b6582868-abfb-47b8-9447-f967c83efb7a}"
+  },
+  "{57479526-790b-421b-8d2e-ff8b58d57c53}": {
+    "id": "{57479526-790b-421b-8d2e-ff8b58d57c53}",
+    "type": "intersection",
+    "label": "its stair, t-junction",
+    "x": 1151.8256458854619,
+    "y": -932.9131438024835,
+    "neighbors": {
+      "{56160496-159d-4baf-87ff-176a543329bd}": 38.07777523502995,
+      "{b32a098f-cc94-412c-a6b5-308d624894f6}": 28.149863286737826,
+      "{aaa659dc-07b0-4d79-93fe-8d0efe360a9a}": 115.04626863913337
+    },
+    "level": 1,
+    "source": "source_1",
+    "originalId": "{57479526-790b-421b-8d2e-ff8b58d57c53}"
+  },
+  "{0957cd9f-f3b3-4a79-902c-33f7a3bf8054}": {
+    "id": "{0957cd9f-f3b3-4a79-902c-33f7a3bf8054}",
+    "type": "intersection",
+    "label": "",
+    "x": 256.5451577327194,
+    "y": -499.0156022673279,
+    "neighbors": {
+      "{3b8f3d24-0477-4478-a418-9a87ccc03f77}": 235.03691684292698
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{0957cd9f-f3b3-4a79-902c-33f7a3bf8054}"
+  },
+  "{3b8f3d24-0477-4478-a418-9a87ccc03f77}": {
+    "id": "{3b8f3d24-0477-4478-a418-9a87ccc03f77}",
+    "type": "intersection",
+    "label": "",
+    "x": 491.3957620686867,
+    "y": -508.37220004963734,
+    "neighbors": {
+      "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}": 18.769293860593987,
+      "{0957cd9f-f3b3-4a79-902c-33f7a3bf8054}": 235.03691684292698,
+      "{1f7f442e-32bb-4df0-bea3-ede149716a6b}": 103.85823538363485
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{3b8f3d24-0477-4478-a418-9a87ccc03f77}"
+  },
+  "{1f7f442e-32bb-4df0-bea3-ede149716a6b}": {
+    "id": "{1f7f442e-32bb-4df0-bea3-ede149716a6b}",
+    "type": "intersection",
+    "label": "",
+    "x": 595.2539974523215,
+    "y": -508.37220004963734,
+    "neighbors": {
+      "{3b8f3d24-0477-4478-a418-9a87ccc03f77}": 103.85823538363485,
+      "{97922f54-447d-4d3e-a025-e476a3acd92d}": 72.88543442002556
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{1f7f442e-32bb-4df0-bea3-ede149716a6b}"
+  },
+  "{97922f54-447d-4d3e-a025-e476a3acd92d}": {
+    "id": "{97922f54-447d-4d3e-a025-e476a3acd92d}",
+    "type": "intersection",
+    "label": "",
+    "x": 658.8788623720259,
+    "y": -543.9272716224133,
+    "neighbors": {
+      "{1f7f442e-32bb-4df0-bea3-ede149716a6b}": 72.88543442002556,
+      "{e46e2e10-8b6e-4fa2-8381-c4d730366383}": 108.55266514123441,
+      "{4acb81c4-f188-469c-9b10-737bc9836879}": 181.2863457111243
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{97922f54-447d-4d3e-a025-e476a3acd92d}"
+  },
+  "{e46e2e10-8b6e-4fa2-8381-c4d730366383}": {
+    "id": "{e46e2e10-8b6e-4fa2-8381-c4d730366383}",
+    "type": "intersection",
+    "label": "",
+    "x": 767.4153966468155,
+    "y": -542.0559520659514,
+    "neighbors": {
+      "{989d35b8-4805-492e-9c52-cd0e0d697998}": 38.89452533287397,
+      "{97922f54-447d-4d3e-a025-e476a3acd92d}": 108.55266514123441,
+      "{1cc9c316-47db-4cc3-b317-790bbb69ca53}": 96.37749908851816
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{e46e2e10-8b6e-4fa2-8381-c4d730366383}"
+  },
+  "{1cc9c316-47db-4cc3-b317-790bbb69ca53}": {
+    "id": "{1cc9c316-47db-4cc3-b317-790bbb69ca53}",
+    "type": "intersection",
+    "label": "",
+    "x": 863.7883538046028,
+    "y": -542.9916118441823,
+    "neighbors": {
+      "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}": 11.966286394219955,
+      "{e46e2e10-8b6e-4fa2-8381-c4d730366383}": 96.37749908851816,
+      "{3fb501dd-fafe-40bd-a350-2f74270baab5}": 29.955729019908063
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{1cc9c316-47db-4cc3-b317-790bbb69ca53}"
+  },
+  "{3fb501dd-fafe-40bd-a350-2f74270baab5}": {
+    "id": "{3fb501dd-fafe-40bd-a350-2f74270baab5}",
+    "type": "intersection",
+    "label": "",
+    "x": 864.7240135828338,
+    "y": -572.9327247475726,
+    "neighbors": {
+      "{1cc9c316-47db-4cc3-b317-790bbb69ca53}": 29.955729019908063,
+      "{e43523d6-0d8e-4d49-b7f3-6ebe17b6d21c}": 131.92802873056337
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{3fb501dd-fafe-40bd-a350-2f74270baab5}"
+  },
+  "{e43523d6-0d8e-4d49-b7f3-6ebe17b6d21c}": {
+    "id": "{e43523d6-0d8e-4d49-b7f3-6ebe17b6d21c}",
+    "type": "intersection",
+    "label": "",
+    "x": 996.6520423133971,
+    "y": -572.9327247475726,
+    "neighbors": {
+      "{3fb501dd-fafe-40bd-a350-2f74270baab5}": 131.92802873056337,
+      "{356e2bd1-8f62-41ae-b5d0-45ee48b8c80b}": 114.15432755099032
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{e43523d6-0d8e-4d49-b7f3-6ebe17b6d21c}"
+  },
+  "{356e2bd1-8f62-41ae-b5d0-45ee48b8c80b}": {
+    "id": "{356e2bd1-8f62-41ae-b5d0-45ee48b8c80b}",
+    "type": "intersection",
+    "label": "",
+    "x": 1110.8025352575723,
+    "y": -571.9970649693416,
+    "neighbors": {
+      "{e43523d6-0d8e-4d49-b7f3-6ebe17b6d21c}": 114.15432755099032,
+      "{e2ed8446-ecbb-4651-86ee-4d36cb61fa94}": 109.47619252605922
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{356e2bd1-8f62-41ae-b5d0-45ee48b8c80b}"
+  },
+  "{e2ed8446-ecbb-4651-86ee-4d36cb61fa94}": {
+    "id": "{e2ed8446-ecbb-4651-86ee-4d36cb61fa94}",
+    "type": "intersection",
+    "label": "",
+    "x": 1111.7381950358033,
+    "y": -681.4692590223622,
+    "neighbors": {
+      "{356e2bd1-8f62-41ae-b5d0-45ee48b8c80b}": 109.47619252605922,
+      "{1cb08741-90b3-4556-994d-4b2992de8c75}": 83.46274029953524
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{e2ed8446-ecbb-4651-86ee-4d36cb61fa94}"
+  },
+  "{1cb08741-90b3-4556-994d-4b2992de8c75}": {
+    "id": "{1cb08741-90b3-4556-994d-4b2992de8c75}",
+    "type": "intersection",
+    "label": "",
+    "x": 1028.4644747732493,
+    "y": -687.0832176917479,
+    "neighbors": {
+      "{e2ed8446-ecbb-4651-86ee-4d36cb61fa94}": 83.46274029953524,
+      "{c5422fb8-c68b-445e-9d7d-223c4de1373d}": 25.452697759636347
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{1cb08741-90b3-4556-994d-4b2992de8c75}"
+  },
+  "{c5422fb8-c68b-445e-9d7d-223c4de1373d}": {
+    "id": "{c5422fb8-c68b-445e-9d7d-223c4de1373d}",
+    "type": "intersection",
+    "label": "",
+    "x": 1013.4939183215541,
+    "y": -707.6677328128287,
+    "neighbors": {
+      "{1cb08741-90b3-4556-994d-4b2992de8c75}": 25.452697759636347,
+      "{f88d931a-eb1c-42d6-b194-8de12ca2f363}": 99.1843498838047,
+      "{c7051eb4-343e-4f73-989f-17fdf1f02a3d}": 51.15415535780996
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{c5422fb8-c68b-445e-9d7d-223c4de1373d}"
+  },
+  "{f88d931a-eb1c-42d6-b194-8de12ca2f363}": {
+    "id": "{f88d931a-eb1c-42d6-b194-8de12ca2f363}",
+    "type": "intersection",
+    "label": "",
+    "x": 1012.5582585433232,
+    "y": -806.8476693053088,
+    "neighbors": {
+      "{c5422fb8-c68b-445e-9d7d-223c4de1373d}": 99.1843498838047,
+      "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}": 112.31425514872814
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{f88d931a-eb1c-42d6-b194-8de12ca2f363}"
+  },
+  "{c7051eb4-343e-4f73-989f-17fdf1f02a3d}": {
+    "id": "{c7051eb4-343e-4f73-989f-17fdf1f02a3d}",
+    "type": "intersection",
+    "label": "",
+    "x": 980.745826083471,
+    "y": -668.370022127129,
+    "neighbors": {
+      "{7c2d6d0a-bfca-4cdc-bced-5229619386e3}": 20.16945371538246,
+      "{81ef4be1-1065-4ec2-b157-2016bdbfddba}": 102.92257560540395,
+      "{c5422fb8-c68b-445e-9d7d-223c4de1373d}": 51.15415535780996
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{c7051eb4-343e-4f73-989f-17fdf1f02a3d}"
+  },
+  "{81ef4be1-1065-4ec2-b157-2016bdbfddba}": {
+    "id": "{81ef4be1-1065-4ec2-b157-2016bdbfddba}",
+    "type": "intersection",
+    "label": "",
+    "x": 877.823250478067,
+    "y": -668.370022127129,
+    "neighbors": {
+      "{4acb81c4-f188-469c-9b10-737bc9836879}": 91.81392506123193,
+      "{c7051eb4-343e-4f73-989f-17fdf1f02a3d}": 102.92257560540395
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{81ef4be1-1065-4ec2-b157-2016bdbfddba}"
+  },
+  "{4acb81c4-f188-469c-9b10-737bc9836879}": {
+    "id": "{4acb81c4-f188-469c-9b10-737bc9836879}",
+    "type": "intersection",
+    "label": "",
+    "x": 786.1285922114345,
+    "y": -673.0483210182837,
+    "neighbors": {
+      "{97922f54-447d-4d3e-a025-e476a3acd92d}": 181.2863457111243,
+      "{ecdbc929-8060-431c-8d39-0526868a0732}": 114.6135489594957,
+      "{81ef4be1-1065-4ec2-b157-2016bdbfddba}": 91.81392506123193
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{4acb81c4-f188-469c-9b10-737bc9836879}"
+  },
+  "{ecdbc929-8060-431c-8d39-0526868a0732}": {
+    "id": "{ecdbc929-8060-431c-8d39-0526868a0732}",
+    "type": "intersection",
+    "label": "",
+    "x": 862.852694026372,
+    "y": -758.1933608372997,
+    "neighbors": {
+      "{c82b2b97-2779-430d-a731-956d3abdee17}": 39.9516319256354,
+      "{d0fe64e1-5c9d-46fd-a565-640a8684c2e1}": 77.94952619085787,
+      "{4acb81c4-f188-469c-9b10-737bc9836879}": 114.6135489594957,
+      "{c530a253-8214-4871-b580-4eb22058a8ba}": 103.87509275030718
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{ecdbc929-8060-431c-8d39-0526868a0732}"
+  },
+  "{c530a253-8214-4871-b580-4eb22058a8ba}": {
+    "id": "{c530a253-8214-4871-b580-4eb22058a8ba}",
+    "type": "intersection",
+    "label": "",
+    "x": 935.8341567283857,
+    "y": -832.1104833175444,
+    "neighbors": {
+      "{a1491e5f-e5bc-4a3e-9348-684908413102}": 99.39980593375458,
+      "{ecdbc929-8060-431c-8d39-0526868a0732}": 103.87509275030718,
+      "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}": 117.88570595195753
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{c530a253-8214-4871-b580-4eb22058a8ba}"
+  },
+  "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}": {
+    "id": "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}",
+    "type": "intersection",
+    "label": "",
+    "x": 1015.365237878016,
+    "y": -919.1268426930222,
+    "neighbors": {
+      "{6b75c881-e469-4cd3-9126-c77727e1fbac}": 34.77080936140937,
+      "{f88d931a-eb1c-42d6-b194-8de12ca2f363}": 112.31425514872814,
+      "{ff0bb078-ef83-49d0-a8ad-8ea94edde482}": 60.594355935127915,
+      "{c530a253-8214-4871-b580-4eb22058a8ba}": 117.88570595195753,
+      "{cc3a5b95-6b68-4e4a-8e78-fc37a5f11fcd}": 41.93370056209956
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}"
+  },
+  "{6b75c881-e469-4cd3-9126-c77727e1fbac}": {
+    "id": "{6b75c881-e469-4cd3-9126-c77727e1fbac}",
+    "type": "intersection",
+    "label": "",
+    "x": 1047.1776703378682,
+    "y": -933.1617393664865,
+    "neighbors": {
+      "{a4044b2e-6511-45e5-8116-86af72940e52}": 24.000214986658484,
+      "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}": 34.77080936140937,
+      "{e665c28d-812f-4d2e-a2d7-717d16b8cfbd}": 152.51254385164407
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{6b75c881-e469-4cd3-9126-c77727e1fbac}"
+  },
+  "{e665c28d-812f-4d2e-a2d7-717d16b8cfbd}": {
+    "id": "{e665c28d-812f-4d2e-a2d7-717d16b8cfbd}",
+    "type": "intersection",
+    "label": "",
+    "x": 1199.6902141895123,
+    "y": -933.1617393664865,
+    "neighbors": {
+      "{1bdde0fb-72ee-4a14-b4fe-a95a97324e05}": 47.07205657502212,
+      "{6b75c881-e469-4cd3-9126-c77727e1fbac}": 152.51254385164407
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{e665c28d-812f-4d2e-a2d7-717d16b8cfbd}"
+  },
+  "{ff0bb078-ef83-49d0-a8ad-8ea94edde482}": {
+    "id": "{ff0bb078-ef83-49d0-a8ad-8ea94edde482}",
+    "type": "intersection",
+    "label": "",
+    "x": 1029.4001345514803,
+    "y": -978.0734087215718,
+    "neighbors": {
+      "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}": 46.142273765040656,
+      "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}": 60.594355935127915
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{ff0bb078-ef83-49d0-a8ad-8ea94edde482}"
+  },
+  "{086d34c7-a778-4c43-af78-e352d6d08dfe}": {
+    "id": "{086d34c7-a778-4c43-af78-e352d6d08dfe}",
+    "type": "intersection",
+    "label": "",
+    "x": 537.2430912020029,
+    "y": -546.734250957106,
+    "neighbors": {
+      "{7e7c9f10-d2d1-4051-b5c8-d5784f92b8ff}": 85.27346765727779
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{086d34c7-a778-4c43-af78-e352d6d08dfe}"
+  },
+  "{7e7c9f10-d2d1-4051-b5c8-d5784f92b8ff}": {
+    "id": "{7e7c9f10-d2d1-4051-b5c8-d5784f92b8ff}",
+    "type": "intersection",
+    "label": "",
+    "x": 541.9213900931577,
+    "y": -631.879290776122,
+    "neighbors": {
+      "{086d34c7-a778-4c43-af78-e352d6d08dfe}": 85.27346765727779,
+      "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}": 91.81392506123193
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{7e7c9f10-d2d1-4051-b5c8-d5784f92b8ff}"
+  },
+  "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}": {
+    "id": "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}",
+    "type": "intersection",
+    "label": "",
+    "x": 633.6160483597903,
+    "y": -636.5575896672768,
+    "neighbors": {
+      "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}": 31.099694229277855,
+      "{5c8aeaae-f1c9-44d6-bafb-5e570c70aabf}": 44.34332252462516,
+      "{360dd3d6-5ef9-4c83-831a-cffa84010965}": 67.07495718129012,
+      "{7e7c9f10-d2d1-4051-b5c8-d5784f92b8ff}": 91.81392506123193
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}"
+  },
+  "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}": {
+    "id": "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 634.7036164296014,
+    "y": -667.6382617457263,
+    "neighbors": {
+      "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}": 31.099694229277855,
+      "{9c2d42b0-b7d4-4bc3-82bc-b53e1f76637d}": 3.554496763115045,
+      "{ef7f13a9-6b50-4731-a4a5-0013d41f7a86}": 22.783842366175335,
+      "{6ea13056-33fe-4f13-8c3e-8027778027a1}": 1.8674117430307033
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}"
+  },
+  "{273e3552-f85a-480b-8f54-4fa4070ff4bb}": {
+    "id": "{273e3552-f85a-480b-8f54-4fa4070ff4bb}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 764.861133750586,
+    "y": -793.6637943898542,
+    "neighbors": {
+      "{e6ad8e75-c462-4357-959f-fcb1b84ee84d}": 72.86048175221121,
+      "{0f8dcc3b-d1fc-4ad5-ae46-5abd18e503a2}": 1.959188024287195,
+      "{75b2ef1d-8674-4c6a-b509-1f6c9579ea9e}": 29.845290915284856,
+      "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}": 2.835657707416285
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{273e3552-f85a-480b-8f54-4fa4070ff4bb}"
+  },
+  "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}": {
+    "id": "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 869.1937468412165,
+    "y": -532.315763578671,
+    "neighbors": {
+      "{1cc9c316-47db-4cc3-b317-790bbb69ca53}": 11.966286394219955,
+      "{085bcd52-8f31-406e-b338-bdec9ff0169e}": 6.537793502818539,
+      "{321084d5-a3a6-4fd7-9954-c942cf8507fa}": 14.124113658072469,
+      "{6d35bc28-d842-45ab-a180-77d935f47ac8}": 31.01691610685225,
+      "{2bc038f4-59c9-48cd-b310-b4669e99f99c}": 3.7862940939698357
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}"
+  },
+  "{7c2d6d0a-bfca-4cdc-bced-5229619386e3}": {
+    "id": "{7c2d6d0a-bfca-4cdc-bced-5229619386e3}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 983.8563216239885,
+    "y": -688.2981851300095,
+    "neighbors": {
+      "{c7051eb4-343e-4f73-989f-17fdf1f02a3d}": 20.16945371538246,
+      "{06686508-15c3-400f-8a11-a4ad8f3bb832}": 19.909782419476528,
+      "{ec649bb5-1d76-48ad-adfe-d047b38a92dc}": 23.289030101380046
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{7c2d6d0a-bfca-4cdc-bced-5229619386e3}"
+  },
+  "{a1491e5f-e5bc-4a3e-9348-684908413102}": {
+    "id": "{a1491e5f-e5bc-4a3e-9348-684908413102}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 888.8206740562855,
+    "y": -919.6893270339821,
+    "neighbors": {
+      "{c530a253-8214-4871-b580-4eb22058a8ba}": 99.39980593375458,
+      "{70325b5a-fac7-40ed-9d34-288d138e5f36}": 4.773064425621836,
+      "{1e734d90-1761-462a-ba35-0aae3283499a}": 34.311935014371905,
+      "{60dccdc0-b1bd-47b6-8274-91268f85cce1}": 30.625120422569168,
+      "{bba78cb0-f876-407e-a65d-12f7cb170fa4}": 5.705243956107815
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{a1491e5f-e5bc-4a3e-9348-684908413102}"
+  },
+  "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}": {
+    "id": "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 1025.176168392555,
+    "y": -1024.0219401246125,
+    "neighbors": {
+      "{ff0bb078-ef83-49d0-a8ad-8ea94edde482}": 46.142273765040656,
+      "{f06ea448-efc7-4987-b394-8d6ac0cdcd15}": 4.146510507060214,
+      "{7a9d7b8f-6077-4fb6-88eb-c1cf31a16ce1}": 12.028209248699016,
+      "{c18d67a6-2b3a-4e6e-b83b-bffd83f277e0}": 5.556501214987576,
+      "{6e3b13fd-9c04-4af0-8148-4d0d95ee589f}": 4.710982338638855
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}"
+  },
+  "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}": {
+    "id": "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 482.8531795551195,
+    "y": -525.0847903941718,
+    "neighbors": {
+      "{3b8f3d24-0477-4478-a418-9a87ccc03f77}": 18.769293860593987,
+      "{267ed979-006f-4103-9996-b4e8f58c3595}": 11.738493524179617,
+      "{34333fdc-05d1-42fd-873d-160f97d8f2ae}": 17.117424470310645,
+      "{9fee37b5-485d-4d5e-9839-d0a0a5b942c9}": 3.782974499570259
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}"
+  },
+  "{b32a098f-cc94-412c-a6b5-308d624894f6}": {
+    "id": "{b32a098f-cc94-412c-a6b5-308d624894f6}",
+    "type": "poi",
+    "label": "Stairs",
+    "x": 1133.6407661600422,
+    "y": -911.4253576802687,
+    "neighbors": {
+      "{1bdde0fb-72ee-4a14-b4fe-a95a97324e05}": 35.16535330030202,
+      "{07a73c59-e0ed-46f8-90d6-23d004a639a3}": 21.989954679354913,
+      "{57479526-790b-421b-8d2e-ff8b58d57c53}": 28.149863286737826
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{b32a098f-cc94-412c-a6b5-308d624894f6}"
+  },
+  "{5c8aeaae-f1c9-44d6-bafb-5e570c70aabf}": {
+    "id": "{5c8aeaae-f1c9-44d6-bafb-5e570c70aabf}",
+    "type": "poi",
+    "label": "Men's Washroom",
+    "x": 655.4854907786136,
+    "y": -597.9822382001456,
+    "neighbors": {
+      "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}": 44.34332252462516
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{5c8aeaae-f1c9-44d6-bafb-5e570c70aabf}"
+  },
+  "{989d35b8-4805-492e-9c52-cd0e0d697998}": {
+    "id": "{989d35b8-4805-492e-9c52-cd0e0d697998}",
+    "type": "poi",
+    "label": "Women's Washroom",
+    "x": 799.4473523861823,
+    "y": -564.1180895956836,
+    "neighbors": {
+      "{e46e2e10-8b6e-4fa2-8381-c4d730366383}": 38.89452533287397
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{989d35b8-4805-492e-9c52-cd0e0d697998}"
+  },
+  "{e6ad8e75-c462-4357-959f-fcb1b84ee84d}": {
+    "id": "{e6ad8e75-c462-4357-959f-fcb1b84ee84d}",
+    "type": "poi",
+    "label": "Women's Washroom",
+    "x": 788.6396453847582,
+    "y": -724.7926670168553,
+    "neighbors": {
+      "{273e3552-f85a-480b-8f54-4fa4070ff4bb}": 72.86048175221121
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{e6ad8e75-c462-4357-959f-fcb1b84ee84d}"
+  },
+  "{1bdde0fb-72ee-4a14-b4fe-a95a97324e05}": {
+    "id": "{1bdde0fb-72ee-4a14-b4fe-a95a97324e05}",
+    "type": "poi",
+    "label": "Washrooms",
+    "x": 1166.7389732198992,
+    "y": -899.5463525806026,
+    "neighbors": {
+      "{e665c28d-812f-4d2e-a2d7-717d16b8cfbd}": 47.07205657502212,
+      "{b32a098f-cc94-412c-a6b5-308d624894f6}": 35.16535330030202
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{1bdde0fb-72ee-4a14-b4fe-a95a97324e05}"
+  },
+  "{cc3a5b95-6b68-4e4a-8e78-fc37a5f11fcd}": {
+    "id": "{cc3a5b95-6b68-4e4a-8e78-fc37a5f11fcd}",
+    "type": "poi",
+    "label": "Men's Washroom",
+    "x": 978.2837108087425,
+    "y": -899.5463525806026,
+    "neighbors": {
+      "{e2f246fe-d288-4cf5-b368-ef0be216d6d8}": 41.93370056209956
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{cc3a5b95-6b68-4e4a-8e78-fc37a5f11fcd}"
+  },
+  "{a4044b2e-6511-45e5-8116-86af72940e52}": {
+    "id": "{a4044b2e-6511-45e5-8116-86af72940e52}",
+    "type": "poi",
+    "label": "elevator",
+    "x": 1057.3558488833537,
+    "y": -954.8968492328305,
+    "neighbors": {
+      "{6b75c881-e469-4cd3-9126-c77727e1fbac}": 24.000214986658484
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{a4044b2e-6511-45e5-8116-86af72940e52}"
+  },
+  "{d0fe64e1-5c9d-46fd-a565-640a8684c2e1}": {
+    "id": "{d0fe64e1-5c9d-46fd-a565-640a8684c2e1}",
+    "type": "poi",
+    "label": "Group Study C",
+    "x": 900.9859120479655,
+    "y": -826.1785527300704,
+    "neighbors": {
+      "{ecdbc929-8060-431c-8d39-0526868a0732}": 77.94952619085787
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{d0fe64e1-5c9d-46fd-a565-640a8684c2e1}"
+  },
+  "{c82b2b97-2779-430d-a731-956d3abdee17}": {
+    "id": "{c82b2b97-2779-430d-a731-956d3abdee17}",
+    "type": "poi",
+    "label": "Group Study B",
+    "x": 823.7549896650171,
+    "y": -749.9773759788947,
+    "neighbors": {
+      "{ecdbc929-8060-431c-8d39-0526868a0732}": 39.9516319256354
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{c82b2b97-2779-430d-a731-956d3abdee17}"
+  },
+  "{360dd3d6-5ef9-4c83-831a-cffa84010965}": {
+    "id": "{360dd3d6-5ef9-4c83-831a-cffa84010965}",
+    "type": "poi",
+    "label": "Group Study A",
+    "x": 699.155768220527,
+    "y": -622.2889176390865,
+    "neighbors": {
+      "{f43ff64f-ee84-47e9-aa94-ba0badd17e8a}": 67.07495718129012
+    },
+    "level": 2,
+    "source": "source_2",
+    "originalId": "{360dd3d6-5ef9-4c83-831a-cffa84010965}"
+  },
+  "{9fee37b5-485d-4d5e-9839-d0a0a5b942c9}": {
+    "id": "{9fee37b5-485d-4d5e-9839-d0a0a5b942c9}",
+    "type": "stairs",
+    "label": "upper left stairs",
+    "x": 479.6972345421879,
+    "y": -522.9989075739369,
+    "neighbors": {
+      "{4ca656d2-9922-4a03-9d1d-aeb59c8e98b0}": 11.889892658370165,
+      "{83aeba01-26a7-4e3a-bd46-b26cfb0a7ec8}": 3.782974499570259
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{9fee37b5-485d-4d5e-9839-d0a0a5b942c9}"
+  },
+  "{2bc038f4-59c9-48cd-b310-b4669e99f99c}": {
+    "id": "{2bc038f4-59c9-48cd-b310-b4669e99f99c}",
+    "type": "stairs",
+    "label": "upper right stairs",
+    "x": 872.6135562058679,
+    "y": -533.9408564607775,
+    "neighbors": {
+      "{1327699b-d830-4e58-8208-5146d87ab385}": 10.769292510458481,
+      "{13b960df-e22e-4b7f-bafb-fc68ec3ea0a4}": 3.7862940939698357
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{2bc038f4-59c9-48cd-b310-b4669e99f99c}"
+  },
+  "{6e3b13fd-9c04-4af0-8148-4d0d95ee589f}": {
+    "id": "{6e3b13fd-9c04-4af0-8148-4d0d95ee589f}",
+    "type": "stairs",
+    "label": "lower right stairs",
+    "x": 1028.4679077268943,
+    "y": -1027.3920746545282,
+    "neighbors": {
+      "{c8940ddd-83f8-4e5d-884f-2226883e63a4}": 7.077566313851113,
+      "{7e151aac-5ea2-4e4a-8c85-0c1b8b45fa0b}": 4.710982338638855
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6e3b13fd-9c04-4af0-8148-4d0d95ee589f}"
+  },
+  "{bba78cb0-f876-407e-a65d-12f7cb170fa4}": {
+    "id": "{bba78cb0-f876-407e-a65d-12f7cb170fa4}",
+    "type": "stairs",
+    "label": "right stairs",
+    "x": 891.7832456349122,
+    "y": -924.565081154138,
+    "neighbors": {
+      "{78db8514-f442-443e-86b1-d30f218903e9}": 33.76361023285388,
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 39.51398322591702,
+      "{017b5da5-9083-4ced-bc6b-464667d9bddc}": 31.673992775665457,
+      "{a1491e5f-e5bc-4a3e-9348-684908413102}": 5.705243956107815
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{bba78cb0-f876-407e-a65d-12f7cb170fa4}"
+  },
+  "{6ea13056-33fe-4f13-8c3e-8027778027a1}": {
+    "id": "{6ea13056-33fe-4f13-8c3e-8027778027a1}",
+    "type": "stairs",
+    "label": "left stairs",
+    "x": 633.4617741583223,
+    "y": -666.2436096775482,
+    "neighbors": {
+      "{257568b4-d9a2-4550-a0bc-921a319a9e3e}": 32.605090524592555,
+      "{f208370b-f818-4aaa-ab3e-2e787d05557e}": 31.396385217291886,
+      "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}": 33.746076181322614,
+      "{8dabf8a6-ff3a-4f30-96ea-0ea6a6851a36}": 1.8674117430307033
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6ea13056-33fe-4f13-8c3e-8027778027a1}"
+  },
+  "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}": {
+    "id": "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}",
+    "type": "stairs",
+    "label": "middle stairs",
+    "x": 762.6225098966172,
+    "y": -795.4043454158432,
+    "neighbors": {
+      "{455bd64d-c5de-43e2-8406-c85b9f8834be}": 34.33720538288194,
+      "{14032bf6-d1c9-467f-aa59-0991af79e20b}": 34.794807616630884,
+      "{39042654-f313-46bf-ad2d-a637af6d5ad2}": 32.35601405852738,
+      "{273e3552-f85a-480b-8f54-4fa4070ff4bb}": 2.835657707416285
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}"
+  },
+  "{4b263bc2-0aa9-4ca3-bac0-a7b5ecb2662d}": {
+    "id": "{4b263bc2-0aa9-4ca3-bac0-a7b5ecb2662d}",
+    "type": "poi",
+    "label": "lower men washroom",
+    "x": 960.7525705437105,
+    "y": -896.9773511906188,
+    "neighbors": {
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 36.24864488430754
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{4b263bc2-0aa9-4ca3-bac0-a7b5ecb2662d}"
+  },
+  "{7ab25366-9074-4d53-ba7d-c428c90d96bf}": {
+    "id": "{7ab25366-9074-4d53-ba7d-c428c90d96bf}",
+    "type": "elevator",
+    "label": "lower elevator",
+    "x": 1051.0396867879554,
+    "y": -960.930725196959,
+    "neighbors": {
+      "{7f2f75e0-3049-44f0-aa77-ebea8fd6c49f}": 20.501645355025243
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{7ab25366-9074-4d53-ba7d-c428c90d96bf}"
+  },
+  "{3c95e37e-61b1-4cdf-901c-8fd994c38f33}": {
+    "id": "{3c95e37e-61b1-4cdf-901c-8fd994c38f33}",
+    "type": "poi",
+    "label": "lower women washroom",
+    "x": 792.7182153113656,
+    "y": -727.6890082326594,
+    "neighbors": {
+      "{6321959d-ac85-4187-acf7-4e225a546085}": 28.87974327054391
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{3c95e37e-61b1-4cdf-901c-8fd994c38f33}"
+  },
+  "{d97157b9-53bb-4025-947c-6d26f71ba5a2}": {
+    "id": "{d97157b9-53bb-4025-947c-6d26f71ba5a2}",
+    "type": "poi",
+    "label": "upper men washroom",
+    "x": 656.0335532193835,
+    "y": -621.1000515554257,
+    "neighbors": {
+      "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}": 13.723451119120455
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{d97157b9-53bb-4025-947c-6d26f71ba5a2}"
+  },
+  "{37f38ab6-a049-4805-adb0-c3d4d482b86f}": {
+    "id": "{37f38ab6-a049-4805-adb0-c3d4d482b86f}",
+    "type": "poi",
+    "label": "upper women washroom",
+    "x": 775.1623871527623,
+    "y": -554.6387020978565,
+    "neighbors": {
+      "{4d795c36-ebf2-4674-82db-326a87fa7b5e}": 10.991676935178175
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{37f38ab6-a049-4805-adb0-c3d4d482b86f}"
+  },
+  "{f2504105-42dc-4374-aa50-34bfa920bfa1}": {
+    "id": "{f2504105-42dc-4374-aa50-34bfa920bfa1}",
+    "type": "elevator",
+    "label": "upper elevator",
+    "x": 848.5490225570236,
+    "y": -574.4820423817558,
+    "neighbors": {
+      "{6d5e3399-12b8-40f1-893a-d691f0dfffe4}": 10.936212909763913
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{f2504105-42dc-4374-aa50-34bfa920bfa1}"
+  },
+  "{d4918a39-d375-4cc8-add7-51d87fc9543b}": {
+    "id": "{d4918a39-d375-4cc8-add7-51d87fc9543b}",
+    "type": "room_door",
+    "label": "right room B457",
+    "x": 841.5564229605054,
+    "y": -530.7702677949463,
+    "neighbors": {
+      "{c8d4e621-979f-49c7-9dc3-58c47a554c9f}": 13.942815641752057
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{d4918a39-d375-4cc8-add7-51d87fc9543b}"
+  },
+  "{122c8b24-f6a1-4654-8eea-c77ad2968eb9}": {
+    "id": "{122c8b24-f6a1-4654-8eea-c77ad2968eb9}",
+    "type": "intersection",
+    "label": "between B455-7",
+    "x": 753.3091157581067,
+    "y": -525.3986925739307,
+    "neighbors": {
+      "{cebb513f-dbe6-4bfd-b26e-867c14f33d8e}": 18.35486412547595,
+      "{a389106b-2453-4c03-84bd-38f2e1347094}": 10.005253171591994,
+      "{10890be0-b226-4ba6-aaf3-987bc71fc6e9}": 7.8256476773399735
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{122c8b24-f6a1-4654-8eea-c77ad2968eb9}"
+  },
+  "{10890be0-b226-4ba6-aaf3-987bc71fc6e9}": {
+    "id": "{10890be0-b226-4ba6-aaf3-987bc71fc6e9}",
+    "type": "room_door",
+    "label": "left room B457",
+    "x": 760.9827946452718,
+    "y": -523.8639567964977,
+    "neighbors": {
+      "{122c8b24-f6a1-4654-8eea-c77ad2968eb9}": 7.8256476773399735
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{10890be0-b226-4ba6-aaf3-987bc71fc6e9}"
+  },
+  "{a389106b-2453-4c03-84bd-38f2e1347094}": {
+    "id": "{a389106b-2453-4c03-84bd-38f2e1347094}",
+    "type": "room_door",
+    "label": "right B455",
+    "x": 743.333333204792,
+    "y": -524.6313246852143,
+    "neighbors": {
+      "{122c8b24-f6a1-4654-8eea-c77ad2968eb9}": 10.005253171591994
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{a389106b-2453-4c03-84bd-38f2e1347094}"
+  },
+  "{89efa7a2-52eb-4156-9f88-3745c23e9097}": {
+    "id": "{89efa7a2-52eb-4156-9f88-3745c23e9097}",
+    "type": "room_door",
+    "label": "left B455",
+    "x": 662.7597048895584,
+    "y": -529.2355320175133,
+    "neighbors": {
+      "{706c5313-6836-4e7f-b92d-2d051c65b375}": 17.21881349297613
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{89efa7a2-52eb-4156-9f88-3745c23e9097}"
+  },
+  "{4f5302b6-011a-4877-bc5a-5abab5f7e763}": {
+    "id": "{4f5302b6-011a-4877-bc5a-5abab5f7e763}",
+    "type": "room_door",
+    "label": "right room B453",
+    "x": 649.7144507813776,
+    "y": -497.00608069141987,
+    "neighbors": {
+      "{0470030d-82e0-41a1-8193-1dd2aac98ab6}": 18.60588789654849
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{4f5302b6-011a-4877-bc5a-5abab5f7e763}"
+  },
+  "{0bd50c96-88c7-4fdb-b3d7-47f5845a36cc}": {
+    "id": "{0bd50c96-88c7-4fdb-b3d7-47f5845a36cc}",
+    "type": "room_door",
+    "label": "left room B453",
+    "x": 473.98720426529667,
+    "y": -498.5408164688529,
+    "neighbors": {
+      "{4ca656d2-9922-4a03-9d1d-aeb59c8e98b0}": 13.291617038158725
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{0bd50c96-88c7-4fdb-b3d7-47f5845a36cc}"
+  },
+  "{069980b8-83c0-45d9-b72a-706bd780222b}": {
+    "id": "{069980b8-83c0-45d9-b72a-706bd780222b}",
+    "type": "room_door",
+    "label": "room B449",
+    "x": 547.9009845370556,
+    "y": -544.4563318594774,
+    "neighbors": {
+      "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}": 6.1223599759094744
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{069980b8-83c0-45d9-b72a-706bd780222b}"
+  },
+  "{086f9931-1f48-4623-a982-1e51dc16fd97}": {
+    "id": "{086f9931-1f48-4623-a982-1e51dc16fd97}",
+    "type": "room_door",
+    "label": "room B499A",
+    "x": 542.0621738456751,
+    "y": -592.6265200633662,
+    "neighbors": {
+      "{1acc04b0-9c75-4fc6-871b-4f0b72619922}": 3.9380718567984068
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{086f9931-1f48-4623-a982-1e51dc16fd97}"
+  },
+  "{76b538c8-fbaf-4b5c-8d72-7fa003b7134c}": {
+    "id": "{76b538c8-fbaf-4b5c-8d72-7fa003b7134c}",
+    "type": "room_door",
+    "label": "room B444-8",
+    "x": 538.1505759173872,
+    "y": -636.0743004444165,
+    "neighbors": {
+      "{c8559937-1e81-4ac3-91d9-281edb2ead97}": 5.154248363301782
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{76b538c8-fbaf-4b5c-8d72-7fa003b7134c}"
+  },
+  "{36ff85b7-061e-4cde-b82a-922b3f95e757}": {
+    "id": "{36ff85b7-061e-4cde-b82a-922b3f95e757}",
+    "type": "room_door",
+    "label": "room B443",
+    "x": 628.6960094985303,
+    "y": -625.7996413146413,
+    "neighbors": {
+      "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}": 14.748119889585377
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{36ff85b7-061e-4cde-b82a-922b3f95e757}"
+  },
+  "{e0753cff-62bd-4711-a1c5-5bfdc5798ee1}": {
+    "id": "{e0753cff-62bd-4711-a1c5-5bfdc5798ee1}",
+    "type": "room_door",
+    "label": "room B440",
+    "x": 668.5103136264088,
+    "y": -623.8731427278086,
+    "neighbors": {
+      "{f208370b-f818-4aaa-ab3e-2e787d05557e}": 24.016636058132168
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{e0753cff-62bd-4711-a1c5-5bfdc5798ee1}"
+  },
+  "{204fffc1-0626-4b0d-83e6-2940cc8a7226}": {
+    "id": "{204fffc1-0626-4b0d-83e6-2940cc8a7226}",
+    "type": "room_door",
+    "label": "room B439X",
+    "x": 682.6379699298495,
+    "y": -645.0646271829697,
+    "neighbors": {
+      "{f208370b-f818-4aaa-ab3e-2e787d05557e}": 26.67534441743545,
+      "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}": 25.80015938104092
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{204fffc1-0626-4b0d-83e6-2940cc8a7226}"
+  },
+  "{859061f3-4746-4145-a166-0ee65f92362e}": {
+    "id": "{859061f3-4746-4145-a166-0ee65f92362e}",
+    "type": "room_door",
+    "label": "upper room B432",
+    "x": 705.1137867762326,
+    "y": -669.4669426161855,
+    "neighbors": {
+      "{545152c4-7f3c-4017-8c0f-8de2e81ed23c}": 27.712580533803393
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{859061f3-4746-4145-a166-0ee65f92362e}"
+  },
+  "{c877435c-9d90-4f33-9c57-51b5610c8ee1}": {
+    "id": "{c877435c-9d90-4f33-9c57-51b5610c8ee1}",
+    "type": "room_door",
+    "label": "room B439",
+    "x": 676.858474169351,
+    "y": -674.6042721810732,
+    "neighbors": {
+      "{545152c4-7f3c-4017-8c0f-8de2e81ed23c}": 6.614542081198537
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{c877435c-9d90-4f33-9c57-51b5610c8ee1}"
+  },
+  "{33a5cb2a-f8b5-4247-a445-eaaa765e45d7}": {
+    "id": "{33a5cb2a-f8b5-4247-a445-eaaa765e45d7}",
+    "type": "room_door",
+    "label": "room B434-8",
+    "x": 666.8114882360424,
+    "y": -763.7870400651155,
+    "neighbors": {
+      "{670a00da-1d99-460c-917a-6ee018b4fd05}": 4.929487942474694
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{33a5cb2a-f8b5-4247-a445-eaaa765e45d7}"
+  },
+  "{409f903a-2fc3-4f9a-b5a6-fb62ab449e2c}": {
+    "id": "{409f903a-2fc3-4f9a-b5a6-fb62ab449e2c}",
+    "type": "room_door",
+    "label": "room B433",
+    "x": 757.1770926044713,
+    "y": -752.4023969950772,
+    "neighbors": {
+      "{6321959d-ac85-4187-acf7-4e225a546085}": 19.167475926375094
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{409f903a-2fc3-4f9a-b5a6-fb62ab449e2c}"
+  },
+  "{956a8427-b3b7-4e2d-96e4-8c8ea28dd32d}": {
+    "id": "{956a8427-b3b7-4e2d-96e4-8c8ea28dd32d}",
+    "type": "room_door",
+    "label": "room B430",
+    "x": 796.311803157728,
+    "y": -750.9793166113225,
+    "neighbors": {
+      "{14032bf6-d1c9-467f-aa59-0991af79e20b}": 30.81233587070677,
+      "{455bd64d-c5de-43e2-8406-c85b9f8834be}": 24.01598702992641,
+      "{6321959d-ac85-4187-acf7-4e225a546085}": 19.99612681292115
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{956a8427-b3b7-4e2d-96e4-8c8ea28dd32d}"
+  },
+  "{dcc1138f-06f6-4ef8-b287-1e9c958c879d}": {
+    "id": "{dcc1138f-06f6-4ef8-b287-1e9c958c879d}",
+    "type": "room_door",
+    "label": "room B420A",
+    "x": 832.6003529434752,
+    "y": -782.2870850539277,
+    "neighbors": {
+      "{a8511535-ddad-4a9d-9095-3ac45e028667}": 27.660791886881427,
+      "{6a62b410-1192-4d53-871a-9c7fa337f271}": 31.33190150019806
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{dcc1138f-06f6-4ef8-b287-1e9c958c879d}"
+  },
+  "{cce476c3-6c15-45e4-bc30-877dee452894}": {
+    "id": "{cce476c3-6c15-45e4-bc30-877dee452894}",
+    "type": "room_door",
+    "label": "room B420B",
+    "x": 904.465912323092,
+    "y": -854.1526444335445,
+    "neighbors": {
+      "{d969e45d-5eb2-4c67-a6bd-6958eeec9a9d}": 16.02778183379947
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{cce476c3-6c15-45e4-bc30-877dee452894}"
+  },
+  "{209d7f7d-e658-4603-a316-b08ce50a8aed}": {
+    "id": "{209d7f7d-e658-4603-a316-b08ce50a8aed}",
+    "type": "room_door",
+    "label": "room B420C",
+    "x": 911.5813142418659,
+    "y": -870.5180688467246,
+    "neighbors": {
+      "{d969e45d-5eb2-4c67-a6bd-6958eeec9a9d}": 11.994252160517478
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{209d7f7d-e658-4603-a316-b08ce50a8aed}"
+  },
+  "{b3be0f6b-94a5-4039-bf41-881ed84e2f8b}": {
+    "id": "{b3be0f6b-94a5-4039-bf41-881ed84e2f8b}",
+    "type": "room_door",
+    "label": "room B422",
+    "x": 884.5427869505249,
+    "y": -880.4796315330082,
+    "neighbors": {
+      "{71596f4d-1603-4e04-874a-f664b6cb76ce}": 14.629121369071695
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{b3be0f6b-94a5-4039-bf41-881ed84e2f8b}"
+  },
+  "{38d44ff1-550e-4355-a5d5-e78cb702c328}": {
+    "id": "{38d44ff1-550e-4355-a5d5-e78cb702c328}",
+    "type": "room_door",
+    "label": "room B428",
+    "x": 804.8502854602568,
+    "y": -802.9217506183721,
+    "neighbors": {
+      "{6a62b410-1192-4d53-871a-9c7fa337f271}": 5.804529097496128
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{38d44ff1-550e-4355-a5d5-e78cb702c328}"
+  },
+  "{35bd4ddc-a6ca-48d7-95b5-a11b5254507a}": {
+    "id": "{35bd4ddc-a6ca-48d7-95b5-a11b5254507a}",
+    "type": "room_door",
+    "label": "room B423-7",
+    "x": 794.8887227739733,
+    "y": -894.7104353705561,
+    "neighbors": {
+      "{2e97f8f2-eee3-4138-b8b1-cb332db6f3e8}": 6.644164312134523
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{35bd4ddc-a6ca-48d7-95b5-a11b5254507a}"
+  },
+  "{3c2f469e-ac79-4c14-94b6-f903703d1954}": {
+    "id": "{3c2f469e-ac79-4c14-94b6-f903703d1954}",
+    "type": "room_door",
+    "label": "room B417",
+    "x": 932.2198450715891,
+    "y": -931.719573343404,
+    "neighbors": {
+      "{29833aca-33a6-4684-8c51-3f45dd9fd081}": 5.640130876854023
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{3c2f469e-ac79-4c14-94b6-f903703d1954}"
+  },
+  "{b56acf33-4592-4da4-913b-a5d17d5593f3}": {
+    "id": "{b56acf33-4592-4da4-913b-a5d17d5593f3}",
+    "type": "room_door",
+    "label": "room B419",
+    "x": 924.1696856405719,
+    "y": -880.5435598176515,
+    "neighbors": {
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 22.713987334521978,
+      "{78db8514-f442-443e-86b1-d30f218903e9}": 27.450876632182812,
+      "{71596f4d-1603-4e04-874a-f664b6cb76ce}": 25.003705352536638
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{b56acf33-4592-4da4-913b-a5d17d5593f3}"
+  },
+  "{c9e29358-c09a-4549-91fe-1b9d3352b1ee}": {
+    "id": "{c9e29358-c09a-4549-91fe-1b9d3352b1ee}",
+    "type": "room_door",
+    "label": "upper room B410",
+    "x": 959.2453803042899,
+    "y": -925.9694594641061,
+    "neighbors": {
+      "{29833aca-33a6-4684-8c51-3f45dd9fd081}": 27.1725811800976,
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 41.06080478725809
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{c9e29358-c09a-4549-91fe-1b9d3352b1ee}"
+  },
+  "{640b18bb-1dc9-47de-8496-2de0e7dd92ed}": {
+    "id": "{640b18bb-1dc9-47de-8496-2de0e7dd92ed}",
+    "type": "room_door",
+    "label": "lower room B410",
+    "x": 1017.8965418731299,
+    "y": -981.1705527053672,
+    "neighbors": {
+      "{3b2b04a5-02e4-482f-a388-fcfed79b00fe}": 8.23021846935931
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{640b18bb-1dc9-47de-8496-2de0e7dd92ed}"
+  },
+  "{bbaeeb27-5e2c-44c5-9968-3c4f09233d48}": {
+    "id": "{bbaeeb27-5e2c-44c5-9968-3c4f09233d48}",
+    "type": "room_door",
+    "label": "room B411",
+    "x": 1012.1464279938318,
+    "y": -1009.9211221018573,
+    "neighbors": {
+      "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}": 15.904877786232381
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{bbaeeb27-5e2c-44c5-9968-3c4f09233d48}"
+  },
+  "{48d4da50-c8f1-48f7-9a68-c0e69b9098b1}": {
+    "id": "{48d4da50-c8f1-48f7-9a68-c0e69b9098b1}",
+    "type": "room_door",
+    "label": "room B402",
+    "x": 1037.4469290627433,
+    "y": -1009.3461107139276,
+    "neighbors": {
+      "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}": 9.409944143265715
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{48d4da50-c8f1-48f7-9a68-c0e69b9098b1}"
+  },
+  "{faaf8634-58dc-49b5-a36d-630fbbf4f2f9}": {
+    "id": "{faaf8634-58dc-49b5-a36d-630fbbf4f2f9}",
+    "type": "room_door",
+    "label": "room B412-6",
+    "x": 921.7345801706456,
+    "y": -1021.2297451645063,
+    "neighbors": {
+      "{9a97dc39-b166-48bc-b979-812d43f019df}": 6.0502097401386115
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{faaf8634-58dc-49b5-a36d-630fbbf4f2f9}"
+  },
+  "{c8940ddd-83f8-4e5d-884f-2226883e63a4}": {
+    "id": "{c8940ddd-83f8-4e5d-884f-2226883e63a4}",
+    "type": "intersection",
+    "label": "lower right stairs",
+    "x": 1028.8889949590537,
+    "y": -1020.3270459589125,
+    "neighbors": {
+      "{6e3b13fd-9c04-4af0-8148-4d0d95ee589f}": 7.077566313851113,
+      "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}": 11.103284285565842,
+      "{8997c306-403b-4809-9c89-1b6835987775}": 96.44400947818954
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{c8940ddd-83f8-4e5d-884f-2226883e63a4}"
+  },
+  "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}": {
+    "id": "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}",
+    "type": "intersection",
+    "label": "B402-11",
+    "x": 1028.0374119282287,
+    "y": -1009.2564665581899,
+    "neighbors": {
+      "{bbaeeb27-5e2c-44c5-9968-3c4f09233d48}": 15.904877786232381,
+      "{48d4da50-c8f1-48f7-9a68-c0e69b9098b1}": 9.409944143265715,
+      "{5a8cae02-c5cb-4df6-9870-e13e6ff982a1}": 19.878379379333865,
+      "{c8940ddd-83f8-4e5d-884f-2226883e63a4}": 11.103284285565842
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}"
+  },
+  "{5a8cae02-c5cb-4df6-9870-e13e6ff982a1}": {
+    "id": "{5a8cae02-c5cb-4df6-9870-e13e6ff982a1}",
+    "type": "intersection",
+    "label": "right fork",
+    "x": 1028.6051339487788,
+    "y": -989.3861958389443,
+    "neighbors": {
+      "{7f2f75e0-3049-44f0-aa77-ebea8fd6c49f}": 27.039903139660108,
+      "{3b2b04a5-02e4-482f-a388-fcfed79b00fe}": 10.218996369897923,
+      "{8efe816d-6f6c-4077-bfbe-bfd4934e9881}": 19.878379379333865
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{5a8cae02-c5cb-4df6-9870-e13e6ff982a1}"
+  },
+  "{3b2b04a5-02e4-482f-a388-fcfed79b00fe}": {
+    "id": "{3b2b04a5-02e4-482f-a388-fcfed79b00fe}",
+    "type": "hallway_node",
+    "label": "lower B410",
+    "x": 1018.3861375788808,
+    "y": -989.3861958389443,
+    "neighbors": {
+      "{640b18bb-1dc9-47de-8496-2de0e7dd92ed}": 8.23021846935931,
+      "{5a8cae02-c5cb-4df6-9870-e13e6ff982a1}": 10.218996369897923
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{3b2b04a5-02e4-482f-a388-fcfed79b00fe}"
+  },
+  "{7f2f75e0-3049-44f0-aa77-ebea8fd6c49f}": {
+    "id": "{7f2f75e0-3049-44f0-aa77-ebea8fd6c49f}",
+    "type": "hallway_node",
+    "label": "elevator",
+    "x": 1030.5921610207033,
+    "y": -962.4193998628251,
+    "neighbors": {
+      "{7ab25366-9074-4d53-ba7d-c428c90d96bf}": 20.501645355025243,
+      "{5a8cae02-c5cb-4df6-9870-e13e6ff982a1}": 27.039903139660108
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{7f2f75e0-3049-44f0-aa77-ebea8fd6c49f}"
+  },
+  "{9a97dc39-b166-48bc-b979-812d43f019df}": {
+    "id": "{9a97dc39-b166-48bc-b979-812d43f019df}",
+    "type": "intersection",
+    "label": "B412-6",
+    "x": 926.8154224120774,
+    "y": -1017.9449194435052,
+    "neighbors": {
+      "{faaf8634-58dc-49b5-a36d-630fbbf4f2f9}": 6.0502097401386115,
+      "{8997c306-403b-4809-9c89-1b6835987775}": 6.777715940608411,
+      "{621e2288-53ee-44fb-ac56-2ba5a40428f6}": 9.093260145230545
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{9a97dc39-b166-48bc-b979-812d43f019df}"
+  },
+  "{8997c306-403b-4809-9c89-1b6835987775}": {
+    "id": "{8997c306-403b-4809-9c89-1b6835987775}",
+    "type": "hallway_node",
+    "label": "B416",
+    "x": 932.4548229553989,
+    "y": -1021.7045198057197,
+    "neighbors": {
+      "{c8940ddd-83f8-4e5d-884f-2226883e63a4}": 96.44400947818954,
+      "{9a97dc39-b166-48bc-b979-812d43f019df}": 6.777715940608411
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{8997c306-403b-4809-9c89-1b6835987775}"
+  },
+  "{621e2288-53ee-44fb-ac56-2ba5a40428f6}": {
+    "id": "{621e2288-53ee-44fb-ac56-2ba5a40428f6}",
+    "type": "hallway_node",
+    "label": "B412",
+    "x": 922.3039019774201,
+    "y": -1010.0497586828552,
+    "neighbors": {
+      "{9a97dc39-b166-48bc-b979-812d43f019df}": 9.093260145230545,
+      "{017b5da5-9083-4ced-bc6b-464667d9bddc}": 84.222600543534
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{621e2288-53ee-44fb-ac56-2ba5a40428f6}"
+  },
+  "{017b5da5-9083-4ced-bc6b-464667d9bddc}": {
+    "id": "{017b5da5-9083-4ced-bc6b-464667d9bddc}",
+    "type": "intersection",
+    "label": "right hall",
+    "x": 923.4317820860845,
+    "y": -925.834710569254,
+    "neighbors": {
+      "{bba78cb0-f876-407e-a65d-12f7cb170fa4}": 31.673992775665457,
+      "{29833aca-33a6-4684-8c51-3f45dd9fd081}": 8.64476661591749,
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 22.652005863948617,
+      "{621e2288-53ee-44fb-ac56-2ba5a40428f6}": 84.222600543534
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{017b5da5-9083-4ced-bc6b-464667d9bddc}"
+  },
+  "{29833aca-33a6-4684-8c51-3f45dd9fd081}": {
+    "id": "{29833aca-33a6-4684-8c51-3f45dd9fd081}",
+    "type": "intersection",
+    "label": "B417",
+    "x": 932.0730295100748,
+    "y": -926.0813536333413,
+    "neighbors": {
+      "{c9e29358-c09a-4549-91fe-1b9d3352b1ee}": 27.1725811800976,
+      "{3c2f469e-ac79-4c14-94b6-f903703d1954}": 5.640130876854023,
+      "{017b5da5-9083-4ced-bc6b-464667d9bddc}": 8.64476661591749,
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 23.89642823784919
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{29833aca-33a6-4684-8c51-3f45dd9fd081}"
+  },
+  "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": {
+    "id": "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}",
+    "type": "intersection",
+    "label": "center of right hall",
+    "x": 925.0491110571149,
+    "y": -903.2405162561162,
+    "neighbors": {
+      "{bba78cb0-f876-407e-a65d-12f7cb170fa4}": 39.51398322591702,
+      "{4b263bc2-0aa9-4ca3-bac0-a7b5ecb2662d}": 36.24864488430754,
+      "{29833aca-33a6-4684-8c51-3f45dd9fd081}": 23.89642823784919,
+      "{78db8514-f442-443e-86b1-d30f218903e9}": 28.499360170010227,
+      "{b56acf33-4592-4da4-913b-a5d17d5593f3}": 22.713987334521978,
+      "{c9e29358-c09a-4549-91fe-1b9d3352b1ee}": 41.06080478725809,
+      "{017b5da5-9083-4ced-bc6b-464667d9bddc}": 22.652005863948617
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}"
+  },
+  "{78db8514-f442-443e-86b1-d30f218903e9}": {
+    "id": "{78db8514-f442-443e-86b1-d30f218903e9}",
+    "type": "intersection",
+    "label": "upper right hall",
+    "x": 899.039693086459,
+    "y": -891.5904644567598,
+    "neighbors": {
+      "{bba78cb0-f876-407e-a65d-12f7cb170fa4}": 33.76361023285388,
+      "{7aafaddf-ff4f-45c8-bacf-bda54a527e2f}": 28.499360170010227,
+      "{b56acf33-4592-4da4-913b-a5d17d5593f3}": 27.450876632182812,
+      "{71596f4d-1603-4e04-874a-f664b6cb76ce}": 10.758666224367031,
+      "{7dcfc363-75c4-4b43-9843-6c451d44fdc9}": 96.99307517228536
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{78db8514-f442-443e-86b1-d30f218903e9}"
+  },
+  "{71596f4d-1603-4e04-874a-f664b6cb76ce}": {
+    "id": "{71596f4d-1603-4e04-874a-f664b6cb76ce}",
+    "type": "intersection",
+    "label": "B422",
+    "x": 899.16765050897,
+    "y": -880.8325591855019,
+    "neighbors": {
+      "{b56acf33-4592-4da4-913b-a5d17d5593f3}": 25.003705352536638,
+      "{78db8514-f442-443e-86b1-d30f218903e9}": 10.758666224367031,
+      "{d969e45d-5eb2-4c67-a6bd-6958eeec9a9d}": 11.406799347635557,
+      "{b3be0f6b-94a5-4039-bf41-881ed84e2f8b}": 14.629121369071695
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{71596f4d-1603-4e04-874a-f664b6cb76ce}"
+  },
+  "{d969e45d-5eb2-4c67-a6bd-6958eeec9a9d}": {
+    "id": "{d969e45d-5eb2-4c67-a6bd-6958eeec9a9d}",
+    "type": "intersection",
+    "label": "B420C",
+    "x": 899.636027737111,
+    "y": -869.4353799674068,
+    "neighbors": {
+      "{71596f4d-1603-4e04-874a-f664b6cb76ce}": 11.406799347635557,
+      "{209d7f7d-e658-4603-a316-b08ce50a8aed}": 11.994252160517478,
+      "{cce476c3-6c15-45e4-bc30-877dee452894}": 16.02778183379947
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{d969e45d-5eb2-4c67-a6bd-6958eeec9a9d}"
+  },
+  "{7dcfc363-75c4-4b43-9843-6c451d44fdc9}": {
+    "id": "{7dcfc363-75c4-4b43-9843-6c451d44fdc9}",
+    "type": "hallway_node",
+    "label": "B427",
+    "x": 802.0479865791566,
+    "y": -892.1057315505162,
+    "neighbors": {
+      "{78db8514-f442-443e-86b1-d30f218903e9}": 96.99307517228536,
+      "{2e97f8f2-eee3-4138-b8b1-cb332db6f3e8}": 4.7227622753217595
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{7dcfc363-75c4-4b43-9843-6c451d44fdc9}"
+  },
+  "{2e97f8f2-eee3-4138-b8b1-cb332db6f3e8}": {
+    "id": "{2e97f8f2-eee3-4138-b8b1-cb332db6f3e8}",
+    "type": "intersection",
+    "label": "B423-7",
+    "x": 798.4198601007747,
+    "y": -889.0822928185313,
+    "neighbors": {
+      "{7dcfc363-75c4-4b43-9843-6c451d44fdc9}": 4.7227622753217595,
+      "{89869c45-b729-4937-96c6-75f25bee9eaf}": 7.558596829962312,
+      "{35bd4ddc-a6ca-48d7-95b5-a11b5254507a}": 6.644164312134523
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{2e97f8f2-eee3-4138-b8b1-cb332db6f3e8}"
+  },
+  "{89869c45-b729-4937-96c6-75f25bee9eaf}": {
+    "id": "{89869c45-b729-4937-96c6-75f25bee9eaf}",
+    "type": "hallway_node",
+    "label": "B423",
+    "x": 793.8847020027973,
+    "y": -883.0354153545615,
+    "neighbors": {
+      "{2e97f8f2-eee3-4138-b8b1-cb332db6f3e8}": 7.558596829962312,
+      "{39042654-f313-46bf-ad2d-a637af6d5ad2}": 86.96060740019037
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{89869c45-b729-4937-96c6-75f25bee9eaf}"
+  },
+  "{14032bf6-d1c9-467f-aa59-0991af79e20b}": {
+    "id": "{14032bf6-d1c9-467f-aa59-0991af79e20b}",
+    "type": "intersection",
+    "label": "middle hall",
+    "x": 794.6242599066439,
+    "y": -781.7454057288064,
+    "neighbors": {
+      "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}": 34.794807616630884,
+      "{a8511535-ddad-4a9d-9095-3ac45e028667}": 10.321455982907516,
+      "{39042654-f313-46bf-ad2d-a637af6d5ad2}": 14.340395965798544,
+      "{455bd64d-c5de-43e2-8406-c85b9f8834be}": 25.888261598586283,
+      "{956a8427-b3b7-4e2d-96e4-8c8ea28dd32d}": 30.81233587070677
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{14032bf6-d1c9-467f-aa59-0991af79e20b}"
+  },
+  "{a8511535-ddad-4a9d-9095-3ac45e028667}": {
+    "id": "{a8511535-ddad-4a9d-9095-3ac45e028667}",
+    "type": "intersection",
+    "label": "B428",
+    "x": 804.9403499125925,
+    "y": -782.0781828257725,
+    "neighbors": {
+      "{dcc1138f-06f6-4ef8-b287-1e9c958c879d}": 27.660791886881427,
+      "{6a62b410-1192-4d53-871a-9c7fa337f271}": 15.04113299607773,
+      "{deda6b79-36cd-406e-b464-63b8231739b2}": 30.916159014229358,
+      "{14032bf6-d1c9-467f-aa59-0991af79e20b}": 10.321455982907516
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{a8511535-ddad-4a9d-9095-3ac45e028667}"
+  },
+  "{455bd64d-c5de-43e2-8406-c85b9f8834be}": {
+    "id": "{455bd64d-c5de-43e2-8406-c85b9f8834be}",
+    "type": "intersection",
+    "label": "upper middle hall",
+    "x": 775.9887424765432,
+    "y": -763.7754424926379,
+    "neighbors": {
+      "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}": 34.33720538288194,
+      "{14032bf6-d1c9-467f-aa59-0991af79e20b}": 25.888261598586283,
+      "{956a8427-b3b7-4e2d-96e4-8c8ea28dd32d}": 24.01598702992641,
+      "{6321959d-ac85-4187-acf7-4e225a546085}": 12.317248754624078,
+      "{bb63c2fd-9c02-4d11-b74d-e4b59f2431fc}": 101.52647209207151
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{455bd64d-c5de-43e2-8406-c85b9f8834be}"
+  },
+  "{6321959d-ac85-4187-acf7-4e225a546085}": {
+    "id": "{6321959d-ac85-4187-acf7-4e225a546085}",
+    "type": "intersection",
+    "label": "B433",
+    "x": 776.3215195735092,
+    "y": -751.4626899048928,
+    "neighbors": {
+      "{956a8427-b3b7-4e2d-96e4-8c8ea28dd32d}": 19.99612681292115,
+      "{409f903a-2fc3-4f9a-b5a6-fb62ab449e2c}": 19.167475926375094,
+      "{455bd64d-c5de-43e2-8406-c85b9f8834be}": 12.317248754624078,
+      "{3c95e37e-61b1-4cdf-901c-8fd994c38f33}": 28.87974327054391,
+      "{6fe7aa2f-593a-4946-aed5-9205df8d5517}": 28.6606512081742
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6321959d-ac85-4187-acf7-4e225a546085}"
+  },
+  "{bb63c2fd-9c02-4d11-b74d-e4b59f2431fc}": {
+    "id": "{bb63c2fd-9c02-4d11-b74d-e4b59f2431fc}",
+    "type": "hallway_node",
+    "label": "B438",
+    "x": 674.4629478298208,
+    "y": -763.4045559685682,
+    "neighbors": {
+      "{455bd64d-c5de-43e2-8406-c85b9f8834be}": 101.52647209207151,
+      "{670a00da-1d99-460c-917a-6ee018b4fd05}": 4.974597897161845
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{bb63c2fd-9c02-4d11-b74d-e4b59f2431fc}"
+  },
+  "{670a00da-1d99-460c-917a-6ee018b4fd05}": {
+    "id": "{670a00da-1d99-460c-917a-6ee018b4fd05}",
+    "type": "intersection",
+    "label": "B434-8",
+    "x": 670.4514072331762,
+    "y": -760.4627595310288,
+    "neighbors": {
+      "{bb63c2fd-9c02-4d11-b74d-e4b59f2431fc}": 4.974597897161845,
+      "{33a5cb2a-f8b5-4247-a445-eaaa765e45d7}": 4.929487942474694,
+      "{2b872ef5-b2d2-4f64-8ab8-4a3e44557694}": 6.818307927286886
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{670a00da-1d99-460c-917a-6ee018b4fd05}"
+  },
+  "{2b872ef5-b2d2-4f64-8ab8-4a3e44557694}": {
+    "id": "{2b872ef5-b2d2-4f64-8ab8-4a3e44557694}",
+    "type": "hallway_node",
+    "label": "B434",
+    "x": 665.904994556979,
+    "y": -755.3814747752789,
+    "neighbors": {
+      "{670a00da-1d99-460c-917a-6ee018b4fd05}": 6.818307927286886,
+      "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}": 89.65155741227984
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{2b872ef5-b2d2-4f64-8ab8-4a3e44557694}"
+  },
+  "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}": {
+    "id": "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}",
+    "type": "intersection",
+    "label": "lower left hall",
+    "x": 667.2040823137569,
+    "y": -665.7393300137467,
+    "neighbors": {
+      "{6ea13056-33fe-4f13-8c3e-8027778027a1}": 33.746076181322614,
+      "{2b872ef5-b2d2-4f64-8ab8-4a3e44557694}": 89.65155741227984,
+      "{545152c4-7f3c-4017-8c0f-8de2e81ed23c}": 10.485164024030473,
+      "{204fffc1-0626-4b0d-83e6-2940cc8a7226}": 25.80015938104092,
+      "{f208370b-f818-4aaa-ab3e-2e787d05557e}": 24.152887768916422
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}"
+  },
+  "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}": {
+    "id": "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}",
+    "type": "intersection",
+    "label": "upper left hall",
+    "x": 643.4264445917782,
+    "y": -626.5216677969767,
+    "neighbors": {
+      "{36ff85b7-061e-4cde-b82a-922b3f95e757}": 14.748119889585377,
+      "{98c01853-017a-431f-af02-ac39803cb297}": 29.352929539531182,
+      "{d97157b9-53bb-4025-947c-6d26f71ba5a2}": 13.723451119120455,
+      "{257568b4-d9a2-4550-a0bc-921a319a9e3e}": 8.710130897504804
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}"
+  },
+  "{98c01853-017a-431f-af02-ac39803cb297}": {
+    "id": "{98c01853-017a-431f-af02-ac39803cb297}",
+    "type": "room_door",
+    "label": "lower room B442",
+    "x": 633.9870725803971,
+    "y": -598.7279143875604,
+    "neighbors": {
+      "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}": 29.352929539531182
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{98c01853-017a-431f-af02-ac39803cb297}"
+  },
+  "{d3727f26-51c6-4e9f-9478-030020cd84c4}": {
+    "id": "{d3727f26-51c6-4e9f-9478-030020cd84c4}",
+    "type": "room_door",
+    "label": "upper room B442",
+    "x": 576.7432680201748,
+    "y": -540.2396792934202,
+    "neighbors": {
+      "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}": 9.750999623816417
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{d3727f26-51c6-4e9f-9478-030020cd84c4}"
+  },
+  "{257568b4-d9a2-4550-a0bc-921a319a9e3e}": {
+    "id": "{257568b4-d9a2-4550-a0bc-921a319a9e3e}",
+    "type": "middle left hall",
+    "label": "",
+    "x": 643.5277066737675,
+    "y": -635.2312100491515,
+    "neighbors": {
+      "{6ea13056-33fe-4f13-8c3e-8027778027a1}": 32.605090524592555,
+      "{67a9d27d-b4cd-4abd-a503-ed2c011375b1}": 8.710130897504804,
+      "{f208370b-f818-4aaa-ab3e-2e787d05557e}": 15.431830659696896,
+      "{6f133238-eba3-4d2f-8d8a-1cd0f3e0ccfe}": 97.0664679880818
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{257568b4-d9a2-4550-a0bc-921a319a9e3e}"
+  },
+  "{f208370b-f818-4aaa-ab3e-2e787d05557e}": {
+    "id": "{f208370b-f818-4aaa-ab3e-2e787d05557e}",
+    "type": "intersection",
+    "label": "B439X",
+    "x": 655.9720120129464,
+    "y": -644.3570339645493,
+    "neighbors": {
+      "{6ea13056-33fe-4f13-8c3e-8027778027a1}": 31.396385217291886,
+      "{204fffc1-0626-4b0d-83e6-2940cc8a7226}": 26.67534441743545,
+      "{e0753cff-62bd-4711-a1c5-5bfdc5798ee1}": 24.016636058132168,
+      "{257568b4-d9a2-4550-a0bc-921a319a9e3e}": 15.431830659696896,
+      "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}": 24.152887768916422
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{f208370b-f818-4aaa-ab3e-2e787d05557e}"
+  },
+  "{6f133238-eba3-4d2f-8d8a-1cd0f3e0ccfe}": {
+    "id": "{6f133238-eba3-4d2f-8d8a-1cd0f3e0ccfe}",
+    "type": "hallway_node",
+    "label": "B448",
+    "x": 546.4621250281731,
+    "y": -635.6460202271242,
+    "neighbors": {
+      "{257568b4-d9a2-4550-a0bc-921a319a9e3e}": 97.0664679880818,
+      "{c8559937-1e81-4ac3-91d9-281edb2ead97}": 6.241387157986269
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6f133238-eba3-4d2f-8d8a-1cd0f3e0ccfe}"
+  },
+  "{8cabc478-1793-4280-8a74-df232de1dbe9}": {
+    "id": "{8cabc478-1793-4280-8a74-df232de1dbe9}",
+    "type": "hallway_node",
+    "label": "B444",
+    "x": 537.5860859606737,
+    "y": -627.5996015155703,
+    "neighbors": {
+      "{1acc04b0-9c75-4fc6-871b-4f0b72619922}": 34.89142643639215,
+      "{c8559937-1e81-4ac3-91d9-281edb2ead97}": 5.8340258856917275
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{8cabc478-1793-4280-8a74-df232de1dbe9}"
+  },
+  "{c8559937-1e81-4ac3-91d9-281edb2ead97}": {
+    "id": "{c8559937-1e81-4ac3-91d9-281edb2ead97}",
+    "type": "intersection",
+    "label": "B444-8",
+    "x": 541.3644836083384,
+    "y": -632.0447752187052,
+    "neighbors": {
+      "{76b538c8-fbaf-4b5c-8d72-7fa003b7134c}": 5.154248363301782,
+      "{6f133238-eba3-4d2f-8d8a-1cd0f3e0ccfe}": 6.241387157986269,
+      "{8cabc478-1793-4280-8a74-df232de1dbe9}": 5.8340258856917275
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{c8559937-1e81-4ac3-91d9-281edb2ead97}"
+  },
+  "{1acc04b0-9c75-4fc6-871b-4f0b72619922}": {
+    "id": "{1acc04b0-9c75-4fc6-871b-4f0b72619922}",
+    "type": "intersection",
+    "label": "B449A",
+    "x": 538.1250371618175,
+    "y": -592.7123377884026,
+    "neighbors": {
+      "{8cabc478-1793-4280-8a74-df232de1dbe9}": 34.89142643639215,
+      "{086f9931-1f48-4623-a982-1e51dc16fd97}": 3.9380718567984068,
+      "{1247d345-f70b-43df-a616-fc3ef77ac07a}": 54.29404867335132
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{1acc04b0-9c75-4fc6-871b-4f0b72619922}"
+  },
+  "{527c854e-c3d1-4652-b947-ec7a9dfa632a}": {
+    "id": "{527c854e-c3d1-4652-b947-ec7a9dfa632a}",
+    "type": "intersection",
+    "label": "upper hall",
+    "x": 538.0840193595219,
+    "y": -512.4922722437784,
+    "neighbors": {
+      "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}": 28.098009442023386,
+      "{1247d345-f70b-43df-a616-fc3ef77ac07a}": 25.92678405887396,
+      "{4ca656d2-9922-4a03-9d1d-aeb59c8e98b0}": 61.9715276068987,
+      "{b6eed9c0-65f9-4a13-98fc-76208d563dcd}": 27.93524448435094,
+      "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}": 38.97769976440212
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{527c854e-c3d1-4652-b947-ec7a9dfa632a}"
+  },
+  "{4ca656d2-9922-4a03-9d1d-aeb59c8e98b0}": {
+    "id": "{4ca656d2-9922-4a03-9d1d-aeb59c8e98b0}",
+    "type": "intersection",
+    "label": "upper left stairs",
+    "x": 476.11807376737124,
+    "y": -511.6605145848234,
+    "neighbors": {
+      "{9fee37b5-485d-4d5e-9839-d0a0a5b942c9}": 11.889892658370165,
+      "{527c854e-c3d1-4652-b947-ec7a9dfa632a}": 61.9715276068987,
+      "{0bd50c96-88c7-4fdb-b3d7-47f5845a36cc}": 13.291617038158725
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{4ca656d2-9922-4a03-9d1d-aeb59c8e98b0}"
+  },
+  "{1247d345-f70b-43df-a616-fc3ef77ac07a}": {
+    "id": "{1247d345-f70b-43df-a616-fc3ef77ac07a}",
+    "type": "intersection",
+    "label": "B442",
+    "x": 537.9343153699342,
+    "y": -538.4186240957259,
+    "neighbors": {
+      "{1acc04b0-9c75-4fc6-871b-4f0b72619922}": 54.29404867335132,
+      "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}": 10.98125116684048,
+      "{527c854e-c3d1-4652-b947-ec7a9dfa632a}": 25.92678405887396
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{1247d345-f70b-43df-a616-fc3ef77ac07a}"
+  },
+  "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}": {
+    "id": "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}",
+    "type": "intersection",
+    "label": "B449",
+    "x": 548.9155665367747,
+    "y": -538.4186240957259,
+    "neighbors": {
+      "{1247d345-f70b-43df-a616-fc3ef77ac07a}": 10.98125116684048,
+      "{069980b8-83c0-45d9-b72a-706bd780222b}": 6.1223599759094744,
+      "{527c854e-c3d1-4652-b947-ec7a9dfa632a}": 28.098009442023386,
+      "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}": 18.241625753622646
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}"
+  },
+  "{84d81aac-82ec-4380-a332-1d8c06f9b0bd}": {
+    "id": "{84d81aac-82ec-4380-a332-1d8c06f9b0bd}",
+    "type": "intersection",
+    "label": "upper right hall",
+    "x": 608.4677363261789,
+    "y": -515.1890543197172,
+    "neighbors": {
+      "{b6eed9c0-65f9-4a13-98fc-76208d563dcd}": 42.5050963005903,
+      "{0470030d-82e0-41a1-8193-1dd2aac98ab6}": 41.39302460321863,
+      "{b9b3a7de-23e6-46a8-bc0b-7d8cad0fe73b}": 49.15684630914813
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{84d81aac-82ec-4380-a332-1d8c06f9b0bd}"
+  },
+  "{0470030d-82e0-41a1-8193-1dd2aac98ab6}": {
+    "id": "{0470030d-82e0-41a1-8193-1dd2aac98ab6}",
+    "type": "intersection",
+    "label": "right B453",
+    "x": 649.8586061088852,
+    "y": -515.6114101338264,
+    "neighbors": {
+      "{84d81aac-82ec-4380-a332-1d8c06f9b0bd}": 41.39302460321863,
+      "{b9b3a7de-23e6-46a8-bc0b-7d8cad0fe73b}": 31.48463590605673,
+      "{4f5302b6-011a-4877-bc5a-5abab5f7e763}": 18.60588789654849
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{0470030d-82e0-41a1-8193-1dd2aac98ab6}"
+  },
+  "{b9b3a7de-23e6-46a8-bc0b-7d8cad0fe73b}": {
+    "id": "{b9b3a7de-23e6-46a8-bc0b-7d8cad0fe73b}",
+    "type": "intersection",
+    "label": "upper lower hall",
+    "x": 646.0574037819019,
+    "y": -546.8657403779109,
+    "neighbors": {
+      "{0470030d-82e0-41a1-8193-1dd2aac98ab6}": 31.48463590605673,
+      "{84d81aac-82ec-4380-a332-1d8c06f9b0bd}": 49.15684630914813,
+      "{706c5313-6836-4e7f-b92d-2d051c65b375}": 17.32173829335245
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{b9b3a7de-23e6-46a8-bc0b-7d8cad0fe73b}"
+  },
+  "{706c5313-6836-4e7f-b92d-2d051c65b375}": {
+    "id": "{706c5313-6836-4e7f-b92d-2d051c65b375}",
+    "type": "intersection",
+    "label": "left B455",
+    "x": 663.3739921603811,
+    "y": -546.4433845638016,
+    "neighbors": {
+      "{b9b3a7de-23e6-46a8-bc0b-7d8cad0fe73b}": 17.32173829335245,
+      "{89efa7a2-52eb-4156-9f88-3745c23e9097}": 17.21881349297613,
+      "{cebb513f-dbe6-4bfd-b26e-867c14f33d8e}": 90.89282474955925
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{706c5313-6836-4e7f-b92d-2d051c65b375}"
+  },
+  "{cebb513f-dbe6-4bfd-b26e-867c14f33d8e}": {
+    "id": "{cebb513f-dbe6-4bfd-b26e-867c14f33d8e}",
+    "type": "intersection",
+    "label": "to B455-7",
+    "x": 754.2263258063467,
+    "y": -543.7306254450737,
+    "neighbors": {
+      "{706c5313-6836-4e7f-b92d-2d051c65b375}": 90.89282474955925,
+      "{122c8b24-f6a1-4654-8eea-c77ad2968eb9}": 18.35486412547595,
+      "{4d795c36-ebf2-4674-82db-326a87fa7b5e}": 19.582981310223317
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{cebb513f-dbe6-4bfd-b26e-867c14f33d8e}"
+  },
+  "{4d795c36-ebf2-4674-82db-326a87fa7b5e}": {
+    "id": "{4d795c36-ebf2-4674-82db-326a87fa7b5e}",
+    "type": "intersection",
+    "label": "upper women washroom",
+    "x": 773.80930711657,
+    "y": -543.7306254450737,
+    "neighbors": {
+      "{37f38ab6-a049-4805-adb0-c3d4d482b86f}": 10.991676935178175,
+      "{cebb513f-dbe6-4bfd-b26e-867c14f33d8e}": 19.582981310223317,
+      "{c8d4e621-979f-49c7-9dc3-58c47a554c9f}": 68.0579039263555
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{4d795c36-ebf2-4674-82db-326a87fa7b5e}"
+  },
+  "{c8d4e621-979f-49c7-9dc3-58c47a554c9f}": {
+    "id": "{c8d4e621-979f-49c7-9dc3-58c47a554c9f}",
+    "type": "intersection",
+    "label": "right B457",
+    "x": 841.8601671695961,
+    "y": -544.7097745105848,
+    "neighbors": {
+      "{1ff458bd-112c-4249-b1a8-657608aa5b9e}": 15.176810515423199,
+      "{d4918a39-d375-4cc8-add7-51d87fc9543b}": 13.942815641752057,
+      "{4d795c36-ebf2-4674-82db-326a87fa7b5e}": 68.0579039263555
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{c8d4e621-979f-49c7-9dc3-58c47a554c9f}"
+  },
+  "{1ff458bd-112c-4249-b1a8-657608aa5b9e}": {
+    "id": "{1ff458bd-112c-4249-b1a8-657608aa5b9e}",
+    "type": "intersection",
+    "label": "right hall",
+    "x": 857.0369776850193,
+    "y": -544.7097745105848,
+    "neighbors": {
+      "{1327699b-d830-4e58-8208-5146d87ab385}": 15.666385048178654,
+      "{6d5e3399-12b8-40f1-893a-d691f0dfffe4}": 29.964201204407036,
+      "{c8d4e621-979f-49c7-9dc3-58c47a554c9f}": 15.176810515423199
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{1ff458bd-112c-4249-b1a8-657608aa5b9e}"
+  },
+  "{1327699b-d830-4e58-8208-5146d87ab385}": {
+    "id": "{1327699b-d830-4e58-8208-5146d87ab385}",
+    "type": "hallway_node",
+    "label": "upper right stairs",
+    "x": 872.703362733198,
+    "y": -544.7097745105848,
+    "neighbors": {
+      "{2bc038f4-59c9-48cd-b310-b4669e99f99c}": 10.769292510458481,
+      "{1ff458bd-112c-4249-b1a8-657608aa5b9e}": 15.666385048178654
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{1327699b-d830-4e58-8208-5146d87ab385}"
+  },
+  "{6d5e3399-12b8-40f1-893a-d691f0dfffe4}": {
+    "id": "{6d5e3399-12b8-40f1-893a-d691f0dfffe4}",
+    "type": "hallway_node",
+    "label": "upper elevator",
+    "x": 859.4848503487972,
+    "y": -574.5738210086754,
+    "neighbors": {
+      "{f2504105-42dc-4374-aa50-34bfa920bfa1}": 10.936212909763913,
+      "{1ff458bd-112c-4249-b1a8-657608aa5b9e}": 29.964201204407036
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6d5e3399-12b8-40f1-893a-d691f0dfffe4}"
+  },
+  "{39042654-f313-46bf-ad2d-a637af6d5ad2}": {
+    "id": "{39042654-f313-46bf-ad2d-a637af6d5ad2}",
+    "type": "intersection",
+    "label": "lower middle hall",
+    "x": 794.9714352867395,
+    "y": -796.0815985885355,
+    "neighbors": {
+      "{89869c45-b729-4937-96c6-75f25bee9eaf}": 86.96060740019037,
+      "{852c4fcb-98f9-418a-81c3-6aa2418a7f54}": 32.35601405852738,
+      "{6a62b410-1192-4d53-871a-9c7fa337f271}": 10.083590751017496,
+      "{14032bf6-d1c9-467f-aa59-0991af79e20b}": 14.340395965798544
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{39042654-f313-46bf-ad2d-a637af6d5ad2}"
+  },
+  "{6a62b410-1192-4d53-871a-9c7fa337f271}": {
+    "id": "{6a62b410-1192-4d53-871a-9c7fa337f271}",
+    "type": "intersection",
+    "label": "B428",
+    "x": 805.0015002590819,
+    "y": -797.1191915167088,
+    "neighbors": {
+      "{39042654-f313-46bf-ad2d-a637af6d5ad2}": 10.083590751017496,
+      "{38d44ff1-550e-4355-a5d5-e78cb702c328}": 5.804529097496128,
+      "{deda6b79-36cd-406e-b464-63b8231739b2}": 27.332035097823667,
+      "{a8511535-ddad-4a9d-9095-3ac45e028667}": 15.04113299607773,
+      "{dcc1138f-06f6-4ef8-b287-1e9c958c879d}": 31.33190150019806
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6a62b410-1192-4d53-871a-9c7fa337f271}"
+  },
+  "{deda6b79-36cd-406e-b464-63b8231739b2}": {
+    "id": "{deda6b79-36cd-406e-b464-63b8231739b2}",
+    "type": "room_door",
+    "label": "room B421",
+    "x": 832.3247807009802,
+    "y": -796.4274628979266,
+    "neighbors": {
+      "{6a62b410-1192-4d53-871a-9c7fa337f271}": 27.332035097823667,
+      "{a8511535-ddad-4a9d-9095-3ac45e028667}": 30.916159014229358
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{deda6b79-36cd-406e-b464-63b8231739b2}"
+  },
+  "{6fe7aa2f-593a-4946-aed5-9205df8d5517}": {
+    "id": "{6fe7aa2f-593a-4946-aed5-9205df8d5517}",
+    "type": "room_door",
+    "label": "lower room B432",
+    "x": 762.06467569801,
+    "y": -726.5995579544274,
+    "neighbors": {
+      "{6321959d-ac85-4187-acf7-4e225a546085}": 28.6606512081742
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{6fe7aa2f-593a-4946-aed5-9205df8d5517}"
+  },
+  "{545152c4-7f3c-4017-8c0f-8de2e81ed23c}": {
+    "id": "{545152c4-7f3c-4017-8c0f-8de2e81ed23c}",
+    "type": "intersection",
+    "label": "B439",
+    "x": 677.4392536139684,
+    "y": -668.0152766445246,
+    "neighbors": {
+      "{5634ea08-63a8-4dbf-a8e5-b27ad7bdec85}": 10.485164024030473,
+      "{859061f3-4746-4145-a166-0ee65f92362e}": 27.712580533803393,
+      "{c877435c-9d90-4f33-9c57-51b5610c8ee1}": 6.614542081198537
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{545152c4-7f3c-4017-8c0f-8de2e81ed23c}"
+  },
+  "{b6eed9c0-65f9-4a13-98fc-76208d563dcd}": {
+    "id": "{b6eed9c0-65f9-4a13-98fc-76208d563dcd}",
+    "type": "intersection",
+    "label": "upper branch",
+    "x": 565.9800933407214,
+    "y": -513.9711031455059,
+    "neighbors": {
+      "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}": 24.511221302359846,
+      "{527c854e-c3d1-4652-b947-ec7a9dfa632a}": 27.93524448435094,
+      "{84d81aac-82ec-4380-a332-1d8c06f9b0bd}": 42.5050963005903
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{b6eed9c0-65f9-4a13-98fc-76208d563dcd}"
+  },
+  "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}": {
+    "id": "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}",
+    "type": "intersection",
+    "label": "upper B442",
+    "x": 567.1571578990134,
+    "y": -538.4540459579799,
+    "neighbors": {
+      "{806ea0b0-b4c1-4cca-a8bd-fe56f0e6a705}": 18.241625753622646,
+      "{d3727f26-51c6-4e9f-9478-030020cd84c4}": 9.750999623816417,
+      "{b6eed9c0-65f9-4a13-98fc-76208d563dcd}": 24.511221302359846,
+      "{527c854e-c3d1-4652-b947-ec7a9dfa632a}": 38.97769976440212
+    },
+    "level": 3,
+    "source": "source_3",
+    "originalId": "{253fc2ee-d798-40f8-966d-e605fcdfb4a5}"
+  }
+}
