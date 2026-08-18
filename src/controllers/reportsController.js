@@ -4,6 +4,7 @@ import {
   sendError,
   sendInternalError,
 } from "../errors/apiErrors.js";
+import { processAndStoreFile } from "../services/fileUploadService.js";
 
 const apiToIncidentType = {
   lost_item: "lostandfound",
@@ -223,6 +224,20 @@ export async function createOne(req, res) {
       device_id,
     });
 
+    // Process and store file to Azure Blob Storage or local disk
+    let photoUrl = null;
+    if (file) {
+      try {
+        photoUrl = await processAndStoreFile(file, "reports");
+      } catch (uploadError) {
+        console.error(
+          "File upload failed, continuing without photo:",
+          uploadError,
+        );
+        // Don't fail the whole request if photo upload fails
+      }
+    }
+
     const created = await prisma.report.create({
       data: {
         campus_id,
@@ -233,7 +248,7 @@ export async function createOne(req, res) {
         incident_at: parseOptionalDate(incident_at),
         is_anonymous: parseBooleanFlag(is_anonymous, false),
         email_updates: parseBooleanFlag(email_updates, false),
-        photo_url: file ? file.path : null,
+        photo_url: photoUrl,
       },
       include: {
         user: {

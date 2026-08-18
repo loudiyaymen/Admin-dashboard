@@ -5,6 +5,7 @@ import { requireAdminAuth } from "../middleware/requireAdminAuth.js";
 export const usersRouter = Router();
 
 usersRouter.post("/activity", usersController.logDailyActiveUser);
+usersRouter.post("/push-token", usersController.registerPushToken);
 
 usersRouter.get(
   "/activity/count",

@@ -4,12 +4,15 @@ import {
   sendError,
   sendInternalError,
 } from "../errors/apiErrors.js";
+import { processAndStoreFile } from "../services/fileUploadService.js";
 
 const VALID_HOST_TYPES = new Set(["admin", "student"]);
 
-function buildPublicUploadUrl(req, file) {
+// File upload is now handled by fileUploadService which returns URLs directly
+// This helper is kept for backward compatibility if needed
+async function buildPublicUploadUrl(req, file) {
   if (!file) return null;
-  return `/uploads/${file.filename}`;
+  return await processAndStoreFile(file, "events");
 }
 
 function parseOptionalDate(rawValue) {

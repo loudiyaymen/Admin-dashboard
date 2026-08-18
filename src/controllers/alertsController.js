@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import { prisma } from "../prismaClient.js";
 import { broadcast } from "../websocket.js";
+import { sendPushAlertNotification } from "../services/expoPushService.js";
 import {
   API_ERRORS,
   sendError,
@@ -271,6 +272,14 @@ export async function createGlobalAlert(req, res) {
     // Broadcast both a simple event and full payload for backward-compatible websocket consumers.
     broadcast("ALERT_CREATED");
     broadcast(JSON.stringify(wsPayload));
+
+    await sendPushAlertNotification(wsPayload).catch((error) => {
+      console.error(
+        "Failed to send push notification for alert creation:",
+        error,
+      );
+    });
+
     res.status(201).json({
       alert_id,
       alert_type: alert_type ?? null,
@@ -372,6 +381,15 @@ export async function resolveOne(req, res) {
     broadcast(
       JSON.stringify(buildAlertWsPayload(result.followUp, campus, building)),
     );
+
+    await sendPushAlertNotification(
+      buildAlertWsPayload(result.followUp, campus, building),
+    ).catch((error) => {
+      console.error(
+        "Failed to send push notification for alert resolution:",
+        error,
+      );
+    });
 
     return res.status(201).json({
       resolvedAlertId: result.resolved.alert_id,

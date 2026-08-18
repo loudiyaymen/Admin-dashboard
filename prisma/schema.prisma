@@ -119,6 +119,20 @@ model DailyActiveUser {
   @@id([device_id, login_date])
 }
 
+model DevicePushToken {
+  id                 Int      @id @default(autoincrement())
+  device_id          String
+  push_token         String   @unique
+  platform           String?
+  is_active          Boolean  @default(true)
+  last_registered_at DateTime @default(now())
+  created_at         DateTime @default(now())
+  updated_at         DateTime @updatedAt
+
+  @@index([device_id])
+  @@map("device_push_tokens")
+}
+
 model AdminCredential {
   id            Int      @id @default(autoincrement())
   username      String   @unique

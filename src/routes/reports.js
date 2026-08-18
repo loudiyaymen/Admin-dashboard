@@ -4,8 +4,9 @@ import * as reportsController from "../controllers/reportsController.js";
 import { validateReportJsonBody } from "../middleware/validateReportJsonBody.js";
 import { requireAdminAuth } from "../middleware/requireAdminAuth.js";
 
+// Use memory storage to avoid writing to disk before Azure upload
 const upload = multer({
-  dest: "uploads/",
+  storage: multer.memoryStorage(),
   limits: { fileSize: 5 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
     const allowed = ["image/jpeg", "image/png", "application/pdf"];

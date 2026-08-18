@@ -81,3 +81,44 @@ export async function getActiveUsersCount(req, res) {
     sendInternalError(res);
   }
 }
+
+export async function registerPushToken(req, res) {
+  try {
+    const device_id = String(req.body?.device_id || "").trim();
+    const push_token = String(req.body?.push_token || "").trim();
+    const platform = String(req.body?.platform || "").trim() || null;
+
+    if (!device_id) {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "device_id is required");
+    }
+
+    if (!push_token) {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "push_token is required");
+    }
+
+    if (!/^(ExponentPushToken|ExpoPushToken)\[[^\]]+\]$/.test(push_token)) {
+      return sendError(res, API_ERRORS.BAD_REQUEST, "Invalid Expo push token");
+    }
+
+    await prisma.devicePushToken.upsert({
+      where: { push_token },
+      update: {
+        device_id,
+        platform,
+        is_active: true,
+        last_registered_at: new Date(),
+      },
+      create: {
+        device_id,
+        push_token,
+        platform,
+        is_active: true,
+      },
+    });
+
+    res.status(201).json({ ok: true });
+  } catch (error) {
+    console.error("registerPushToken error:", error);
+    sendInternalError(res);
+  }
+}

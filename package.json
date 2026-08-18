@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard#readme",
   "dependencies": {
+    "@azure/storage-blob": "^12.24.0",
     "@prisma/adapter-pg": "^7.5.0",
     "@prisma/client": "^7.5.0",
     "bcryptjs": "^3.0.3",

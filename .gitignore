@@ -4,5 +4,5 @@ node_modules
 /src/generated/prisma
 /Admin-dashboard/node_modules
 scripts
-/*.md
 /uploads
+.env.production

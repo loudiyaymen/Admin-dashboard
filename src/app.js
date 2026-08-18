@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { logger } from "./middleware/logger.js";
 import { sanitizeInput } from "./middleware/sanitizeInput.js";
+import { initializeAzureBlobStorage } from "./services/azureBlobService.js";
 import { campusesRouter } from "./routes/campuses.js";
 import { buildingsRouter } from "./routes/buildings.js";
 import { floorsRouter } from "./routes/floors.js";
@@ -22,20 +23,46 @@ import { validateAdminAuthConfig } from "./config/adminAuthConfig.js";
 
 validateAdminAuthConfig();
 
+// Initialize Azure Blob Storage if credentials are available
+initializeAzureBlobStorage();
+
 export const app = express();
 
+// Ensure local uploads directory exists as fallback
 const uploadsDir = path.resolve(process.cwd(), "uploads");
 fs.mkdirSync(uploadsDir, { recursive: true });
 
-app.use(cors({ origin: "*" }));
+// Configure CORS with frontend allowlist
+const corsAllowlist = [
+  "http://localhost:5173", // Local frontend dev
+  "http://localhost:3000", // Alternative local port
+  "https://proud-cliff-09f5ba80f.1.azurestaticapps.net", // Production frontend
+  process.env.CORS_ORIGIN, // Allow override via env
+].filter(Boolean);
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || corsAllowlist.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  }),
+);
 app.use(
   helmet({
     crossOriginResourcePolicy: { policy: "cross-origin" },
   }),
 );
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(sanitizeInput);
 app.use(logger);
+
+// Serve local uploads as fallback (when Azure Blob Storage is not available)
 app.use("/uploads", express.static(uploadsDir));
 
 app.get("/health", (_req, res) => {
