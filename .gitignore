@@ -1,6 +1,7 @@
 node_modules
 .DS_Store
 .env
+.env.production
 /src/generated/prisma
 /Admin-dashboard/node_modules
 scripts
