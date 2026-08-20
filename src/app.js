@@ -32,24 +32,51 @@ export const app = express();
 const uploadsDir = path.resolve(process.cwd(), "uploads");
 fs.mkdirSync(uploadsDir, { recursive: true });
 
-// Configure CORS with frontend allowlist
-const corsAllowlist = [
-  "http://localhost:5173", // Local frontend dev
-  "http://localhost:3000", // Alternative local port
-  "https://proud-cliff-09f5ba80f.1.azurestaticapps.net", // Production frontend
-  process.env.CORS_ORIGIN, // Allow override via env
-].filter(Boolean);
+function normalizeOrigin(value) {
+  return String(value || "").trim().replace(/\/$/, "");
+}
+
+const explicitOrigins = [
+  "http://localhost:5173",
+  "http://localhost:3000",
+  "https://proud-cliff-09f5ba80f.1.azurestaticapps.net",
+  process.env.CORS_ORIGIN,
+]
+  .filter(Boolean)
+  .map(normalizeOrigin);
+
+const envOrigins = String(process.env.CORS_ORIGINS || "")
+  .split(",")
+  .map((origin) => normalizeOrigin(origin))
+  .filter(Boolean);
+
+const corsAllowlist = new Set([...explicitOrigins, ...envOrigins]);
+
+function isAllowedOrigin(origin) {
+  const normalized = normalizeOrigin(origin);
+  if (corsAllowlist.has(normalized)) return true;
+
+  // Allow Azure Static Web Apps production and preview domains.
+  if (/^https:\/\/[a-z0-9-]+(\.[a-z0-9-]+)?\.azurestaticapps\.net$/i.test(normalized)) {
+    return true;
+  }
+
+  return false;
+}
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || corsAllowlist.includes(origin)) {
+      if (!origin || isAllowedOrigin(origin)) {
         callback(null, true);
       } else {
+        console.warn(`Blocked by CORS: ${origin}`);
         callback(new Error("Not allowed by CORS"));
       }
     },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 app.use(
