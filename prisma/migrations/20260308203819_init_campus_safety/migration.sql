@@ -1,6 +1,3 @@
--- CreateExtension
-CREATE EXTENSION IF NOT EXISTS "postgis";
-
 -- CreateEnum
 CREATE TYPE "Role" AS ENUM ('admin', 'student');
 
@@ -25,7 +22,7 @@ CREATE TABLE "User" (
 CREATE TABLE "Campus" (
     "id" UUID NOT NULL,
     "name" TEXT NOT NULL,
-    "boundary" geometry(Polygon, 4326),
+    "boundary" TEXT,
 
     CONSTRAINT "Campus_pkey" PRIMARY KEY ("id")
 );
@@ -61,7 +58,7 @@ CREATE TABLE "NavigationNode" (
     "campus_id" UUID NOT NULL,
     "name" TEXT,
     "floor_level" INTEGER NOT NULL DEFAULT 1,
-    "geom" geometry(Point, 4326),
+    "geom" TEXT,
 
     CONSTRAINT "NavigationNode_pkey" PRIMARY KEY ("id")
 );
@@ -73,7 +70,7 @@ CREATE TABLE "NavigationEdge" (
     "target_node_id" TEXT NOT NULL,
     "weight" DOUBLE PRECISION NOT NULL,
     "is_stairs" BOOLEAN NOT NULL DEFAULT false,
-    "geom" geometry(LineString, 4326),
+    "geom" TEXT,
 
     CONSTRAINT "NavigationEdge_pkey" PRIMARY KEY ("id")
 );

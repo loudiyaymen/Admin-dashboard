@@ -1,11 +1,9 @@
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["postgresqlExtensions"]
 }
 
 datasource db {
   provider   = "postgresql"
-  extensions = [postgis]
 }
 
 model User {
@@ -21,7 +19,7 @@ model User {
 model Campus {
   id               String                   @id @default(uuid()) @db.Uuid
   name             String
-  boundary         Unsupported("geometry")?
+  boundary         String?
   events           Event[]
   navigation_nodes NavigationNode[]
   reports          Report[]
@@ -60,7 +58,7 @@ model NavigationNode {
   campus_id    String                   @db.Uuid
   name         String?
   floor_level  Int                      @default(1)
-  geom         Unsupported("geometry")?
+  geom         String?
   events       Event[]
   source_edges NavigationEdge[]         @relation("SourceEdges")
   target_edges NavigationEdge[]         @relation("TargetEdges")
@@ -73,7 +71,7 @@ model NavigationEdge {
   target_node_id String
   weight         Float
   is_stairs      Boolean                  @default(false)
-  geom           Unsupported("geometry")?
+  geom           String?
   source_node    NavigationNode           @relation("SourceEdges", fields: [source_node_id], references: [id])
   target_node    NavigationNode           @relation("TargetEdges", fields: [target_node_id], references: [id])
 }
@@ -216,15 +214,6 @@ model SosEvent {
   estimated_floor_id      String?
 
   @@map("sos_events")
-}
-
-/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
-model spatial_ref_sys {
-  srid      Int     @id
-  auth_name String? @db.VarChar(256)
-  auth_srid Int?
-  srtext    String? @db.VarChar(2048)
-  proj4text String? @db.VarChar(2048)
 }
 
 enum Role {
