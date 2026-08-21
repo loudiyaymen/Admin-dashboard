@@ -1,8 +1,8 @@
 import { BlobServiceClient } from "@azure/storage-blob";
-import { Readable } from "stream";
 
 let blobServiceClient = null;
 let containerClient = null;
+let containerEnsured = false;
 
 /**
  * Initialize Azure Blob Storage client
@@ -44,6 +44,11 @@ export async function uploadFileToBlob(fileBuffer, fileName, mimeType) {
   }
 
   try {
+    if (!containerEnsured) {
+      await containerClient.createIfNotExists();
+      containerEnsured = true;
+    }
+
     const blobClient = containerClient.getBlockBlobClient(fileName);
 
     // Upload file
