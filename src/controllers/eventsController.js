@@ -185,7 +185,7 @@ export async function createOne(req, res) {
       fee_cents,
       event_image_url,
     } = req.body;
-    const uploadedEventImageUrl = buildPublicUploadUrl(req, req.file);
+    const uploadedEventImageUrl = await buildPublicUploadUrl(req, req.file);
 
     const normalizedEventType = event_type ?? req.body.type ?? null;
     const normalizedDescription = description ?? req.body.details ?? null;
@@ -313,7 +313,7 @@ export async function createOne(req, res) {
 
 export async function updateOne(req, res) {
   try {
-    const uploadedEventImageUrl = buildPublicUploadUrl(req, req.file);
+    const uploadedEventImageUrl = await buildPublicUploadUrl(req, req.file);
     const parsedRegistrationStartAt = parseOptionalDate(
       req.body.registration_start_at,
     );
