@@ -254,6 +254,22 @@ export async function createOne(req, res) {
       );
     }
 
+    if (parsedRegistrationStartAt && parsedRegistrationStartAt >= parsedDate) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "registration_start_at must be before event_date",
+      );
+    }
+
+    if (parsedRegistrationEndAt && parsedRegistrationEndAt >= parsedDate) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "registration_end_at must be before event_date",
+      );
+    }
+
     if (
       !parsedIsUnlimited &&
       parsedMaxParticipants !== undefined &&
@@ -313,6 +329,15 @@ export async function createOne(req, res) {
 
 export async function updateOne(req, res) {
   try {
+    const existingEvent = await prisma.event.findUnique({
+      where: { id: req.params.id },
+      select: { event_date: true },
+    });
+
+    if (!existingEvent) {
+      return sendError(res, API_ERRORS.EVENT_NOT_FOUND);
+    }
+
     const uploadedEventImageUrl = await buildPublicUploadUrl(req, req.file);
     const parsedRegistrationStartAt = parseOptionalDate(
       req.body.registration_start_at,
@@ -379,6 +404,34 @@ export async function updateOne(req, res) {
           "event_date must be a valid ISO date string",
         );
       }
+    }
+
+    const effectiveEventDate = req.body.event_date
+      ? new Date(req.body.event_date)
+      : existingEvent.event_date;
+
+    if (
+      parsedRegistrationStartAt &&
+      effectiveEventDate &&
+      parsedRegistrationStartAt >= effectiveEventDate
+    ) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "registration_start_at must be before event_date",
+      );
+    }
+
+    if (
+      parsedRegistrationEndAt &&
+      effectiveEventDate &&
+      parsedRegistrationEndAt >= effectiveEventDate
+    ) {
+      return sendError(
+        res,
+        API_ERRORS.BAD_REQUEST,
+        "registration_end_at must be before event_date",
+      );
     }
 
     const updatedEvent = await prisma.event.update({

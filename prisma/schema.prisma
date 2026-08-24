@@ -32,6 +32,8 @@ model Report {
   campus_id     String       @db.Uuid
   incident_type IncidentType
   description   String
+  reporter_name String?
+  reporter_email String?
   location_text String?
   incident_at   DateTime?
   is_anonymous  Boolean      @default(false)

@@ -40,6 +40,11 @@ function deriveReporterName(row) {
     return "Anonymous";
   }
 
+  const explicitName = String(row?.reporter_name || "").trim();
+  if (explicitName) {
+    return explicitName;
+  }
+
   const email = String(row?.user?.email || "").trim();
   if (email.includes("@")) {
     return email.split("@")[0];
@@ -64,7 +69,9 @@ function toApiReport(row) {
     campus_id: row.campus_id,
     user_id: row.user_id,
     reporter_name: deriveReporterName(row),
-    reporter_email: Boolean(row.is_anonymous) ? "Anonymous" : row?.user?.email,
+    reporter_email: Boolean(row.is_anonymous)
+      ? "Anonymous"
+      : row?.reporter_email || row?.user?.email,
     location_text: row.location_text ?? null,
     incident_at: row.incident_at ?? null,
     is_anonymous: Boolean(row.is_anonymous),
@@ -199,6 +206,8 @@ export async function createOne(req, res) {
       campus_id,
       user_id,
       device_id,
+      reporter_name,
+      reporter_email,
       location_text,
       incident_at,
       is_anonymous,
@@ -244,6 +253,14 @@ export async function createOne(req, res) {
         user_id: resolvedUserId,
         incident_type,
         description: description.trim(),
+        reporter_name: parseBooleanFlag(is_anonymous, false)
+          ? null
+          : String(reporter_name || "").trim() || null,
+        reporter_email: parseBooleanFlag(is_anonymous, false)
+          ? null
+          : String(reporter_email || "")
+              .trim()
+              .toLowerCase() || null,
         location_text: location_text ? String(location_text).trim() : null,
         incident_at: parseOptionalDate(incident_at),
         is_anonymous: parseBooleanFlag(is_anonymous, false),
