@@ -48,6 +48,23 @@ function parseBooleanFlag(rawValue, defaultValue = false) {
   return defaultValue;
 }
 
+function shouldIncludeParticipants(rawValue) {
+  if (rawValue === undefined || rawValue === null || rawValue === "") {
+    return true;
+  }
+
+  const normalized = String(rawValue).trim().toLowerCase();
+  if (["false", "0", "no", "n", "off"].includes(normalized)) {
+    return false;
+  }
+
+  if (["true", "1", "yes", "y", "on"].includes(normalized)) {
+    return true;
+  }
+
+  return true;
+}
+
 function isAdmin(req) {
   return req.admin?.role === "admin";
 }
@@ -93,7 +110,27 @@ async function loadEventWithParticipants(eventId) {
 export async function getAll(req, res) {
   try {
     const admin = isAdmin(req);
-    const { campus_id, location_node_id, limit = 50, offset = 0 } = req.query;
+    const {
+      campus_id,
+      location_node_id,
+      limit = 50,
+      offset = 0,
+      include_participants,
+    } = req.query;
+
+    const includeParticipants = shouldIncludeParticipants(include_participants);
+
+    const eventInclude = {
+      campus: true,
+      location_node: true,
+    };
+
+    if (includeParticipants) {
+      eventInclude.participants = {
+        select: participantSelect(),
+        orderBy: { joined_at: "asc" },
+      };
+    }
 
     const events = await prisma.event.findMany({
       where: {
@@ -104,14 +141,7 @@ export async function getAll(req, res) {
       take: parseInt(limit, 10),
       skip: parseInt(offset, 10),
       orderBy: { event_date: "desc" },
-      include: {
-        campus: true,
-        location_node: true,
-        participants: {
-          select: participantSelect(),
-          orderBy: { joined_at: "asc" },
-        },
-      },
+      include: eventInclude,
     });
 
     res.json({ data: events });
@@ -138,18 +168,27 @@ export async function getMine(req, res) {
       return sendError(res, API_ERRORS.BAD_REQUEST, "device_id is required");
     }
 
+    const includeParticipants = shouldIncludeParticipants(
+      req.query.include_participants,
+    );
+
+    const eventInclude = {
+      campus: true,
+      location_node: true,
+    };
+
+    if (includeParticipants) {
+      eventInclude.participants = {
+        select: participantSelect(),
+        orderBy: { joined_at: "asc" },
+      };
+    }
+
     const registrations = await prisma.eventParticipant.findMany({
       where: { device_id: deviceId },
       include: {
         event: {
-          include: {
-            campus: true,
-            location_node: true,
-            participants: {
-              select: participantSelect(),
-              orderBy: { joined_at: "asc" },
-            },
-          },
+          include: eventInclude,
         },
       },
       orderBy: { joined_at: "desc" },
