@@ -13,16 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard.git"
+    "url": "git+https://github.com/loudiyaymen/Admin-dashboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard/issues"
+    "url": "https://github.com/loudiyaymen/Admin-dashboard/issues"
   },
-  "homepage": "https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard#readme",
+  "homepage": "https://github.com/loudiyaymen/Admin-dashboard#readme",
   "dependencies": {
     "@prisma/adapter-pg": "^7.5.0",
     "@prisma/client": "^7.5.0",

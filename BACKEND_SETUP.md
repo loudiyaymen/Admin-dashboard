@@ -16,11 +16,11 @@ If you want to run the database locally with the included Docker config, Docker 
 ## 2. Clone the repository
 
 ```bash
-git clone https://github.com/Student-Algonquin-Mobile-Safety/Admin-dashboard.git
+git clone https://github.com/loudiyaymen/Admin-dashboard.git
 cd Admin-dashboard
 ```
 
-If you already have the repository on your machine, open the `admin-dashboard` folder instead.
+If you already have the repository on your machine, open the `Admin-dashboard` folder instead.
 
 ## 3. Install dependencies
 

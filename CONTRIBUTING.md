@@ -7,7 +7,7 @@ dev → staging → main
 Each branch has a specific purpose, rules, and review requirements.
 All contributors are expected to follow these rules to keep the project stable and reviewable.
 
-Tech stack: JavaScript, Typescript, React Native
+Tech stack: Node.js, Express, Prisma, PostgreSQL + PostGIS
 
 ---
 
